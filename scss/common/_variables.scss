@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+// breakpoints
+$breakpoints: (
+	"sm": 640px,
+	"md": 768px,
+	"lg": 1024px,
+	"xl": 1420px,
+);
+
+// design size
+$design-size: (
+	"pc-width": 1440,
+	"pc-height": 810,
+	"sp-width": 360,
+	"sp-height": 800,
+);
+
+// colors
+$color-base-white: #ffffff;
+$color-base-lower-white: #c0c0c0;
+$color-base-lower-black: #292929;
+$color-base-black: #000000;
+$color-base-blue: #498edf;
+$color-base-gray: #eaeaea;
+$color-yellow-marker: #e9f651;
+$color-base-red: #e74c3c;
+
+// shadow
+$shadow-base: 0 0 10px rgb(0 0 0 / 10%);
+$shadow-top: 0 40px 60px rgb(18 113 142 / 24%);
+$shadow-occupation: 0 10px 40px 0 rgb(153 211 239 / 10%);
+$shadow-works-environment: 0 0 50px rgb(28 105 129 / 10%);
+
+// fonts
+$hiragino-ud-sans-w4: "Hiragino UD Sans W4 JIS2004", "sans-serif";
+$hiragino-ud-sans-w5: "Hiragino UD Sans W5 JIS2004", "sans-serif";
+$noto-sans: "Noto Sans JP", sans-serif;
+$font-family-termina: "termina", sans-serif;
+
+// animations
+$duration-short: 0.3s;
+$duration-base: 0.5s;
+$duration-full: 0.8s;
+
+// easing
+$easing-transform: cubic-bezier(0.43, 0.05, 0.17, 1);
+$easing-material: cubic-bezier(0.26, 0.16, 0.1, 1);
+
+// z-index
+$z-index-header: 100;
+$z-index-openning: 101;

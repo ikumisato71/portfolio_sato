@@ -1,0 +1,43 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+html {
+  // pc,sp共通
+  font-size: 1.6667vw;
+}
+
+body {
+  font-family: $noto-sans;
+  font-size: vw(16);
+  line-height: 1.8;
+  letter-spacing: 0;
+
+  @include sp() {
+    font-size: vw_sp(13);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+// ①@extendの使い方
+// extendはすでに作られているクラスを使いまわせる
+.button {
+  color: #333;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
+}

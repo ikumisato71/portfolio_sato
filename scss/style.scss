@@ -1,0 +1,10 @@
+// 共通スタイル
+@use "./common/functions";
+@use "./common/mixins";
+@use "./common/destyle";
+@use "./common/utility";
+@use "./common/variables";
+@use "./common/global";
+
+// 固有のスタイル
+@use "./body/header";

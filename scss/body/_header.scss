@@ -1,0 +1,32 @@
+@charset "utf-8";
+@use "../common/variables" as *;
+@use "../common/functions" as *;
+@use "../common/mixins" as *;
+
+header {
+  .list {
+    display: flex;
+
+    @include sp() {
+      display: block;
+    }
+
+    .list__item {
+      &:nth-child(2) {
+        color: red;
+
+        @include sp() {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  .list__item-link {
+    @extend .button;
+  }
+
+  .list__item-link {
+    @include button(100px);
+  }
+}

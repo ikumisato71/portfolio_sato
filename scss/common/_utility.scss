@@ -1,0 +1,14 @@
+@use "mixins" as *;
+
+// for each device
+[data-only-show="pc"] {
+	@include sp() {
+		display: none !important;
+	}
+}
+
+[data-only-show="sp"] {
+	@include not_sp() {
+		display: none !important;
+	}
+}
