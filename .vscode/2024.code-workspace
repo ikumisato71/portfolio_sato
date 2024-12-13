@@ -1,0 +1,35 @@
+{
+  "folders": [
+	{
+		"path": "../../../Local Sites/samurai-university/app/public/wp-content/themes/samurai_university2024"
+	},
+	{
+		"path": "../../../Local Sites/ange/app/public/wp-content/themes/ANGEwp"
+	},
+	{
+		"path": "../../../Local Sites/ecoshop/app/public/wp-content/themes/ecoshop wp"
+	},
+	{
+		"path": "../../1. The basics of GSAP"
+	},
+	{
+		"path": "../../../Local Sites/samurai-sample/app/public/wp-content/themes/lightning"
+	},
+	{
+		"path": "../../2.FinishedProjects/2. Load GSAP Fn"
+	},
+	{
+		"path": "../../1.StartingProjects/2. Load GSAP"
+	},
+	{
+		"path": "../../1.StartingProjects/1. Home GSAP"
+	},
+	{
+		"path": "../../../../../Applications/MAMP/htdocs"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {}
+}
