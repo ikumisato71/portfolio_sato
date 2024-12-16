@@ -1,19 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
 // breakpoints
 $breakpoints: (
-	"sm": 640px,
-	"md": 768px,
-	"lg": 1024px,
-	"xl": 1420px,
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1420px,
 );
 
 // design size
 $design-size: (
-	"pc-width": 1440,
-	"pc-height": 810,
-	"sp-width": 360,
-	"sp-height": 800,
+  "pc-width": 1440,
+  "pc-height": 810,
+  "sp-width": 360,
+  "sp-height": 800,
 );
 
 // colors
@@ -37,6 +39,10 @@ $hiragino-ud-sans-w4: "Hiragino UD Sans W4 JIS2004", "sans-serif";
 $hiragino-ud-sans-w5: "Hiragino UD Sans W5 JIS2004", "sans-serif";
 $noto-sans: "Noto Sans JP", sans-serif;
 $font-family-termina: "termina", sans-serif;
+$YuGothic: "yu-gothic-pr6n", sans-serif;
+$poiret-one-regular: "Poiret One", serif;
+$rajdhani-regular: "Rajdhani", sans-serif;
+$zilla-slab-highlight-regular: "Zilla Slab Highlight", serif;
 
 // animations
 $duration-short: 0.3s;

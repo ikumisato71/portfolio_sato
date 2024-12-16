@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -394,33 +397,36 @@ th {
   }
 }
 
-html {
-  font-size: 1.6667vw;
-}
-
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 1.1111111111vw;
-  line-height: 1.8;
-  letter-spacing: 0;
-}
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 3.6111111111vw;
-  }
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
+h1 {
+  font-family: "Poiret One", serif;
+  font-size: 8.8888888889vw;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 26.6666666667vw;
+  }
+}
+
+h2 {
+  font-family: "Poiret One", serif;
+  font-size: 4.4444444444vw;
+}
+
+h3 {
+  font-size: 1.3888888889vw;
+}
+
+h4 {
+  font-size: 1.1111111111vw;
+}
+
+p {
+  font-size: 1.25vw;
 }
 
 header .list {
@@ -430,30 +436,4 @@ header .list {
   header .list {
     display: block;
   }
-}
-header .list .list__item:nth-child(2) {
-  color: red;
-}
-@media screen and (max-width: 768px) {
-  header .list .list__item:nth-child(2) {
-    color: blue;
-  }
-}
-header .button, header .list__item-link {
-  color: #333;
-  font-size: 16px;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 8px 16px;
-  border: 1px solid #333;
-  text-decoration: none;
-}
-header .list__item-link {
-  color: #333;
-  font-size: 100px;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 8px 16px;
-  border: 1px solid #333;
-  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

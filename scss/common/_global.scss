@@ -4,32 +4,32 @@
 
 html {
   // pc,sp共通
-  font-size: 1.6667vw;
+  // font-size: 1.6667vw;
 }
 
-body {
-  font-family: $noto-sans;
-  font-size: vw(16);
-  line-height: 1.8;
-  letter-spacing: 0;
+// body {
+//   font-family: $noto-sans;
+//   font-size: vw(16);
+//   line-height: 1.8;
+//   letter-spacing: 0;
 
-  @include sp() {
-    font-size: vw_sp(13);
-  }
-}
+//   @include sp() {
+//     font-size: vw_sp(13);
+//   }
+// }
 
 img {
   width: 100%;
   height: auto;
 }
 
-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-}
+// svg {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: auto;
+// }
 // ①@extendの使い方
 // extendはすでに作られているクラスを使いまわせる
 // .button {
@@ -42,12 +42,14 @@ svg {
 //   text-decoration: none;
 // }
 h1 {
+  font-family: $poiret-one-regular;
   font-size: vw(128);
   @include sp() {
     font-size: vw_sp(96);
   }
 }
 h2 {
+  font-family: $poiret-one-regular;
   font-size: vw(64);
 }
 h3 {
