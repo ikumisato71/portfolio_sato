@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -422,25 +423,29 @@ h2 {
 h3 {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.3888888889vw;
+  padding: 10px;
 }
 
 h4 {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.1111111111vw;
+  padding: 10px;
 }
 
 h5 {
-  font-size: 1.1111111111vw;
+  font-family: "Raleway Dots", sans-serif;
+  font-size: 6.9444444444vw;
+  text-align: center;
 }
 
 h6 {
-  font-size: 6.9444444444vw;
   text-align: center;
 }
 
 p {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.25vw;
+  padding: 10px;
 }
 
 .skill-text p {
@@ -448,13 +453,25 @@ p {
   font-size: 0.9722222222vw;
 }
 
-header .list {
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 15px;
+}
+header .nav__list {
   display: flex;
+  justify-content: flex-end;
+  gap: 40px;
 }
 @media screen and (max-width: 768px) {
-  header .list {
+  header .nav__list {
     display: block;
   }
+}
+header .nav__list a {
+  position: relative;
 }
 
 .mv__container {
@@ -505,7 +522,7 @@ header .list {
   display: flex;
 }
 .skill__wrapper .skill-img {
-  width: 10%;
+  width: 30%;
 }
 
 .blog__wrapper {
@@ -518,7 +535,7 @@ header .list {
   width: 30%;
 }
 
-.contact {
+#contact {
   background-color: #e8e2d7;
   width: 100%;
   height: 365px;

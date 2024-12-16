@@ -57,21 +57,25 @@ h2 {
 h3 {
   font-family: $YuGothic;
   font-size: vw(20);
+  padding: 10px;
 }
 h4 {
   font-family: $YuGothic;
   font-size: vw(16);
+  padding: 10px;
 }
 h5 {
-  font-size: vw(16);
+  font-family: $raleway-dots-regular;
+  font-size: vw(100);
+  text-align: center;
 }
 h6 {
-  font-size: vw(100);
   text-align: center;
 }
 p {
   font-family: $YuGothic;
   font-size: vw(18);
+  padding: 10px;
 }
 .skill-text p {
   font-family: $YuGothic;
