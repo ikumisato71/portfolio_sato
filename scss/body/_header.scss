@@ -33,10 +33,10 @@ header {
     position: relative;
     padding: 10px;
     font-family: $YuGothic;
-    color: #222;
+    color: #0f0f0f;
   }
   .list__item-link a:hover {
-    color: #222;
+    color: #0f0f0f;
     text-decoration: underline;
   }
   // .list__item-link {
@@ -55,6 +55,11 @@ header {
     font-size: 150px;
     font-family: $YuGothic;
   }
+  h3 > span {
+    border-bottom: 1px solid #0f0f0f;
+    padding: 5px 30px;
+  }
+
   .T-logo img {
     width: 10%;
   }

@@ -418,11 +418,13 @@ h2 {
   font-size: 4.4444444444vw;
   text-align: center;
   margin-top: 180px;
+  letter-spacing: -7px;
 }
 
 h3 {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.3888888889vw;
+  text-align: center;
   padding: 10px;
 }
 
@@ -470,8 +472,15 @@ header .nav__list {
     display: block;
   }
 }
-header .nav__list a {
+header .list__item-link a {
   position: relative;
+  padding: 10px;
+  font-family: "yu-gothic-pr6n", sans-serif;
+  color: #0f0f0f;
+}
+header .list__item-link a:hover {
+  color: #0f0f0f;
+  text-decoration: underline;
 }
 
 .mv__container {
@@ -482,6 +491,10 @@ header .nav__list a {
 .mv__container h6 {
   font-size: 150px;
   font-family: "yu-gothic-pr6n", sans-serif;
+}
+.mv__container h3 > span {
+  border-bottom: 1px solid #0f0f0f;
+  padding: 5px 30px;
 }
 .mv__container .T-logo img {
   width: 10%;
