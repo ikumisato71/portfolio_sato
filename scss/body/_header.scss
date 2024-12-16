@@ -31,3 +31,66 @@ header {
   //   @include button(100px);
   // }
 }
+.mv__container {
+  background-color: $color-base-main;
+  width: 100%;
+  height: 750px;
+  h6 {
+    font-size: 150px;
+    font-family: $YuGothic;
+  }
+  .T-logo img {
+    width: 10%;
+  }
+}
+
+.works__list {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  .works__item {
+    width: 30%;
+  }
+}
+.about__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+
+  .about-photo img {
+    width: 50%;
+  }
+  .about-text {
+    width: 50%;
+  }
+}
+.skill__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .skill__item {
+    width: 30%;
+    display: flex;
+  }
+  .skill-img {
+    width: 10%;
+  }
+}
+.blog__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-around;
+  .blog__item {
+    width: 30%;
+  }
+}
+.contact {
+  background-color: $color-base-main;
+  width: 100%;
+  height: 365px;
+}

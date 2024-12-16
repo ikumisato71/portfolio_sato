@@ -415,18 +415,37 @@ h1 {
 h2 {
   font-family: "Poiret One", serif;
   font-size: 4.4444444444vw;
+  text-align: center;
+  margin-top: 180px;
 }
 
 h3 {
+  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.3888888889vw;
 }
 
 h4 {
+  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.1111111111vw;
 }
 
+h5 {
+  font-size: 1.1111111111vw;
+}
+
+h6 {
+  font-size: 6.9444444444vw;
+  text-align: center;
+}
+
 p {
+  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.25vw;
+}
+
+.skill-text p {
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-size: 0.9722222222vw;
 }
 
 header .list {
@@ -436,4 +455,71 @@ header .list {
   header .list {
     display: block;
   }
+}
+
+.mv__container {
+  background-color: #e8e2d7;
+  width: 100%;
+  height: 750px;
+}
+.mv__container h6 {
+  font-size: 150px;
+  font-family: "yu-gothic-pr6n", sans-serif;
+}
+.mv__container .T-logo img {
+  width: 10%;
+}
+
+.works__list {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+}
+.works__list .works__item {
+  width: 30%;
+}
+
+.about__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+}
+.about__wrapper .about-photo img {
+  width: 50%;
+}
+.about__wrapper .about-text {
+  width: 50%;
+}
+
+.skill__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.skill__wrapper .skill__item {
+  width: 30%;
+  display: flex;
+}
+.skill__wrapper .skill-img {
+  width: 10%;
+}
+
+.blog__wrapper {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.blog__wrapper .blog__item {
+  width: 30%;
+}
+
+.contact {
+  background-color: #e8e2d7;
+  width: 100%;
+  height: 365px;
 }/*# sourceMappingURL=style.css.map */

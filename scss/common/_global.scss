@@ -51,13 +51,29 @@ h1 {
 h2 {
   font-family: $poiret-one-regular;
   font-size: vw(64);
+  text-align: center;
+  margin-top: 180px;
 }
 h3 {
+  font-family: $YuGothic;
   font-size: vw(20);
 }
 h4 {
+  font-family: $YuGothic;
   font-size: vw(16);
 }
+h5 {
+  font-size: vw(16);
+}
+h6 {
+  font-size: vw(100);
+  text-align: center;
+}
 p {
+  font-family: $YuGothic;
   font-size: vw(18);
+}
+.skill-text p {
+  font-family: $YuGothic;
+  font-size: vw(14);
 }
