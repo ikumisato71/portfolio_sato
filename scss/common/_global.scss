@@ -7,16 +7,20 @@ html {
   // font-size: 1.6667vw;
 }
 
-// body {
-//   font-family: $noto-sans;
-//   font-size: vw(16);
-//   line-height: 1.8;
-//   letter-spacing: 0;
+body {
+  // font-family: $noto-sans;
+  // font-size: vw(16);
+  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo",
+    "MS Ｐゴシック", "MS PGothic", Sans-Serif;
+  color: #0f0f0f;
+  line-height: 1.8;
+  // letter-spacing: 0;
 
-//   @include sp() {
-//     font-size: vw_sp(13);
-//   }
-// }
+  @include sp() {
+    // font-size: vw_sp(13);
+  }
+}
 
 img {
   width: 100%;
@@ -56,14 +60,14 @@ h2 {
   letter-spacing: -7px;
 }
 h3 {
-  font-family: $YuGothic;
   font-size: vw(20);
-  text-align: center;
+  font-weight: 700;
   padding: 10px;
 }
 h4 {
-  font-family: $YuGothic;
+  font-family: "YuGothic";
   font-size: vw(16);
+  font-weight: 700;
   padding: 10px;
 }
 h5 {
@@ -72,14 +76,22 @@ h5 {
   text-align: center;
 }
 h6 {
+  font-family: "YuGothic";
+  font-size: 150px;
   text-align: center;
 }
+
 p {
-  font-family: $YuGothic;
   font-size: vw(18);
   padding: 10px;
 }
 .skill-text p {
-  font-family: $YuGothic;
   font-size: vw(14);
+}
+.list__item-link a {
+  position: relative;
+  padding: 10px;
+}
+.list__item-link a:hover {
+  text-decoration: underline;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
@@ -398,6 +399,11 @@ th {
   }
 }
 
+body {
+  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo", "MS Ｐゴシック", "MS PGothic", Sans-Serif;
+  color: #0f0f0f;
+  line-height: 1.8;
+}
 img {
   width: 100%;
   height: auto;
@@ -422,15 +428,15 @@ h2 {
 }
 
 h3 {
-  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.3888888889vw;
-  text-align: center;
+  font-weight: 700;
   padding: 10px;
 }
 
 h4 {
-  font-family: "yu-gothic-pr6n", sans-serif;
+  font-family: "YuGothic";
   font-size: 1.1111111111vw;
+  font-weight: 700;
   padding: 10px;
 }
 
@@ -441,18 +447,27 @@ h5 {
 }
 
 h6 {
+  font-family: "YuGothic";
+  font-size: 150px;
   text-align: center;
 }
 
 p {
-  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 1.25vw;
   padding: 10px;
 }
 
 .skill-text p {
-  font-family: "yu-gothic-pr6n", sans-serif;
   font-size: 0.9722222222vw;
+}
+
+.list__item-link a {
+  position: relative;
+  padding: 10px;
+}
+
+.list__item-link a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -488,9 +503,11 @@ header .list__item-link a:hover {
   width: 100%;
   height: 750px;
 }
-.mv__container h6 {
-  font-size: 150px;
-  font-family: "yu-gothic-pr6n", sans-serif;
+.mv__container h3 {
+  position: relative;
+  top: 30%;
+  font-weight: 300;
+  text-align: center;
 }
 .mv__container h3 > span {
   border-bottom: 1px solid #0f0f0f;
