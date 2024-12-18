@@ -57,7 +57,7 @@ h2 {
   font-size: vw(64);
   text-align: center;
   margin-top: 180px;
-  letter-spacing: -7px;
+  letter-spacing: -11px;
 }
 h3 {
   font-size: vw(20);
@@ -65,7 +65,7 @@ h3 {
   padding: 10px;
 }
 h4 {
-  font-family: "YuGothic";
+  font-family: $YuGothic;
   font-size: vw(16);
   font-weight: 700;
   padding: 5px 10px 0px 10px;
@@ -88,10 +88,10 @@ p {
 .skill-text p {
   font-size: vw(14);
 }
-.list__item-link a {
+.nav__list__item-link {
   position: relative;
   padding: 10px;
 }
-.list__item-link a:hover {
+.nav__list__item-link:hover {
   text-decoration: underline;
 }
