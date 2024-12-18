@@ -437,7 +437,7 @@ h4 {
   font-family: "YuGothic";
   font-size: 1.1111111111vw;
   font-weight: 700;
-  padding: 10px;
+  padding: 5px 10px 0px 10px;
 }
 
 h5 {
@@ -505,7 +505,7 @@ header .list__item-link a:hover {
 }
 .mv__container h3 {
   position: relative;
-  top: 30%;
+  top: 10%;
   font-weight: 300;
   text-align: center;
 }
@@ -533,11 +533,16 @@ header .list__item-link a:hover {
   display: flex;
   justify-content: center;
 }
+.about__wrapper .about-photo {
+  margin: 0 auto;
+  width: 30%;
+}
 .about__wrapper .about-photo img {
-  width: 50%;
+  width: 80%;
+  padding: 30px;
 }
 .about__wrapper .about-text {
-  width: 50%;
+  width: 70%;
 }
 
 .skill__wrapper {
@@ -553,6 +558,9 @@ header .list__item-link a:hover {
 }
 .skill__wrapper .skill-img {
   width: 30%;
+}
+.skill__wrapper .skill-text {
+  width: 70%;
 }
 
 .blog__wrapper {

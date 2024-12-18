@@ -54,7 +54,7 @@ header {
 
   h3 {
     position: relative;
-    top: 30%;
+    top: 10%;
     font-weight: 300;
     text-align: center;
   }
@@ -82,12 +82,16 @@ header {
   margin: 70px auto;
   display: flex;
   justify-content: center;
-
-  .about-photo img {
-    width: 50%;
+  .about-photo {
+    margin: 0 auto;
+    width: 30%;
+    img {
+      width: 80%;
+      padding: 30px;
+    }
   }
   .about-text {
-    width: 50%;
+    width: 70%;
   }
 }
 .skill__wrapper {
@@ -102,6 +106,9 @@ header {
   }
   .skill-img {
     width: 30%;
+  }
+  .skill-text {
+    width: 70%;
   }
 }
 .blog__wrapper {
