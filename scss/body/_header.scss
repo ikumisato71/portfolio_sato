@@ -3,12 +3,15 @@
 @use "../common/functions" as *;
 @use "../common/mixins" as *;
 @use "../common/global" as *;
+// ---------------
+// header
+// ---------------
 
 header {
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
+  width: 90%;
   padding: 15px;
 
   .nav__list {
@@ -18,27 +21,15 @@ header {
     @include sp() {
       flex-direction: column;
     }
-
-    // .list__item {
-    //   &:nth-child(2) {
-    //     color: red;
-
-    //     @include sp() {
-    //       color: blue;
-    //     }
-    //   }
-    // }
   }
-  .list__item-link a {
+  .nav__list__item-link {
     position: relative;
     padding: 10px;
-    font-family: $YuGothic;
-    color: #0f0f0f;
   }
-  .list__item-link a:hover {
-    color: #0f0f0f;
+  .nav__list__item-link:hover {
     text-decoration: underline;
   }
+
   // .list__item-link {
   //   @extend .button;
   // }
@@ -47,18 +38,21 @@ header {
   //   @include button(100px);
   // }
 }
+// ---------------
+// メインビジュアル
+// ---------------
 .mv__container {
   background-color: $color-base-main;
   width: 100%;
   height: 750px;
-  h6 {
+  .mv__title--l {
     position: relative;
     top: vw(20);
     @include sp() {
       top: vw_sp(20);
     }
   }
-  h3 {
+  .mv__title--s {
     position: relative;
     top: vw(180);
     font-weight: 300;
@@ -67,15 +61,25 @@ header {
       top: vw_sp(20);
     }
   }
-  h3 > span {
-    border-bottom: 1px solid #0f0f0f;
+  .mv__title--s > span {
+    border-bottom: 1px solid $color-base-black;
     padding: 5px 30px;
   }
 
-  .T-logo img {
+  .title_logo img {
     width: 10%;
   }
+  .scroll_down__btn {
+    position: relative;
+    left: vw(1200);
+    img {
+      width: 45%;
+    }
+  }
 }
+// ---------------
+// works
+// ---------------
 
 .works__list {
   width: 80%;
@@ -86,6 +90,10 @@ header {
     width: 30%;
   }
 }
+// ---------------
+// about
+// ---------------
+
 .about__wrapper {
   width: 80%;
   margin: 70px auto;
@@ -103,6 +111,10 @@ header {
     width: 70%;
   }
 }
+// ---------------
+// skill
+// ---------------
+
 .skill__wrapper {
   width: 80%;
   margin: 70px auto;
@@ -120,6 +132,10 @@ header {
     width: 70%;
   }
 }
+// ---------------
+// blog
+// ---------------
+
 .blog__wrapper {
   width: 80%;
   margin: 70px auto;
@@ -129,8 +145,62 @@ header {
     width: 30%;
   }
 }
+button.blog_arrow__btn {
+  position: relative;
+  left: 1000px;
+  img {
+    width: 50%;
+  }
+}
+.blog_arrow__btn:hover {
+}
+// ---------------
+// contact
+// ---------------
+
 #contact {
   background-color: $color-base-main;
   width: 100%;
   height: 365px;
+  margin-top: 180px;
+  h2 {
+    text-align: left;
+    margin: -20px 0 0 20px;
+  }
+  .scroll-top__btn {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 5%;
+    }
+  }
+}
+
+// ---------------
+// footer
+// ---------------
+footer {
+  background-color: $color-base-main;
+  width: 100%;
+  height: auto;
+  // .footer__wrapper {
+  //   display: flex;
+  //   justify-content: center;
+  //   text-align: center;
+  // }
+  .footer__copyright {
+    text-align: center;
+    margin: 50px;
+  }
+  .footer__sns {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    .sns__icon {
+      width: 8%;
+      padding: 20px;
+    }
+  }
 }

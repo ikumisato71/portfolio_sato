@@ -13,7 +13,7 @@ body {
   font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo",
     "MS Ｐゴシック", "MS PGothic", Sans-Serif;
-  color: #0f0f0f;
+  color: $color-base-black;
   line-height: 1.8;
   // letter-spacing: 0;
 
@@ -45,9 +45,22 @@ img {
 //   border: 1px solid #333;
 //   text-decoration: none;
 // }
+.mv__title--l {
+  font-family: "YuGothic";
+  font-size: vw(150);
+  text-align: center;
+  letter-spacing: 0px;
+}
+.mv__title--s {
+  font-size: vw(20);
+  font-weight: 700;
+  padding: 10px;
+}
 h1 {
   font-family: $poiret-one-regular;
   font-size: vw(128);
+  letter-spacing: -23px;
+
   @include sp() {
     font-size: vw_sp(96);
   }
@@ -64,34 +77,29 @@ h3 {
   font-weight: 700;
   padding: 10px;
 }
-h4 {
-  font-family: $YuGothic;
-  font-size: vw(16);
-  font-weight: 700;
-  padding: 5px 10px 0px 10px;
-}
-h5 {
-  font-family: $raleway-dots-regular;
-  font-size: vw(100);
-  text-align: center;
-}
-h6 {
-  font-family: "YuGothic";
-  font-size: 150px;
-  text-align: center;
-}
-
 p {
   font-size: vw(18);
   padding: 10px;
 }
+.nav__list__item-link {
+  font-size: vw(20);
+}
+.skill-text h3 {
+  font-size: vw(16);
+  font-weight: 700;
+  padding: 8px 10px 0px 10px;
+}
 .skill-text p {
   font-size: vw(14);
 }
-.nav__list__item-link {
-  position: relative;
-  padding: 10px;
+.mail p {
+  font-family: $raleway-dots-regular;
+  font-size: vw(100);
+  text-align: center;
+  padding: 0px;
 }
-.nav__list__item-link:hover {
-  text-decoration: underline;
+.blog_arrow__btn p {
+  font-family: $rajdhani-regular;
+  font-size: vw(24);
+  padding: 0;
 }
