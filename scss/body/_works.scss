@@ -1,0 +1,25 @@
+@charset "utf-8";
+@use "../common/variables" as *;
+@use "../common/functions" as *;
+@use "../common/mixins" as *;
+@use "../common/global" as *;
+
+.page__works__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  .page__works__item {
+    width: 30%;
+  }
+  .page__works__item-pc {
+    width: 30%;
+    img {
+    }
+  }
+  .page__works__item-sp {
+    width: 30%;
+    img {
+      width: 50%;
+    }
+  }
+}
