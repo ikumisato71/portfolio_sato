@@ -8,18 +8,4 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  .page__works__item {
-    width: 30%;
-  }
-  .page__works__item-pc {
-    width: 30%;
-    img {
-    }
-  }
-  .page__works__item-sp {
-    width: 30%;
-    img {
-      width: 50%;
-    }
-  }
 }

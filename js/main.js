@@ -13,18 +13,31 @@ pageTopButton.addEventListener("click", () => {
 const textAll = document.querySelectorAll(".js-text");
 const trigger = document.querySelector(".js-stagger-trigger");
 
-textAll.forEach((text, index) => {
-  console.log(text);
-  gsap.from(text, {
-    y: 30,
-    autoAlpha: 0,
-    duration: 0.4,
+textAll.forEach((textContainer, index) => {
+  // 元のテキストを1文字ずつ分割して、それぞれを `<span>` 要素にラップ
+  const characters = textContainer.textContent.split("");
+  textContainer.innerHTML = ""; // 元のテキストをクリア
+
+  characters.forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.display = "inline-block"; // アニメーションに必要なブロック要素として扱う
+    textContainer.appendChild(span);
+  });
+
+  const spans = textContainer.querySelectorAll("span");
+
+  // GSAPアニメーション
+  gsap.from(spans, {
+    y: 30, // 下から上へ移動
+    autoAlpha: 0, // 完全に透明から表示
+    duration: 0.8,
     stagger: {
-      each: 0.3, //各アニメーションの間隔を指定します。
+      each: 0.3, // 1文字ごとの間隔
     },
 
     scrollTrigger: {
-      trigger: index === 0 ? trigger : textAll[index - 1], // 最初は trigger、以降は前のtextをトリガーに
+      trigger: index === 0 ? trigger : textAll[index - 1], // 最初は trigger、以降は前の text をトリガーに
       scrub: true,
       markers: true,
       start: "top 60%",

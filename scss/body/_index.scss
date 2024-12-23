@@ -26,8 +26,22 @@ header {
     position: relative;
     padding: 10px;
   }
-  .nav__list__item-link:hover {
-    text-decoration: underline;
+  .nav__list__item-link::before {
+    background: #0f0f0f;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+  }
+  .nav__list__item-link:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
   }
 
   // .list__item-link {
@@ -44,7 +58,7 @@ header {
 .mv__container {
   background-color: $color-base-main;
   width: 100%;
-  height: 750px;
+  height: 400px;
   .mv__title--l {
     position: relative;
     top: vw(20);

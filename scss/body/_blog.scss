@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use "../common/variables" as *;
+@use "../common/functions" as *;
+@use "../common/mixins" as *;
+@use "../common/global" as *;
+
+.section__title {
+  display: flex;
+  flex-direction: column;
+}
+span.blog__title-span {
+  display: flex;
+  flex-direction: column;
+}
