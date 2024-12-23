@@ -3,6 +3,64 @@
 @use "../common/functions" as *;
 @use "../common/mixins" as *;
 @use "../common/global" as *;
+
+// ---------------
+// header
+// ---------------
+.loading_logo {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+
+  img {
+    width: vw(200);
+    .animated.hinge {
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      .zoomIn {
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+      }
+    }
+
+    @-webkit-keyframes zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.4, 0.4, 0.4);
+        transform: scale3d(0.4, 0.4, 0.4);
+      }
+      ß 50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.4, 0.4, 0.4);
+        transform: scale3d(0.4, 0.4, 0.4);
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 // ---------------
 // header
 // ---------------
@@ -59,16 +117,37 @@ header {
   background-color: $color-base-main;
   width: 100%;
   height: 750px;
-  .mv__title--l {
-    position: relative;
-    text-align: center;
-    top: vw(20);
-    img {
-      width: 55%;
+  .logo {
+    width: 55%;
+    .logo path {
+      fill: black;
+      stroke: black;
+      stroke-width: 0.3px;
+      animation: svg-anime 3s ease-in;
+    }
+
+    @keyframes svg-anime {
+      0% {
+        fill: transparent;
+        stroke-dasharray: 1000px;
+        stroke-dashoffset: 1000px;
+      }
+      90% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        fill: black;
+      }
     }
     @include sp() {
       top: vw_sp(20);
     }
+  }
+  .mv__title--l {
+    position: relative;
+    text-align: center;
+    top: vw(20);
   }
   .mv__title--s {
     position: relative;
