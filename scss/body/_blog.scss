@@ -4,10 +4,10 @@
 @use "../common/mixins" as *;
 @use "../common/global" as *;
 
-.section__title {
-  display: flex;
-  flex-direction: column;
-}
+// .section__title {
+//   display: flex;
+//   flex-direction: column;
+// }
 span.blog__title-span {
   display: flex;
   flex-direction: column;

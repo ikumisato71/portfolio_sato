@@ -30,7 +30,7 @@ header {
     background: #0f0f0f;
     content: "";
     width: 100%;
-    height: 2px;
+    height: 1px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -58,19 +58,27 @@ header {
 .mv__container {
   background-color: $color-base-main;
   width: 100%;
-  height: 400px;
+  height: 750px;
   .mv__title--l {
     position: relative;
+    text-align: center;
     top: vw(20);
+    img {
+      width: 55%;
+    }
     @include sp() {
       top: vw_sp(20);
     }
   }
   .mv__title--s {
     position: relative;
-    top: vw(180);
+    top: vw(250);
     font-weight: 300;
     text-align: center;
+    padding: 10px;
+    img {
+      width: 10%;
+    }
     @include sp() {
       top: vw_sp(20);
     }
