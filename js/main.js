@@ -38,7 +38,7 @@ textAll.forEach((text, index) => {
   gsap.from(text, {
     y: 30,
     autoAlpha: 0,
-    duration: 0.4,
+    duration: 0.8,
     stagger: {
       each: 0.3, //各アニメーションの間隔を指定します。
     },
@@ -78,4 +78,42 @@ linkElem.forEach((link) => {
     hovFlag = false;
     stalker.classList.remove("is_active");
   });
+});
+// ーーーーーーー
+// swiper
+// ーーーーーーー
+
+const slideLength = document.querySelectorAll(".card05 .swiper-slide").length;
+
+const initSwiper = () => {
+  const mySwiper = new Swiper(".card05 .swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    loop: true,
+    loopedSlides: slideLength,
+    speed: 8000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    freeMode: {
+      enabled: true,
+      momentum: false,
+    },
+    grabCursor: true,
+    breakpoints: {
+      1025: {
+        spaceBetween: 32,
+      },
+    },
+    on: {
+      touchEnd: (swiper) => {
+        swiper.slideTo(swiper.activeIndex + 1);
+      },
+    },
+  });
+};
+
+window.addEventListener("load", function () {
+  initSwiper();
 });
