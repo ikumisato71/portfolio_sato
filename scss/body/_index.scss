@@ -40,7 +40,7 @@
 // ---------------
 // マウスストーカー
 // ---------------
-#mouse-stalker {
+.mouse-stalker {
   pointer-events: none;
   position: fixed;
   top: -10px;
@@ -69,8 +69,8 @@
     position: absolute;
     top: -25px;
     left: -55px;
-    width: 80px;
-    height: 75px;
+    width: 30px;
+    height: 25px;
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-image: radial-gradient(
       ellipse at center,
@@ -105,8 +105,8 @@
     position: absolute;
     top: -25px;
     left: -55px;
-    width: 80px;
-    height: 75px;
+    width: 30px;
+    height: 25px;
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
     filter: url(#water);
@@ -171,7 +171,7 @@ header {
   height: 750px;
   .logo {
     width: 55%;
-    .logo path {
+    path {
       fill: black;
       stroke: black;
       stroke-width: 0.3px;

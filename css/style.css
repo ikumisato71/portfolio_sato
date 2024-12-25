@@ -473,7 +473,7 @@ p {
   animation: graphAnim04 3s forwards;
 }
 
-#mouse-stalker {
+.mouse-stalker {
   pointer-events: none;
   position: fixed;
   top: -10px;
@@ -488,20 +488,20 @@ p {
   /* 水滴の光のエフェクト */
   /* 水滴のテクスチャ */
 }
-#mouse-stalker.is_active {
+.mouse-stalker.is_active {
   top: -40px;
   left: -40px;
   width: 80px;
   height: 80px;
   transition: 0.2s;
 }
-#mouse-stalker::after {
+.mouse-stalker::after {
   content: "";
   position: absolute;
   top: -25px;
   left: -55px;
-  width: 80px;
-  height: 75px;
+  width: 30px;
+  height: 25px;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-image: radial-gradient(ellipse at center, white 40%, transparent 60%);
   background-size: 10px 6px;
@@ -510,13 +510,13 @@ p {
   /* 光と影のボックスシャドウ */
   box-shadow: inset 14px 0px 5px -10px rgba(0, 0, 0, 0.2), inset 13px 0px 2px -10px rgba(0, 0, 0, 0.2), inset 0px -3px 5px 0px rgba(250, 241, 220, 0.5), inset 0px -20px 10px 1px rgba(255, 255, 255, 0.3), inset -20px 10px 5px -20px rgba(0, 0, 0, 0.3), inset -20px 15px 10px -20px rgba(0, 0, 0, 0.2), inset 0px 20px 30px -5px rgba(0, 0, 0, 0.3), 0px 2px 1px -1px rgba(245, 227, 183, 0.8), -16px 13px 5px -20px rgb(0, 0, 0), 17px 13px 5px -20px rgb(0, 0, 0), 15px 19px 5px -20px rgb(0, 0, 0), -2px 34px 1px -30px rgba(0, 0, 0, 0.4), -2px 35px 3px -30px rgba(255, 255, 255, 0.3), -1px 16px 3px -5px rgba(0, 0, 0, 0.5), -1px 21px 3px -5px rgba(0, 0, 0, 0.4), 1px -1px 5px 0px rgba(50, 50, 50, 0.5);
 }
-#mouse-stalker::before {
+.mouse-stalker::before {
   content: "";
   position: absolute;
   top: -25px;
   left: -55px;
-  width: 80px;
-  height: 75px;
+  width: 30px;
+  height: 25px;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
   filter: url(#water);
@@ -569,7 +569,7 @@ header .nav__list__item-link:hover::before {
 .mv__container .logo {
   width: 55%;
 }
-.mv__container .logo .logo path {
+.mv__container .logo path {
   fill: black;
   stroke: black;
   stroke-width: 0.3px;

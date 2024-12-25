@@ -52,7 +52,7 @@ triggers.forEach((trigger) => {
 // ーーーーーーー
 // マウスストーカー
 // ーーーーーーー
-const stalker = document.getElementById("mouse-stalker");
+const stalker = document.querySelector(".mouse-stalker");
 let hovFlag = false;
 
 // マウスの動きに追従
