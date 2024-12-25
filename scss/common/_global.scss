@@ -55,20 +55,20 @@ img {
   // font-weight: 700;
 }
 h1 {
-  font-family: $poiret-one-regular;
-  font-size: vw(128);
-  letter-spacing: -23px;
+  // font-family: $poiret-one-regular;
+  // font-size: vw(128);
+  // letter-spacing: (-0.1);
 
-  @include sp() {
-    font-size: vw_sp(96);
-  }
+  // @include sp() {
+  //   font-size: vw_sp(96);
+  // }
 }
 h2 {
   font-family: $poiret-one-regular;
   font-size: vw(64);
   text-align: center;
   margin-top: 180px;
-  letter-spacing: -11px;
+  letter-spacing: calc(-48 / 64 * 1vw); /* -11px ÷ 64px をvwで計算 */
   // visibility: hidden;
 }
 h3 {

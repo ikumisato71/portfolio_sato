@@ -409,23 +409,12 @@ img {
   height: auto;
 }
 
-h1 {
-  font-family: "Poiret One", serif;
-  font-size: 8.8888888889vw;
-  letter-spacing: -23px;
-}
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 26.6666666667vw;
-  }
-}
-
 h2 {
   font-family: "Poiret One", serif;
   font-size: 4.4444444444vw;
   text-align: center;
   margin-top: 180px;
-  letter-spacing: -11px;
+  letter-spacing: -0.75vw; /* -11px ÷ 64px をvwで計算 */
 }
 
 h3 {

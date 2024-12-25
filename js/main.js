@@ -30,22 +30,18 @@ pageTopButton.addEventListener("click", () => {
 // ーーーーーーー
 // タイトルの文字の動き
 // ーーーーーーー
-const textAll = document.querySelectorAll(".js-text");
-const trigger = document.querySelector(".js-stagger-trigger");
+const triggers = document.querySelectorAll(".js-stagger-trigger"); // 各sectionに設定して下さい。
+triggers.forEach((trigger) => {
+  const textElements = trigger.querySelectorAll(".js-text"); // 各sectionの中のjs-textクラスを持つ要素を取得
 
-textAll.forEach((text, index) => {
-  console.log(text);
-  gsap.from(text, {
+  gsap.from(textElements, {
     y: 30,
     autoAlpha: 0,
-    duration: 0.8,
-    stagger: {
-      each: 0.3, //各アニメーションの間隔を指定します。
-    },
-
+    duration: 1,
+    stagger: 0.3, // 各文字間の間隔
     scrollTrigger: {
-      trigger: index === 0 ? trigger : textAll[index - 1], // 最初は trigger、以降は前のtextをトリガーに
-      scrub: true,
+      trigger: trigger,
+      scrub: true, // スクロールに合わせてアニメーションの進行を変化させる
       markers: true,
       start: "top 60%",
       end: "top 30%",
