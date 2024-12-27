@@ -409,11 +409,14 @@ img {
   height: auto;
 }
 
+.section__padding {
+  padding: 180px 170px 0 170px;
+}
+
 h2 {
   font-family: "Poiret One", serif;
   font-size: 4.4444444444vw;
   text-align: center;
-  margin-top: 180px;
   letter-spacing: -0.75vw; /* -11px ÷ 64px をvwで計算 */
 }
 
@@ -455,24 +458,45 @@ p {
   padding: 0;
 }
 
-.loading_logo {
+.loader {
   position: fixed;
+  position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
   z-index: 999;
   inset: 0;
   display: grid;
   place-items: center;
+  transition: opacity 0.8s ease, visibility 0s 0.8s; /* visibilityの遅延を追加 */
 }
-.loading_logo img {
-  width: 13.8888888889vw;
-}
-.loading_logo .ellipse {
-  background-color: #222;
-  animation: graphAnim04 3s forwards;
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden; /* 完全に非表示に */
 }
 
+.ellipse {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  animation: graphAnim04 2s ease 0.7s forwards; /* delayをimgのフェードアウト時間分追加 */
+}
+
+@keyframes graphAnim04 {
+  0% {
+    -webkit-clip-path: ellipse(100% 100% at 100% 100%);
+            clip-path: ellipse(100% 100% at 100% 100%);
+  }
+  50% {
+    -webkit-clip-path: ellipse(100% 100% at 26% 34%);
+            clip-path: ellipse(100% 100% at 26% 34%);
+  }
+  100% {
+    -webkit-clip-path: ellipse(0% 0% at 0% 0%);
+            clip-path: ellipse(0% 0% at 0% 0%);
+  }
+}
 .mouse-stalker {
   pointer-events: none;
   position: fixed;
@@ -540,25 +564,28 @@ header .nav__list {
   }
 }
 header .nav__list__item-link {
-  position: relative;
+  position: relative; /* 必須: ::beforeの相対基準 */
   padding: 10px;
 }
 header .nav__list__item-link::before {
-  background: #0f0f0f;
   content: "";
+  background: #0f0f0f;
   width: 100%;
   height: 1px;
   position: absolute;
   left: 0;
   bottom: 0;
-  margin: auto;
   transform-origin: right top;
-  transform: scale(0, 1);
-  transition: transform 0.3s;
+  transform: scale(0, 1); /* 修正: スペースで区切る */
+  transition: transform 0.3s ease;
 }
 header .nav__list__item-link:hover::before {
   transform-origin: left top;
-  transform: scale(1, 1);
+  transform: scale(1, 1); /* 修正: スペースで区切る */
+}
+
+#mv {
+  position: relative;
 }
 
 .mv__container {
@@ -566,66 +593,89 @@ header .nav__list__item-link:hover::before {
   width: 100%;
   height: 750px;
 }
-.mv__container .logo {
-  width: 55%;
-}
-.mv__container .logo path {
-  fill: black;
-  stroke: black;
-  stroke-width: 0.3px;
-  animation: svg-anime 3s ease-in;
-}
-@keyframes svg-anime {
-  0% {
-    fill: transparent;
-    stroke-dasharray: 1000px;
-    stroke-dashoffset: 1000px;
-  }
-  90% {
-    fill: transparent;
-    stroke-dashoffset: 0;
-  }
-  100% {
-    fill: black;
-  }
-}
 @media screen and (max-width: 768px) {
-  .mv__container .logo {
+  .mv__container {
     top: 5.5555555556vw;
   }
+}
+.mv__container .title_logo img {
+  width: 10%;
 }
 .mv__container .mv__title--l {
   position: relative;
   text-align: center;
   top: 1.3888888889vw;
 }
+.mv__container .mv__title--l .mv__logo--pf {
+  width: 55%;
+}
+.mv__container .mv__title--l .mv__logo--pf path {
+  fill: black;
+  stroke: black;
+  stroke-width: 0.5px;
+  animation: svg-anime 3s ease-in;
+}
+@keyframes svg-anime {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 800px;
+  }
+  80% {
+    fill: transparent;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 1000px;
+  }
+  100% {
+    fill: black;
+  }
+}
 .mv__container .mv__title--s {
   position: relative;
   top: 13.8888888889vw;
-  font-weight: 300;
   text-align: center;
   padding: 10px;
-}
-.mv__container .mv__title--s img {
-  width: 10%;
 }
 @media screen and (max-width: 768px) {
   .mv__container .mv__title--s {
     top: 5.5555555556vw;
   }
 }
+.mv__container .mv__logo--web {
+  width: 10%;
+  margin: 0.6944444444vw;
+}
+.mv__container .mv__logo--web path {
+  fill: black;
+  stroke: black;
+  stroke-width: 0.5px;
+  animation: svg-anime 3s ease-in;
+}
+@keyframes svg-anime {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 800px;
+  }
+  80% {
+    fill: transparent;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 1000px;
+  }
+  100% {
+    fill: black;
+  }
+}
 .mv__container .mv__title--s > span {
   border-bottom: 1px solid #0f0f0f;
   padding: 5px 30px;
 }
-.mv__container .title_logo img {
-  width: 10%;
-}
-.mv__container .scroll_down__btn {
+
+.scrollDown__btn {
   position: relative;
   left: 83.3333333333vw;
 }
-.mv__container .scroll_down__btn img {
+.scrollDown__btn img {
   width: 45%;
   animation: fuwafuwa 2s infinite;
 }
@@ -646,7 +696,7 @@ header .nav__list__item-link:hover::before {
   box-sizing: content-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10rem;
+  padding: 0 11.25rem;
 }
 
 .l-section {
@@ -859,7 +909,7 @@ header .nav__list__item-link:hover::before {
   width: 80%;
   padding: 30px;
 }
-.about__wrapper .about-text {
+.about__wrapper .about__text {
   width: 70%;
 }
 
@@ -874,10 +924,10 @@ header .nav__list__item-link:hover::before {
   width: 30%;
   display: flex;
 }
-.skill__wrapper .skill-img {
+.skill__wrapper .skill__img {
   width: 30%;
 }
-.skill__wrapper .skill-text {
+.skill__wrapper .skill__text {
   width: 70%;
 }
 

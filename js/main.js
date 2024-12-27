@@ -1,7 +1,7 @@
 // ーーーーーーー
 // ローディングアニメーション
 // ーーーーーーー
-const loader = document.querySelector(".loader");
+const loader = document.querySelectorAll(".js-loader");
 
 // ページ読み込み後、2秒後にローダーの非表示処理を開始
 setTimeout(() => {
@@ -14,6 +14,18 @@ setTimeout(() => {
     loader.style.display = "none";
   }, 800);
 }, 1500);
+
+// // ポートフォリオロゴのクラス名で要素を取得
+// const titleLogoPf = document.querySelector(".mv__title--l"); // クラス名には「.」が必要
+
+// // 1200ミリ秒（1.2秒）後に処理を実行
+// setTimeout(() => {
+//   // 要素に変更を加える例（例えば、クラスを追加してアニメーションをトリガーする）
+//   titleLogoPf.classList.add("active");
+// }, 1200);
+// ーーーーーーー
+// トップへ戻る
+// ーーーーーーー
 
 // ページトップボタンの要素を取得
 const pageTopButton = document.querySelector(".js-page-top");

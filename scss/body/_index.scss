@@ -7,36 +7,59 @@
 // ---------------
 // ローディングアニメーション
 // ---------------
-.loading_logo {
+.loader {
   position: fixed;
+  position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  // background-color: #fff;
   z-index: 999;
   inset: 0;
   display: grid;
   place-items: center;
-
-  img {
-    width: vw(200);
+  transition: opacity 0.8s ease, visibility 0s 0.8s; /* visibilityの遅延を追加 */
+  &.hidden {
+    opacity: 0;
+    visibility: hidden; /* 完全に非表示に */
   }
-  .ellipse {
-    background-color: #222;
-    animation: graphAnim04 3s forwards;
-  }
-  // @keyframes graphAnim04 {
-  //   0% {
-  //     clip-path: clip-path:ellipse(100% 100% at 100% 100%);
-  //   }
-  //   50%{
-  //     clip-path: clip-path:ellipse(100% 100% at 26% 34%);
-  //   }
-
-  //   100% {
-  //     clip-path: ellipse(0% 0% at 0% 0%);
-  //   }
-  // }
 }
+
+// .loading_logo img {
+//   position: relative;
+//   width: 200px;
+//   animation: fadeOutLogo 0.2s ease 0.5s forwards; /* フェードアウトアニメーション */
+// }
+
+// @keyframes fadeOutLogo {
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+.ellipse {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  animation: graphAnim04 2s ease 0.7s forwards; /* delayをimgのフェードアウト時間分追加 */
+}
+
+@keyframes graphAnim04 {
+  0% {
+    clip-path: ellipse(100% 100% at 100% 100%);
+  }
+  50% {
+    clip-path: ellipse(100% 100% at 26% 34%);
+  }
+  100% {
+    clip-path: ellipse(0% 0% at 0% 0%);
+  }
+}
+
 // ---------------
 // マウスストーカー
 // ---------------
@@ -82,20 +105,29 @@
     background-repeat: no-repeat;
 
     /* 光と影のボックスシャドウ */
-    box-shadow: inset 14px 0px 5px -10px rgba(0, 0, 0, 0.2),
+    box-shadow:        // left shadow
+      inset 14px 0px 5px -10px rgba(0, 0, 0, 0.2),
       inset 13px 0px 2px -10px rgba(0, 0, 0, 0.2),
+      // main bottom shadow
       inset 0px -3px 5px 0px rgba(250, 241, 220, 0.5),
       inset 0px -20px 10px 1px rgba(255, 255, 255, 0.3),
+      // right shadow
       inset -20px 10px 5px -20px rgba(0, 0, 0, 0.3),
       inset -20px 15px 10px -20px rgba(0, 0, 0, 0.2),
+      // main top shadow
       inset 0px 20px 30px -5px rgba(0, 0, 0, 0.3),
+      // blur bottom border
       0px 2px 1px -1px rgba(245, 227, 183, 0.8),
+      // tiny right/left shadows
       -16px 13px 5px -20px rgba(0, 0, 0, 1),
       17px 13px 5px -20px rgba(0, 0, 0, 1), 15px 19px 5px -20px rgba(0, 0, 0, 1),
+      // tiny reflection
       -2px 34px 1px -30px rgba(0, 0, 0, 0.4),
       -2px 35px 3px -30px rgba(255, 255, 255, 0.3),
+      // main shadows
       -1px 16px 3px -5px rgba(0, 0, 0, 0.5),
       -1px 21px 3px -5px rgba(0, 0, 0, 0.4),
+      // blur top border
       1px -1px 5px 0px rgba(50, 50, 50, 0.5);
   }
 
@@ -116,7 +148,6 @@
 // ---------------
 // header
 // ---------------
-
 header {
   position: fixed;
   top: 0;
@@ -128,117 +159,153 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 40px;
+
     @include sp() {
       flex-direction: column;
     }
   }
+
   .nav__list__item-link {
-    position: relative;
+    position: relative; /* 必須: ::beforeの相対基準 */
     padding: 10px;
-  }
-  .nav__list__item-link::before {
-    background: #0f0f0f;
-    content: "";
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: transform 0.3s;
-  }
-  .nav__list__item-link:hover::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
-  }
 
-  // .list__item-link {
-  //   @extend .button;
-  // }
+    &::before {
+      content: "";
+      background: #0f0f0f;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform-origin: right top;
+      transform: scale(0, 1); /* 修正: スペースで区切る */
+      transition: transform 0.3s ease;
+    }
 
-  // .list__item-link {
-  //   @include button(100px);
-  // }
+    &:hover::before {
+      transform-origin: left top;
+      transform: scale(1, 1); /* 修正: スペースで区切る */
+    }
+  }
 }
+
+// .list__item-link {
+//   @extend .button;
+// }
+
+// .list__item-link {
+//   @include button(100px);
+// }
+
 // ---------------
 // メインビジュアル
 // ---------------
+#mv {
+  position: relative;
+}
 .mv__container {
   background-color: $color-base-main;
   width: 100%;
-  height: 750px;
-  .logo {
-    width: 55%;
+  height: 100vh;
+  @include sp() {
+    top: vw_sp(20);
+  }
+  // 左四角のロゴ
+  .title_logo img {
+    width: 10%;
+  }
+  // ポートフォリオのロゴ
+  .mv__title--l {
+    position: relative;
+    text-align: center;
+    top: vw(50);
+    .mv__logo--pf {
+      width: 55%;
+      path {
+        fill: black;
+        stroke: black;
+        stroke-width: 0.5px;
+        animation: svg-anime 3s ease-in;
+      }
+
+      @keyframes svg-anime {
+        0% {
+          fill: transparent;
+          stroke-dasharray: 200px;
+          stroke-dashoffset: 800px;
+        }
+        80% {
+          fill: transparent;
+          stroke-dasharray: 200px;
+          stroke-dashoffset: 1000px;
+        }
+        100% {
+          fill: black;
+        }
+      }
+    }
+  }
+  // ウエブデザイナーのロゴ
+  .mv__title--s {
+    position: relative;
+    top: vw(300);
+    // font-weight: 300;
+    text-align: center;
+    padding: 10px;
+    @include sp() {
+      top: vw_sp(20);
+    }
+  }
+
+  .mv__logo--web {
+    width: 10%;
+    margin: vw(10);
     path {
       fill: black;
       stroke: black;
-      stroke-width: 0.3px;
+      stroke-width: 0.5px;
       animation: svg-anime 3s ease-in;
     }
 
     @keyframes svg-anime {
       0% {
         fill: transparent;
-        stroke-dasharray: 1000px;
-        stroke-dashoffset: 1000px;
+        stroke-dasharray: 200px;
+        stroke-dashoffset: 800px;
       }
-      90% {
+      80% {
         fill: transparent;
-        stroke-dashoffset: 0;
+        stroke-dasharray: 200px;
+        stroke-dashoffset: 1000px;
       }
       100% {
         fill: black;
       }
     }
-    @include sp() {
-      top: vw_sp(20);
-    }
   }
-  .mv__title--l {
-    position: relative;
-    text-align: center;
-    top: vw(20);
-  }
-  .mv__title--s {
-    position: relative;
-    top: vw(200);
-    font-weight: 300;
-    text-align: center;
-    padding: 10px;
-    img {
-      width: 10%;
-    }
-    @include sp() {
-      top: vw_sp(20);
-    }
-  }
+  // ウエブデザイナーの下線
   .mv__title--s > span {
     border-bottom: 1px solid $color-base-black;
     padding: 5px 30px;
   }
+}
 
-  .title_logo img {
-    width: 10%;
+.scrollDown__btn {
+  position: relative;
+  left: vw(1200);
+  img {
+    width: 45%;
+    animation: fuwafuwa 2s infinite;
   }
-  .scroll_down__btn {
-    position: relative;
-    left: vw(1200);
-    img {
-      width: 45%;
-      animation: fuwafuwa 2s infinite;
+  @keyframes fuwafuwa {
+    0% {
+      transform: translateY(0px);
     }
-    @keyframes fuwafuwa {
-      0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-30px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
     }
   }
 }
@@ -253,7 +320,7 @@ header {
   box-sizing: content-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10rem;
+  padding: 0 11.25rem;
 }
 
 .l-section {
@@ -471,7 +538,7 @@ header {
       padding: 30px;
     }
   }
-  .about-text {
+  .about__text {
     width: 70%;
   }
 }
@@ -489,10 +556,10 @@ header {
     width: 30%;
     display: flex;
   }
-  .skill-img {
+  .skill__img {
     width: 30%;
   }
-  .skill-text {
+  .skill__text {
     width: 70%;
   }
 }
@@ -553,11 +620,6 @@ footer {
   background-color: $color-base-main;
   width: 100%;
   height: auto;
-  // .footer__wrapper {
-  //   display: flex;
-  //   justify-content: center;
-  //   text-align: center;
-  // }
   .footer__copyright {
     text-align: center;
     margin: 50px;
