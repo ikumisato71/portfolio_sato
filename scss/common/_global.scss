@@ -60,6 +60,10 @@ h2 {
   letter-spacing: calc(-48 / 64 * 1vw); /* -11px ÷ 64px をvwで計算 */
   // visibility: hidden;
 }
+.page__works--h2 {
+  font-family: $poiret-one-regular;
+  font-size: vw(128);
+}
 h3 {
   font-size: vw(20);
   font-weight: 700;
