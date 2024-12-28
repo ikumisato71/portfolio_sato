@@ -11,9 +11,9 @@
   position: fixed;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: vw(750);
   // background-color: #fff;
-  z-index: 999;
+  // z-index: 999;
   inset: 0;
   display: grid;
   place-items: center;
@@ -43,7 +43,11 @@
   position: absolute;
   z-index: 999;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  height: vw(750);
+  inset: 0;
+  display: grid;
+  place-items: center;
   background-color: #222;
   animation: graphAnim04 2s ease 0.7s forwards; /* delayをimgのフェードアウト時間分追加 */
 }
@@ -53,7 +57,7 @@
     clip-path: ellipse(100% 100% at 100% 100%);
   }
   50% {
-    clip-path: ellipse(100% 100% at 26% 34%);
+    clip-path: ellipse(100% 100% at 0% 0%);
   }
   100% {
     clip-path: ellipse(0% 0% at 0% 0%);
@@ -206,7 +210,7 @@ header {
 .mv__container {
   background-color: $color-base-main;
   width: 100%;
-  height: 100vh;
+  height: vw(750);
   @include sp() {
     top: vw_sp(20);
   }
@@ -216,14 +220,13 @@ header {
   }
   // ポートフォリオのロゴ
   .mv__title--l {
-    position: relative;
+    margin: vw(90) auto vw(0) auto;
     text-align: center;
-    top: vw(50);
     .mv__logo--pf {
       width: 55%;
       path {
-        fill: black;
-        stroke: black;
+        fill: $color-base-black;
+        stroke: $color-base-black;
         stroke-width: 0.5px;
         animation: svg-anime 3s ease-in;
       }
@@ -240,18 +243,15 @@ header {
           stroke-dashoffset: 1000px;
         }
         100% {
-          fill: black;
+          fill: $color-base-black;
         }
       }
     }
   }
   // ウエブデザイナーのロゴ
   .mv__title--s {
-    position: relative;
-    top: vw(300);
-    // font-weight: 300;
+    margin: vw(200) auto vw(0) auto;
     text-align: center;
-    padding: 10px;
     @include sp() {
       top: vw_sp(20);
     }
@@ -261,8 +261,8 @@ header {
     width: 10%;
     margin: vw(10);
     path {
-      fill: black;
-      stroke: black;
+      fill: $color-base-black;
+      stroke: $color-base-black;
       stroke-width: 0.5px;
       animation: svg-anime 3s ease-in;
     }
@@ -279,7 +279,7 @@ header {
         stroke-dashoffset: 1000px;
       }
       100% {
-        fill: black;
+        fill: $color-base-black;
       }
     }
   }
@@ -313,7 +313,7 @@ header {
 // ---------------
 // works
 // ---------------
-// swiper
+// swiperここから
 .l-inner {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -511,10 +511,9 @@ header {
     display: none !important;
   }
 }
+// swiperここまで
 
 .works__list {
-  width: 80%;
-  margin: 70px auto;
   display: flex;
   justify-content: center;
   .works__item {
@@ -526,15 +525,13 @@ header {
 // ---------------
 
 .about__wrapper {
-  width: 80%;
-  margin: 70px auto 0 auto;
+  margin: vw(70) auto vw(0) auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
   .about-photo {
-    margin: 0 auto;
     width: 30%;
     img {
-      width: 80%;
+      width: 70%;
     }
   }
   .about__text {
@@ -546,17 +543,18 @@ header {
 // ---------------
 
 .skill__wrapper {
-  width: 80%;
-  margin: 70px auto 0 auto;
+  margin: vw(70) auto vw(0) auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  gap: vw(30);
+  justify-content: space-around;
   .skill__item {
     width: 30%;
     display: flex;
   }
   .skill__img {
     width: 30%;
+    margin-top: vw(20);
   }
   .skill__text {
     width: 70%;
@@ -567,23 +565,21 @@ header {
 // ---------------
 
 .blog__wrapper {
-  width: 80%;
-  margin: 70px auto 0 auto;
+  margin: vw(70) auto vw(0) auto;
   display: flex;
   justify-content: space-around;
-  .blog__item {
-    width: 30%;
-  }
+  gap: vw(40);
 }
 button.blog_arrow__btn {
   position: relative;
-  left: 1000px;
+  left: vw(800);
   img {
     width: 50%;
   }
 }
 .blog_arrow__btn:hover {
 }
+
 // ---------------
 // contact
 // ---------------
@@ -591,20 +587,22 @@ button.blog_arrow__btn {
 #contact {
   background-color: $color-base-main;
   width: 100%;
-  height: 365px;
-  margin-top: 180px;
+  height: auto;
+  margin-top: vw(180);
   h2 {
     text-align: left;
-    margin: -20px 0 0 20px;
+    margin: vw(-20) vw(0) vw(0) vw(20);
   }
   .scroll-top__btn {
     position: relative;
-    top: -30px;
+    top: vw(30);
     width: 100%;
     text-align: center;
     transition: transform 0.4s ease;
     img {
-      width: 5%;
+      width: 8%;
+      position: relative;
+      top: vw(-80);
     }
   }
   .scroll-top__btn:hover {
@@ -621,15 +619,15 @@ footer {
   height: auto;
   .footer__copyright {
     text-align: center;
-    margin: 50px;
+    padding: vw(50);
   }
   .footer__sns {
     width: 80%;
-    margin: 0 auto;
+    margin: vw(70) auto vw(0) auto;
     text-align: center;
     .sns__icon {
       width: 8%;
-      padding: 20px;
+      padding: vw(20);
     }
   }
 }

@@ -4,6 +4,8 @@
 
 html {
   // pc,sp共通
+  margin: 0 auto;
+  width: 100%;
 }
 
 body {
@@ -24,7 +26,7 @@ img {
 }
 
 .section__padding {
-  padding: vw(180 170 0 170);
+  padding: vw(180) vw(170) 0 vw(170);
 }
 // svg {
 //   display: flex;
@@ -70,6 +72,7 @@ h3 {
 }
 p {
   font-size: vw(18);
+  margin-top: vw(20);
 }
 .nav__list__item-link {
   font-size: vw(20);
@@ -77,19 +80,26 @@ p {
 .skill__text--h3 {
   font-size: vw(16);
   font-weight: 700;
-  padding: 8px 10px 0px 10px;
+  margin-top: vw(10);
+  margin-left: vw(10);
 }
 .skill__text--p {
   font-size: vw(14);
+  margin-top: vw(10);
+  margin-left: vw(10);
 }
 
 .blog_arrow__btn--p {
   font-family: $rajdhani-regular;
   font-size: vw(24);
+  margin-top: vw(30);
 }
 .mailAddress {
   font-family: $raleway-dots-regular;
-  font-size: vw(100);
+  font-size: vw(128);
   text-align: center;
-  padding: 0px;
+}
+.blog__number {
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(64);
 }
