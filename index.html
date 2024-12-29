@@ -44,29 +44,34 @@
       <div class="ellipse js-loader"></div>
     </div>
     <header>
-      <nav>
+      <div class="header__wrapper">
+      <div class="title_logo">
+        <a href="index.html">
+          <img src="img/title_logo.png" alt="タイトルロゴhomeへ戻る" />
+        </a>
+        </div>
+      <nav class="nav__container">
         <ul class="nav__list">
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">About</a>
+            <a href="index.html#about" class="nav__list__item-link">About</a>
           </li>
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">Works</a>
+            <a href="index.html#works" class="nav__list__item-link">Works</a>
           </li>
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">Blog</a>
+            <a href="index.html#blog" class="nav__list__item-link">Blog</a>
           </li>
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">contact</a>
+            <a href="index.html#contact" class="nav__list__item-link">contact</a>
           </li>
         </ul>
       </nav>
+    </div>
+    </div>
     </header>
     <main>
       <section id="mv">
         <div class="mv__container">
-          <div class="title_logo">
-            <img src="img/title_logo.png" alt="タイトルロゴ" />
-          </div>
           <h1 class="mv__title--l">
             <svg
               class="mv__logo--pf"
@@ -169,7 +174,7 @@
           </button>
         </div>
       </section>
-      <section id="works" class="section__padding js-stagger-trigger">
+      <section id="works" class="section__padding--work js-stagger-trigger">
         <h2 class="section__title">
           <span class="js-text">W</span>
           <span class="js-text">o</span>
@@ -187,9 +192,9 @@
                       <img src="img/work1.jpg" alt="" />
                     </div>
                     <div class="slide-content">
-                      <h3 class="slide-date">コーポレートサイト</h3>
-                      <p class="slide-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <h3 class="slide-title">コーポレートサイト</h3>
+                      <p class="slide-text">
+                        アパレルOEM企業様のコーポレートサイトになります。　ニットを...
                       </p>
                     </div>
                   </article>
@@ -200,9 +205,9 @@
                       <img src="img/work2.jpg" alt="" />
                     </div>
                     <div class="slide-content">
-                      <h3 class="slide-date">コーポレートサイト</h3>
-                      <p class="slide-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <h3 class="slide-title">エコショップのHP （ダミー）</h3>
+                      <p class="slide-text">
+                        サスティナブルな商品を扱っているエコショップ様のホームページに...
                       </p>
                     </div>
                   </article>
@@ -213,9 +218,9 @@
                       <img src="img/work3.jpg" alt="" />
                     </div>
                     <div class="slide-content">
-                      <h3 class="slide-date">コーポレートサイト</h3>
-                      <p class="slide-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <h3 class="slide-title">ポートフォリオ</h3>
+                      <p class="slide-text">
+                        最初に作ったportfolioです。 MVに波紋の効果をいれてます。
                       </p>
                     </div>
                   </article>
@@ -226,9 +231,9 @@
                       <img src="img/works4.jpg" alt="" />
                     </div>
                     <div class="slide-content">
-                      <h3 class="slide-date">コーポレートサイト</h3>
-                      <p class="slide-title">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <h3 class="slide-title">etc...</h3>
+                      <p class="slide-text">
+                        バナーやチラシ、ニット指示書なども作成できます。
                       </p>
                     </div>
                   </article>
@@ -454,20 +459,20 @@
         <div class="blog__wrapper">
           <div class="blog__item--box">
             <p class="blog__number">01</p>
-            <a href="" class="blog__item"
-              ><img src="img/blog1.png" alt="大島"
+            <a href="" class="blog__item--link"
+              ><img class="blog__img" src="img/blog1.png" alt="大島"
             /></a>
           </div>
           <div class="blog__item--box">
             <p class="blog__number">02</p>
-            <a href="" class="blog__item"
-              ><img src="img/blog2.png" alt="富士山"
+            <a href="" class="blog__item--link"
+              ><img class="blog__img" src="img/blog2.png" alt="富士山"
             /></a>
           </div>
           <div class="blog__item--box">
             <p class="blog__number">03</p>
-            <a href="" class="blog__item"
-              ><img src="img/blog3.png" alt="レース"
+            <a href="" class="blog__item--link"
+              ><img class="blog__img" src="img/blog3.png" alt="レース"
             /></a>
           </div>
         </div>

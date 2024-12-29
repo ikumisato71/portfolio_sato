@@ -14,9 +14,12 @@ body {
     "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: $color-base-black;
   line-height: 1.8;
-
+  max-width: 1440px;
+  min-width: 960px;
   @include sp() {
     // font-size: vw_sp(13);
+    max-width: 769x;
+    min-width: 378px;
   }
 }
 
@@ -25,9 +28,19 @@ img {
   height: auto;
 }
 
+.section__padding--work {
+  padding: vw(180) vw(30) 0 vw(30);
+}
 .section__padding {
   padding: vw(180) vw(170) 0 vw(170);
 }
+.section__padding--pageWK {
+  padding: 0 vw(170) 0 vw(170);
+}
+.section__padding--pageBL {
+  padding: vw(180) vw(30) 0 vw(30);
+}
+
 // svg {
 //   display: flex;
 //   align-items: center;
@@ -66,6 +79,14 @@ h2 {
   font-family: $poiret-one-regular;
   font-size: vw(128);
 }
+.page__blog--h2 {
+  font-family: $poiret-one-regular;
+  font-size: vw(128);
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+}
 h3 {
   font-size: vw(20);
   font-weight: 700;
@@ -92,7 +113,7 @@ p {
 .blog_arrow__btn--p {
   font-family: $rajdhani-regular;
   font-size: vw(24);
-  margin-top: vw(30);
+  margin: 0;
 }
 .mailAddress {
   font-family: $raleway-dots-regular;

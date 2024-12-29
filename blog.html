@@ -40,29 +40,34 @@
   </head>
   <body>
     <header>
-      <nav>
+      <div class="header__wrapper">
+      <div class="title_logo">
+        <a href="index.html">
+          <img src="img/title_logo.png" alt="タイトルロゴhomeへ戻る" />
+        </a>
+        </div>
+      <nav class="nav__container">
         <ul class="nav__list">
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link active">About</a>
+            <a href="index.html#about" class="nav__list__item-link">About</a>
           </li>
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">Works</a>
-          </li>
-          <li class="nav__list__item active">
-            <a href="#" class="nav__list__item-link">Blog</a>
+            <a href="index.html#works" class="nav__list__item-link">Works</a>
           </li>
           <li class="nav__list__item">
-            <a href="#" class="nav__list__item-link">contact</a>
+            <a href="index.html#blog" class="nav__list__item-link">Blog</a>
           </li>
-          <!-- <li class="list__item">
-          <a href="#" class="list__item-link">リンクE</a>
-        </li> -->
+          <li class="nav__list__item">
+            <a href="index.html#contact" class="nav__list__item-link">contact</a>
+          </li>
         </ul>
       </nav>
+    </div>
+    </div>
     </header>
     <main>
-      <section id="page-blog">
-        <h2 class="section__title js-text">
+      <section id="page-blog" class="section__padding--pageBL">
+        <h2 class="page__blog--h2 js-text">
           <span class="blog__title-span js-text">B</span>
           <span class="blog__title-span js-text">l</span>
           <span class="blog__title-span js-text">o</span>
