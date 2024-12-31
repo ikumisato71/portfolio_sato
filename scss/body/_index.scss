@@ -55,9 +55,15 @@
   0% {
     clip-path: ellipse(100% 100% at 100% 100%);
   }
+  // 25% {
+  //   clip-path: ellipse(100% 100% at 75% 75%);
+  // }
   50% {
-    clip-path: ellipse(100% 100% at 0% 0%);
+    clip-path: ellipse(96% 92% at 9% 11%);
   }
+  // 75% {
+  //   clip-path: ellipse(100% 100%at 25% 25%);
+  // }
   100% {
     clip-path: ellipse(0% 0% at 0% 0%);
   }
@@ -84,7 +90,7 @@
     left: vw(-40);
     width: vw(80);
     height: vw(80);
-    transition: 0.2s;
+    transition: transform 0.2s ease-out;
   }
 
   /* 水滴の光のエフェクト */
@@ -133,7 +139,7 @@
     height: vw(25);
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
-    filter: url(#water);
+    // filter: url(#water);
   }
 }
 

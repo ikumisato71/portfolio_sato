@@ -452,7 +452,8 @@ h2 {
 
 .page__blog--h2 {
   font-family: "Poiret One", serif;
-  font-size: 8.8888888889vw;
+  font-size: 8.3333333333vw;
+  margin-top: 2.0833333333vw;
 }
 .page__blog--h2 span {
   display: flex;
@@ -645,8 +646,8 @@ p {
             clip-path: ellipse(100% 100% at 100% 100%);
   }
   50% {
-    -webkit-clip-path: ellipse(100% 100% at 0% 0%);
-            clip-path: ellipse(100% 100% at 0% 0%);
+    -webkit-clip-path: ellipse(96% 92% at 9% 11%);
+            clip-path: ellipse(96% 92% at 9% 11%);
   }
   100% {
     -webkit-clip-path: ellipse(0% 0% at 0% 0%);
@@ -673,7 +674,7 @@ p {
   left: -2.7777777778vw;
   width: 5.5555555556vw;
   height: 5.5555555556vw;
-  transition: 0.2s;
+  transition: transform 0.2s ease-out;
 }
 .mouse-stalker::after {
   content: "";
@@ -699,7 +700,6 @@ p {
   height: 1.7361111111vw;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
-  filter: url(#water);
 }
 
 header {

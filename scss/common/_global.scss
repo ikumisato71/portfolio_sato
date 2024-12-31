@@ -73,7 +73,8 @@ h2 {
 }
 .page__blog--h2 {
   font-family: $poiret-one-regular;
-  font-size: vw(128);
+  font-size: vw(120);
+  margin-top: vw(30);
   span {
     display: flex;
     flex-direction: column;
