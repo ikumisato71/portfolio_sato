@@ -69,10 +69,10 @@
 .mouse-stalker {
   pointer-events: none;
   position: fixed;
-  top: -10px;
-  left: -10px;
-  width: 20px;
-  height: 20px;
+  top: -vw(-10);
+  left: vw(-10);
+  width: vw(20);
+  height: vw(20);
   border-radius: 50%;
   transform: translate(0, 0);
   transition: transform 0.2s ease-out;
@@ -80,10 +80,10 @@
 
   /* is_active の状態 */
   &.is_active {
-    top: -40px;
-    left: -40px;
-    width: 80px;
-    height: 80px;
+    top: vw(-40);
+    left: vw(-40);
+    width: vw(80);
+    height: vw(80);
     transition: 0.2s;
   }
 
@@ -91,55 +91,46 @@
   &::after {
     content: "";
     position: absolute;
-    top: -25px;
-    left: -55px;
-    width: 30px;
-    height: 25px;
+    top: vw(-25);
+    left: vw(-55);
+    width: vw(30);
+    height: vw(25);
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-image: radial-gradient(
       ellipse at center,
       white 40%,
       transparent 60%
     );
-    background-size: 10px 6px;
+    background-size: vw(10) vw(6);
     background-position: 60% 25%;
     background-repeat: no-repeat;
 
     /* 光と影のボックスシャドウ */
-    box-shadow:        // left shadow
-      inset 14px 0px 5px -10px rgba(0, 0, 0, 0.2),
-      inset 13px 0px 2px -10px rgba(0, 0, 0, 0.2),
-      // main bottom shadow
-      inset 0px -3px 5px 0px rgba(250, 241, 220, 0.5),
-      inset 0px -20px 10px 1px rgba(255, 255, 255, 0.3),
-      // right shadow
-      inset -20px 10px 5px -20px rgba(0, 0, 0, 0.3),
-      inset -20px 15px 10px -20px rgba(0, 0, 0, 0.2),
-      // main top shadow
-      inset 0px 20px 30px -5px rgba(0, 0, 0, 0.3),
-      // blur bottom border
-      0px 2px 1px -1px rgba(245, 227, 183, 0.8),
-      // tiny right/left shadows
-      -16px 13px 5px -20px rgba(0, 0, 0, 1),
-      17px 13px 5px -20px rgba(0, 0, 0, 1), 15px 19px 5px -20px rgba(0, 0, 0, 1),
-      // tiny reflection
-      -2px 34px 1px -30px rgba(0, 0, 0, 0.4),
-      -2px 35px 3px -30px rgba(255, 255, 255, 0.3),
-      // main shadows
-      -1px 16px 3px -5px rgba(0, 0, 0, 0.5),
-      -1px 21px 3px -5px rgba(0, 0, 0, 0.4),
-      // blur top border
-      1px -1px 5px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: inset vw(10) vw(0) vw(5) vw(-10) rgba(0, 0, 0, 0.2),
+      inset vw(9) vw(0) vw(2) vw(-20) rgba(0, 0, 0, 0.2),
+      inset vw(0) vw(-3) vw(4) vw(0) rgba(250, 241, 220, 0.5),
+      inset vw(0) vw(-20) vw(10) vw(10) rgba(255, 255, 255, 0.3),
+      inset vw(-8) vw(3) vw(4) vw(-20) rgba(0, 0, 0, 0.3),
+      inset vw(-18) vw(12) vw(6) vw(-20) rgba(0, 0, 0, 0.2),
+      inset vw(0) vw(11) vw(8) vw(-10) rgba(0, 0, 0, 0.3),
+      vw(1) vw(-2) vw(1) vw(-5) rgba(245, 227, 183, 0.8),
+      vw(-16) vw(13) vw(5) vw(-20) rgb(0, 0, 0),
+      vw(17) vw(13) vw(5) vw(-20) rgb(0, 0, 0),
+      vw(15) vw(19) vw(5) vw(-20) rgb(0, 0, 0),
+      vw(0) vw(10) vw(4) vw(-30) rgba(0, 0, 0, 0.4),
+      vw(-2) vw(35) vw(3) vw(-30) rgba(255, 255, 255, 0.3),
+      vw(-1) vw(16) vw(4) vw(-5) rgba(0, 0, 0, 0.5),
+      vw(-1) vw(21) vw(3) vw(-5) rgba(0, 0, 0, 0.4),
+      vw(1) vw(0) vw(2) vw(0) rgba(50, 50, 50, 0.5);
   }
-
   /* 水滴のテクスチャ */
   &::before {
     content: "";
     position: absolute;
-    top: -25px;
-    left: -55px;
-    width: 30px;
-    height: 25px;
+    top: vw(-25);
+    left: vw(-55);
+    width: vw(30);
+    height: vw(25);
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
     filter: url(#water);
@@ -158,14 +149,14 @@ header {
 .header__wrapper {
   display: flex;
 }
-.title_logo {
-  img {
-    width: 33%;
-  }
-}
+// .title_logo {
+//   img {
+//     width: 33%;
+//   }
+// }
 .nav__container {
-  padding-top: vw(30);
-  padding-left: vw(400);
+  padding-top: vw(35);
+  padding-left: vw(755);
 }
 .nav__list {
   display: flex;
@@ -274,26 +265,6 @@ header {
 .mv__title--s > span {
   border-bottom: 1px solid $color-base-black;
   padding: 5px 30px;
-}
-
-.scrollDown__btn {
-  margin-top: vw(-250);
-  margin-left: vw(1200);
-  img {
-    width: 70%;
-    animation: fuwafuwa 2s infinite;
-  }
-  @keyframes fuwafuwa {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
 }
 
 // ---------------
@@ -600,22 +571,7 @@ button.blog_arrow__btn {
   margin-top: vw(180);
   h2 {
     text-align: left;
-    margin: vw(-20) vw(0) vw(0) vw(20);
-  }
-  .scroll-top__btn {
-    position: relative;
-    top: vw(30);
-    width: 100%;
-    text-align: center;
-    transition: transform 0.4s ease;
-    img {
-      width: 8%;
-      position: relative;
-      top: vw(-80);
-    }
-  }
-  .scroll-top__btn:hover {
-    transform: scale(1.2);
+    margin: vw(-10) vw(0) vw(0) vw(20);
   }
 }
 
@@ -625,14 +581,14 @@ button.blog_arrow__btn {
 footer {
   background-color: $color-base-main;
   width: 100%;
-  height: auto;
+  height: vw(300);
   .footer__copyright {
     text-align: center;
-    padding: vw(50);
+    margin-top: vw(100);
   }
   .footer__sns {
     width: 80%;
-    margin: vw(70) auto vw(0) auto;
+    margin: vw(100) auto vw(0) auto;
     text-align: center;
     .sns__icon {
       width: 8%;

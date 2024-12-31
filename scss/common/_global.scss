@@ -13,12 +13,12 @@ body {
     "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo",
     "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: $color-base-black;
-  line-height: 1.8;
+  // line-height: 1.8;
   max-width: 1440px;
   min-width: 960px;
   @include sp() {
     // font-size: vw_sp(13);
-    max-width: 769x;
+    max-width: 768x;
     min-width: 378px;
   }
 }
@@ -59,15 +59,7 @@ img {
 //   border: 1px solid #333;
 //   text-decoration: none;
 // }
-h1 {
-  // font-family: $poiret-one-regular;
-  // font-size: vw(128);
-  // letter-spacing: (-0.1);
 
-  // @include sp() {
-  //   font-size: vw_sp(96);
-  // }
-}
 h2 {
   font-family: $poiret-one-regular;
   font-size: vw(64);
@@ -119,8 +111,114 @@ p {
   font-family: $raleway-dots-regular;
   font-size: vw(128);
   text-align: center;
+  margin-top: vw(100);
 }
 .blog__number {
   font-family: $zilla-slab-highlight-regular;
   font-size: vw(64);
+}
+.title__logo--btn {
+  width: vw(135);
+  height: vw(205);
+  background: $color-base-accent;
+}
+.title__logo--text {
+  width: vw(61);
+  height: vw(83);
+  background: $color-base-accent;
+  font-size: vw(24);
+  color: $color-base-wh;
+  overflow-wrap: normal;
+  margin-top: vw(25);
+  margin-left: vw(15);
+  line-height: calc(88 / 24 * 1vw); /* 55px ÷ 24px をvwで計算 */
+  // overflow-wrap: break-word;
+}
+
+.scrollDown__btn {
+  width: vw(124);
+  height: vw(124);
+  border-radius: 50%;
+  background: $color-base-accent;
+  margin-top: vw(-250);
+  margin-left: vw(1200);
+  text-align: center;
+  animation: fuwafuwa 2s infinite;
+
+  @keyframes fuwafuwa {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.dli-arrow-down {
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-base-wh;
+  line-height: vw(1);
+  position: relative;
+  width: vw(1);
+  height: vw(70);
+  background: currentColor;
+}
+
+.dli-arrow-down::before {
+  content: "";
+  width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
+  height: vw(7); // 同様に換算
+  border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  position: absolute;
+  left: 50%;
+  bottom: vw(0.1); // `-0.05em` を `vw`に換算
+  box-sizing: border-box;
+}
+.scroll-top__btn {
+  width: vw(100);
+  height: vw(100);
+  border-radius: 50%;
+  background: $color-base-accent;
+  margin-top: vw(-45);
+  margin-left: vw(670);
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+.scroll-top__btn:hover {
+  transform: scale(1.2);
+}
+
+.dli-arrow-up {
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-base-wh;
+  line-height: vw(1);
+  position: relative;
+  width: vw(1);
+  height: vw(55);
+  background: currentColor;
+}
+
+.dli-arrow-up::before {
+  content: "";
+  width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
+  height: vw(7); // 同様に換算
+  border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  position: absolute;
+  right: 50%;
+  top: vw(0.1); // `-0.05em` を `vw`に換算
+  box-sizing: border-box;
 }

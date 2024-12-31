@@ -407,13 +407,12 @@ html {
 body {
   font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo", "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: #0f0f0f;
-  line-height: 1.8;
   max-width: 1440px;
   min-width: 960px;
 }
 @media screen and (max-width: 768px) {
   body {
-    max-width: 769x;
+    max-width: 768x;
     min-width: 378px;
   }
 }
@@ -497,11 +496,119 @@ p {
   font-family: "Raleway Dots", sans-serif;
   font-size: 8.8888888889vw;
   text-align: center;
+  margin-top: 6.9444444444vw;
 }
 
 .blog__number {
   font-family: "Zilla Slab Highlight", serif;
   font-size: 4.4444444444vw;
+}
+
+.title__logo--btn {
+  width: 9.375vw;
+  height: 14.2361111111vw;
+  background: #222222;
+}
+
+.title__logo--text {
+  width: 4.2361111111vw;
+  height: 5.7638888889vw;
+  background: #222222;
+  font-size: 1.6666666667vw;
+  color: #f5f5f5;
+  overflow-wrap: normal;
+  margin-top: 1.7361111111vw;
+  margin-left: 1.0416666667vw;
+  line-height: 3.6666666667vw; /* 55px ÷ 24px をvwで計算 */
+}
+
+.scrollDown__btn {
+  width: 8.6111111111vw;
+  height: 8.6111111111vw;
+  border-radius: 50%;
+  background: #222222;
+  margin-top: -17.3611111111vw;
+  margin-left: 83.3333333333vw;
+  text-align: center;
+  animation: fuwafuwa 2s infinite;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.dli-arrow-down {
+  display: inline-block;
+  vertical-align: middle;
+  color: #f5f5f5;
+  line-height: 0.0694444444vw;
+  position: relative;
+  width: 0.0694444444vw;
+  height: 4.8611111111vw;
+  background: currentColor;
+}
+
+.dli-arrow-down::before {
+  content: "";
+  width: 0.4861111111vw;
+  height: 0.4861111111vw;
+  border: 0.1041666667vw solid currentColor;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  position: absolute;
+  left: 50%;
+  bottom: 0.0069444444vw;
+  box-sizing: border-box;
+}
+
+.scroll-top__btn {
+  width: 6.9444444444vw;
+  height: 6.9444444444vw;
+  border-radius: 50%;
+  background: #222222;
+  margin-top: -3.125vw;
+  margin-left: 46.5277777778vw;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.scroll-top__btn:hover {
+  transform: scale(1.2);
+}
+
+.dli-arrow-up {
+  display: inline-block;
+  vertical-align: middle;
+  color: #f5f5f5;
+  line-height: 0.0694444444vw;
+  position: relative;
+  width: 0.0694444444vw;
+  height: 3.8194444444vw;
+  background: currentColor;
+}
+
+.dli-arrow-up::before {
+  content: "";
+  width: 0.4861111111vw;
+  height: 0.4861111111vw;
+  border: 0.1041666667vw solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  position: absolute;
+  right: 50%;
+  top: 0.0069444444vw;
+  box-sizing: border-box;
 }
 
 .loader {
@@ -549,10 +656,10 @@ p {
 .mouse-stalker {
   pointer-events: none;
   position: fixed;
-  top: -10px;
-  left: -10px;
-  width: 20px;
-  height: 20px;
+  top: -vw(-10);
+  left: -0.6944444444vw;
+  width: 1.3888888889vw;
+  height: 1.3888888889vw;
   border-radius: 50%;
   transform: translate(0, 0);
   transition: transform 0.2s ease-out;
@@ -562,34 +669,34 @@ p {
   /* 水滴のテクスチャ */
 }
 .mouse-stalker.is_active {
-  top: -40px;
-  left: -40px;
-  width: 80px;
-  height: 80px;
+  top: -2.7777777778vw;
+  left: -2.7777777778vw;
+  width: 5.5555555556vw;
+  height: 5.5555555556vw;
   transition: 0.2s;
 }
 .mouse-stalker::after {
   content: "";
   position: absolute;
-  top: -25px;
-  left: -55px;
-  width: 30px;
-  height: 25px;
+  top: -1.7361111111vw;
+  left: -3.8194444444vw;
+  width: 2.0833333333vw;
+  height: 1.7361111111vw;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-image: radial-gradient(ellipse at center, white 40%, transparent 60%);
-  background-size: 10px 6px;
+  background-size: 0.6944444444vw 0.4166666667vw;
   background-position: 60% 25%;
   background-repeat: no-repeat;
   /* 光と影のボックスシャドウ */
-  box-shadow: inset 14px 0px 5px -10px rgba(0, 0, 0, 0.2), inset 13px 0px 2px -10px rgba(0, 0, 0, 0.2), inset 0px -3px 5px 0px rgba(250, 241, 220, 0.5), inset 0px -20px 10px 1px rgba(255, 255, 255, 0.3), inset -20px 10px 5px -20px rgba(0, 0, 0, 0.3), inset -20px 15px 10px -20px rgba(0, 0, 0, 0.2), inset 0px 20px 30px -5px rgba(0, 0, 0, 0.3), 0px 2px 1px -1px rgba(245, 227, 183, 0.8), -16px 13px 5px -20px rgb(0, 0, 0), 17px 13px 5px -20px rgb(0, 0, 0), 15px 19px 5px -20px rgb(0, 0, 0), -2px 34px 1px -30px rgba(0, 0, 0, 0.4), -2px 35px 3px -30px rgba(255, 255, 255, 0.3), -1px 16px 3px -5px rgba(0, 0, 0, 0.5), -1px 21px 3px -5px rgba(0, 0, 0, 0.4), 1px -1px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: inset 0.6944444444vw 0vw 0.3472222222vw -0.6944444444vw rgba(0, 0, 0, 0.2), inset 0.625vw 0vw 0.1388888889vw -1.3888888889vw rgba(0, 0, 0, 0.2), inset 0vw -0.2083333333vw 0.2777777778vw 0vw rgba(250, 241, 220, 0.5), inset 0vw -1.3888888889vw 0.6944444444vw 0.6944444444vw rgba(255, 255, 255, 0.3), inset -0.5555555556vw 0.2083333333vw 0.2777777778vw -1.3888888889vw rgba(0, 0, 0, 0.3), inset -1.25vw 0.8333333333vw 0.4166666667vw -1.3888888889vw rgba(0, 0, 0, 0.2), inset 0vw 0.7638888889vw 0.5555555556vw -0.6944444444vw rgba(0, 0, 0, 0.3), 0.0694444444vw -0.1388888889vw 0.0694444444vw -0.3472222222vw rgba(245, 227, 183, 0.8), -1.1111111111vw 0.9027777778vw 0.3472222222vw -1.3888888889vw rgb(0, 0, 0), 1.1805555556vw 0.9027777778vw 0.3472222222vw -1.3888888889vw rgb(0, 0, 0), 1.0416666667vw 1.3194444444vw 0.3472222222vw -1.3888888889vw rgb(0, 0, 0), 0vw 0.6944444444vw 0.2777777778vw -2.0833333333vw rgba(0, 0, 0, 0.4), -0.1388888889vw 2.4305555556vw 0.2083333333vw -2.0833333333vw rgba(255, 255, 255, 0.3), -0.0694444444vw 1.1111111111vw 0.2777777778vw -0.3472222222vw rgba(0, 0, 0, 0.5), -0.0694444444vw 1.4583333333vw 0.2083333333vw -0.3472222222vw rgba(0, 0, 0, 0.4), 0.0694444444vw 0vw 0.1388888889vw 0vw rgba(50, 50, 50, 0.5);
 }
 .mouse-stalker::before {
   content: "";
   position: absolute;
-  top: -25px;
-  left: -55px;
-  width: 30px;
-  height: 25px;
+  top: -1.7361111111vw;
+  left: -3.8194444444vw;
+  width: 2.0833333333vw;
+  height: 1.7361111111vw;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
   filter: url(#water);
@@ -606,13 +713,9 @@ header {
   display: flex;
 }
 
-.title_logo img {
-  width: 33%;
-}
-
 .nav__container {
-  padding-top: 2.0833333333vw;
-  padding-left: 27.7777777778vw;
+  padding-top: 2.4305555556vw;
+  padding-left: 52.4305555556vw;
 }
 
 .nav__list {
@@ -714,26 +817,6 @@ header {
 .mv__title--s > span {
   border-bottom: 1px solid #0f0f0f;
   padding: 5px 30px;
-}
-
-.scrollDown__btn {
-  margin-top: -17.3611111111vw;
-  margin-left: 83.3333333333vw;
-}
-.scrollDown__btn img {
-  width: 70%;
-  animation: fuwafuwa 2s infinite;
-}
-@keyframes fuwafuwa {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 .l-inner {
@@ -995,41 +1078,40 @@ button.blog_arrow__btn img {
 }
 #contact h2 {
   text-align: left;
-  margin: -1.3888888889vw 0vw 0vw 1.3888888889vw;
-}
-#contact .scroll-top__btn {
-  position: relative;
-  top: 2.0833333333vw;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.4s ease;
-}
-#contact .scroll-top__btn img {
-  width: 8%;
-  position: relative;
-  top: -5.5555555556vw;
-}
-#contact .scroll-top__btn:hover {
-  transform: scale(1.2);
+  margin: -0.6944444444vw 0vw 0vw 1.3888888889vw;
 }
 
 footer {
   background-color: #e8e2d7;
   width: 100%;
-  height: auto;
+  height: 20.8333333333vw;
 }
 footer .footer__copyright {
   text-align: center;
-  padding: 3.4722222222vw;
+  margin-top: 6.9444444444vw;
 }
 footer .footer__sns {
   width: 80%;
-  margin: 4.8611111111vw auto 0vw auto;
+  margin: 6.9444444444vw auto 0vw auto;
   text-align: center;
 }
 footer .footer__sns .sns__icon {
   width: 8%;
   padding: 1.3888888889vw;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+}
+
+.page-works1 .page-works2 .page-works3 .page-works4 {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 .page__works__wrap {
