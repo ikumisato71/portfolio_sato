@@ -4,6 +4,7 @@
 
 html {
   // pc,sp共通
+  scroll-behavior: smooth;
   margin: 0 auto;
   width: 100%;
 }
@@ -14,12 +15,9 @@ body {
     "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: $color-base-black;
   // line-height: 1.8;
-  max-width: 1440px;
-  min-width: 960px;
+
   @include sp() {
     // font-size: vw_sp(13);
-    max-width: 768x;
-    min-width: 378px;
   }
 }
 
@@ -29,16 +27,16 @@ img {
 }
 
 .section__padding--work {
-  padding: vw(180) vw(30) 0 vw(30);
+  padding: vh(180) vw(30) 0 vw(30);
 }
 .section__padding {
-  padding: vw(180) vw(170) 0 vw(170);
+  padding: vh(180) vw(170) 0 vw(170);
 }
 .section__padding--pageWK {
   padding: 0 vw(170) 0 vw(170);
 }
 .section__padding--pageBL {
-  padding: vw(180) vw(30) 0 vw(30);
+  padding: vh(180) vw(30) 0 vw(30);
 }
 
 // svg {
@@ -74,7 +72,7 @@ h2 {
 .page__blog--h2 {
   font-family: $poiret-one-regular;
   font-size: vw(120);
-  margin-top: vw(30);
+  margin-top: vh(30);
   span {
     display: flex;
     flex-direction: column;
@@ -86,7 +84,7 @@ h3 {
 }
 p {
   font-size: vw(18);
-  margin-top: vw(20);
+  margin-top: vh(20);
 }
 .nav__list__item-link {
   font-size: vw(20);
@@ -94,7 +92,7 @@ p {
 .skill__text--h3 {
   font-size: vw(16);
   font-weight: 700;
-  margin-top: vw(10);
+  margin-top: vh(10);
   margin-left: vw(10);
 }
 .skill__text--p {
@@ -112,7 +110,7 @@ p {
   font-family: $raleway-dots-regular;
   font-size: vw(128);
   text-align: center;
-  margin-top: vw(100);
+  margin-top: vh(100);
 }
 .blog__number {
   font-family: $zilla-slab-highlight-regular;
@@ -120,17 +118,21 @@ p {
 }
 .title__logo--btn {
   width: vw(135);
-  height: vw(205);
+  height: vh(205);
   background: $color-base-accent;
+  @include sp() {
+    width: vw_sp(40);
+    height: vh_sp(300);
+  }
 }
 .title__logo--text {
   width: vw(61);
-  height: vw(83);
+  height: vh(83);
   background: $color-base-accent;
   font-size: vw(24);
   color: $color-base-wh;
   overflow-wrap: normal;
-  margin-top: vw(25);
+  margin-top: vh(25);
   margin-left: vw(15);
   line-height: calc(88 / 24 * 1vw); /* 55px ÷ 24px をvwで計算 */
   // overflow-wrap: break-word;
@@ -141,7 +143,7 @@ p {
   height: vw(124);
   border-radius: 50%;
   background: $color-base-accent;
-  margin-top: vw(-250);
+  margin-top: vh(-250);
   margin-left: vw(1200);
   text-align: center;
   animation: fuwafuwa 2s infinite;
@@ -163,17 +165,17 @@ p {
   display: inline-block;
   vertical-align: middle;
   color: $color-base-wh;
-  line-height: vw(1);
+  line-height: vh(1);
   position: relative;
   width: vw(1);
-  height: vw(70);
+  height: vh(70);
   background: currentColor;
 }
 
 .dli-arrow-down::before {
   content: "";
   width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
-  height: vw(7); // 同様に換算
+  height: vh(7); // 同様に換算
   border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
   border-top: 0;
   border-right: 0;
@@ -181,7 +183,7 @@ p {
   transform-origin: bottom left;
   position: absolute;
   left: 50%;
-  bottom: vw(0.1); // `-0.05em` を `vw`に換算
+  bottom: vh(0.1); // `-0.05em` を `vw`に換算
   box-sizing: border-box;
 }
 .scroll-top__btn {
@@ -189,7 +191,7 @@ p {
   height: vw(100);
   border-radius: 50%;
   background: $color-base-accent;
-  margin-top: vw(-45);
+  margin-top: vh(-45);
   margin-left: vw(670);
   text-align: center;
   transition: transform 0.4s ease;
@@ -202,17 +204,17 @@ p {
   display: inline-block;
   vertical-align: middle;
   color: $color-base-wh;
-  line-height: vw(1);
+  line-height: vh(1);
   position: relative;
   width: vw(1);
-  height: vw(55);
+  height: vh(55);
   background: currentColor;
 }
 
 .dli-arrow-up::before {
   content: "";
   width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
-  height: vw(7); // 同様に換算
+  height: vh(7); // 同様に換算
   border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
   border-left: 0;
   border-bottom: 0;
@@ -220,6 +222,6 @@ p {
   transform-origin: top right;
   position: absolute;
   right: 50%;
-  top: vw(0.1); // `-0.05em` を `vw`に換算
+  top: vh(0.1); // `-0.05em` を `vw`に換算
   box-sizing: border-box;
 }

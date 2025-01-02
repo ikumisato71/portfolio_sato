@@ -11,12 +11,15 @@
   position: fixed;
   position: absolute;
   width: 100%;
-  height: vw(750);
+  height: vh(750);
   // z-index: 999;
   inset: 0;
   display: grid;
   place-items: center;
   transition: opacity 0.8s ease, visibility 0s 0.8s; /* visibilityの遅延を追加 */
+  @include sp() {
+    height: vh_sp(500);
+  }
   &.hidden {
     opacity: 0;
     visibility: hidden; /* 完全に非表示に */
@@ -43,12 +46,15 @@
   z-index: 999;
   width: 100%;
   overflow: hidden;
-  height: vw(750);
+  height: vh(750);
   inset: 0;
   display: grid;
   place-items: center;
   background-color: #222;
   animation: graphAnim04 2s ease 0.7s forwards; /* delayをimgのフェードアウト時間分追加 */
+  @include sp() {
+    height: vh_sp(500);
+  }
 }
 
 @keyframes graphAnim04 {
@@ -75,7 +81,7 @@
 .mouse-stalker {
   pointer-events: none;
   position: fixed;
-  top: -vw(-10);
+  top: vw(-10);
   left: vw(-10);
   width: vw(20);
   height: vw(20);
@@ -112,31 +118,31 @@
     background-repeat: no-repeat;
 
     /* 光と影のボックスシャドウ */
-    box-shadow: inset vw(10) vw(0) vw(5) vw(-10) rgba(0, 0, 0, 0.2),
-      inset vw(9) vw(0) vw(2) vw(-20) rgba(0, 0, 0, 0.2),
-      inset vw(0) vw(-3) vw(4) vw(0) rgba(250, 241, 220, 0.5),
-      inset vw(0) vw(-20) vw(10) vw(10) rgba(255, 255, 255, 0.3),
-      inset vw(-8) vw(3) vw(4) vw(-20) rgba(0, 0, 0, 0.3),
-      inset vw(-18) vw(12) vw(6) vw(-20) rgba(0, 0, 0, 0.2),
-      inset vw(0) vw(11) vw(8) vw(-10) rgba(0, 0, 0, 0.3),
-      vw(1) vw(-2) vw(1) vw(-5) rgba(245, 227, 183, 0.8),
-      vw(-16) vw(13) vw(5) vw(-20) rgb(0, 0, 0),
-      vw(17) vw(13) vw(5) vw(-20) rgb(0, 0, 0),
-      vw(15) vw(19) vw(5) vw(-20) rgb(0, 0, 0),
-      vw(0) vw(10) vw(4) vw(-30) rgba(0, 0, 0, 0.4),
-      vw(-2) vw(35) vw(3) vw(-30) rgba(255, 255, 255, 0.3),
-      vw(-1) vw(16) vw(4) vw(-5) rgba(0, 0, 0, 0.5),
-      vw(-1) vw(21) vw(3) vw(-5) rgba(0, 0, 0, 0.4),
-      vw(1) vw(0) vw(2) vw(0) rgba(50, 50, 50, 0.5);
+    box-shadow: inset vh(10) vw(0) vh(5) vw(-10) rgba(0, 0, 0, 0.2),
+      inset vh(9) vw(0) vh(2) vw(-20) rgba(0, 0, 0, 0.2),
+      inset vh(0) vw(-3) vh(4) vw(0) rgba(250, 241, 220, 0.5),
+      inset vh(0) vw(-20) vh(10) vw(10) rgba(255, 255, 255, 0.3),
+      inset vh(-8) vw(3) vh(4) vw(-20) rgba(0, 0, 0, 0.3),
+      inset vh(-18) vw(12) vh(6) vw(-20) rgba(0, 0, 0, 0.2),
+      inset vh(0) vw(11) vh(8) vw(-10) rgba(0, 0, 0, 0.3),
+      vh(1) vw(-2) vh(1) vw(-5) rgba(245, 227, 183, 0.8),
+      vh(-16) vw(13) vh(5) vw(-20) rgb(0, 0, 0),
+      vh(17) vw(13) vh(5) vw(-20) rgb(0, 0, 0),
+      vh(15) vw(19) vh(5) vw(-20) rgb(0, 0, 0),
+      vh(0) vw(10) vh(4) vw(-30) rgba(0, 0, 0, 0.4),
+      vh(-2) vw(35) vh(3) vw(-30) rgba(255, 255, 255, 0.3),
+      vh(-1) vw(16) vh(4) vw(-5) rgba(0, 0, 0, 0.5),
+      vh(-1) vw(21) vh(3) vw(-5) rgba(0, 0, 0, 0.4),
+      vh(1) vw(0) vh(2) vw(0) rgba(50, 50, 50, 0.5);
   }
   /* 水滴のテクスチャ */
   &::before {
     content: "";
     position: absolute;
-    top: vw(-25);
+    top: vh(-25);
     left: vw(-55);
     width: vw(30);
-    height: vw(25);
+    height: vh(25);
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
     // filter: url(#water);
@@ -161,8 +167,8 @@ header {
 //   }
 // }
 .nav__container {
-  padding-top: vw(35);
-  padding-left: vw(755);
+  margin-top: vh(35);
+  margin-left: vw(755);
 }
 .nav__list {
   display: flex;
@@ -176,13 +182,13 @@ header {
 
 .nav__list__item-link {
   position: relative; /* 必須: ::beforeの相対基準 */
-  padding: 10px;
+  padding: vw(10);
 
   &::before {
     content: "";
-    background: #0f0f0f;
+    background: $color-base-black;
     width: 100%;
-    height: 1px;
+    height: vh(1);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -215,18 +221,25 @@ header {
   top: 0;
   background-color: $color-base-main;
   width: 100%;
-  height: vw(750);
+  height: vh(750);
   @include sp() {
-    top: vw_sp(20);
+    height: vh_sp(500);
   }
 }
 // ポートフォリオのロゴ
 .mv__title--l {
   text-align: center;
+  justify-content: center;
 }
 .mv__logo--pf {
-  margin-top: vw(300);
+  margin-top: vh(300);
   width: 55%;
+  @include sp() {
+    transform: rotate(90deg);
+    margin-top: vh_sp(100);
+    margin-left: vw_sp(100);
+    width: 60%;
+  }
   path {
     fill: $color-base-black;
     stroke: $color-base-black;
@@ -290,8 +303,8 @@ header {
   // border-top: 1px solid #eee;
 }
 .l-section .l-inner {
-  padding-top: vw(70);
-  padding-bottom: vw(40);
+  padding-top: vh(70);
+  padding-bottom: vh(40);
 }
 
 [class*="swiper"]:focus {
@@ -378,7 +391,7 @@ header {
   overflow: hidden;
   // width: 20rem;
   width: vw(345);
-  height: vw(520);
+  height: vh(520);
   border-radius: 4px;
   box-shadow: 10px 10px 20px 0px #e8e2d7;
   // -webkit-box-shadow: var(--box-shadow);
@@ -387,7 +400,7 @@ header {
 .card05 .slide-media {
   padding-top: 62.5%;
   width: vw(345);
-  height: vw(350);
+  height: vh(350);
 }
 .card05 .slide-media img {
   // height: calc(100% + 16px);
@@ -399,7 +412,7 @@ header {
   // padding: 3.2rem;
 }
 .card05 .slide-title {
-  margin-top: vw(20);
+  margin-top: vh(20);
   margin-left: vw(15);
   // font-size: vw(20);
   // line-height: 1;
@@ -497,7 +510,7 @@ header {
 // ---------------
 
 .about__wrapper {
-  margin: vw(70) auto vw(0) auto;
+  margin: vh(70) auto vh(0) auto;
   display: flex;
   align-items: center;
   .about-photo {

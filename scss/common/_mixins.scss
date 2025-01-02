@@ -64,12 +64,12 @@
 // ②@mixinの使い方
 // mixinは型として一部を変更しつつ使える
 
-@mixin button($font-size) {
-  color: #333;
-  font-size: $font-size;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 8px 16px;
-  border: 1px solid #333;
-  text-decoration: none;
-}
+// @mixin button($font-size) {
+//   color: #333;
+//   font-size: $font-size;
+//   display: inline-block;
+//   margin-top: 20px;
+//   padding: 8px 16px;
+//   border: 1px solid #333;
+//   text-decoration: none;
+// }
