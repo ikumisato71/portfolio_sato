@@ -400,6 +400,7 @@ th {
 }
 
 html {
+  scroll-behavior: smooth;
   margin: 0 auto;
   width: 100%;
 }
@@ -407,6 +408,7 @@ html {
 body {
   font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo", "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: #0f0f0f;
+  line-height: 1.8;
 }
 img {
   width: 100%;
@@ -421,10 +423,6 @@ img {
   padding: 22.2222222222vh 11.8055555556vw 0 11.8055555556vw;
 }
 
-.section__padding--pageWK {
-  padding: 0 11.8055555556vw 0 11.8055555556vw;
-}
-
 .section__padding--pageBL {
   padding: 22.2222222222vh 2.0833333333vw 0 2.0833333333vw;
 }
@@ -433,7 +431,7 @@ h2 {
   font-family: "Poiret One", serif;
   font-size: 4.4444444444vw;
   text-align: center;
-  letter-spacing: -0.75vw; /* -11px ÷ 64px をvwで計算 */
+  letter-spacing: -0.17em;
 }
 
 .page__works--h2 {
@@ -494,6 +492,11 @@ p {
 .blog__number {
   font-family: "Zilla Slab Highlight", serif;
   font-size: 4.4444444444vw;
+}
+
+.blog__number--li {
+  font-family: "Zilla Slab Highlight", serif;
+  font-size: 2.5vw;
 }
 
 .title__logo--btn {
@@ -1197,4 +1200,20 @@ footer .footer__sns .sns__icon {
 
 #page-blog {
   display: flex;
+}
+
+.blog__number--ul {
+  width: 80%;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 3.4722222222vw;
+       column-gap: 3.4722222222vw;
+}
+
+.blog__number--li {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-style: 1.6666666667vw;
 }/*# sourceMappingURL=style.css.map */

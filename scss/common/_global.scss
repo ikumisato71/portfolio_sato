@@ -14,7 +14,7 @@ body {
     "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo",
     "MS Ｐゴシック", "MS PGothic", Sans-Serif;
   color: $color-base-black;
-  // line-height: 1.8;
+  line-height: 1.8;
 
   @include sp() {
     // font-size: vw_sp(13);
@@ -32,9 +32,9 @@ img {
 .section__padding {
   padding: vh(180) vw(170) 0 vw(170);
 }
-.section__padding--pageWK {
-  padding: 0 vw(170) 0 vw(170);
-}
+// .section__padding--pageWK {
+//   padding: 0 vw(170) 0 vw(170);
+// }
 .section__padding--pageBL {
   padding: vh(180) vw(30) 0 vw(30);
 }
@@ -62,7 +62,8 @@ h2 {
   font-family: $poiret-one-regular;
   font-size: vw(64);
   text-align: center;
-  letter-spacing: calc(-48 / 64 * 1vw); /* -11px ÷ 64px をvwで計算 */
+  // letter-spacing: calc(-48 / 64 * 1vw); /* -11px ÷ 64px をvwで計算 */
+  letter-spacing: -0.17em;
   // visibility: hidden;
 }
 .page__works--h2 {
@@ -116,6 +117,11 @@ p {
   font-family: $zilla-slab-highlight-regular;
   font-size: vw(64);
 }
+.blog__number--li {
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(36);
+}
+
 .title__logo--btn {
   width: vw(135);
   height: vh(205);
