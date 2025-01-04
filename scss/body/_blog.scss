@@ -11,7 +11,12 @@
 #page-blog {
   display: flex;
 }
-
+.page__blog__wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: vw(90);
+  margin: vw(30) auto 0 auto;
+}
 .blog__number--ul {
   width: 80%;
   column-count: 3;
