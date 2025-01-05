@@ -1145,6 +1145,14 @@ footer .footer__sns .sns__icon {
   padding: 1.3888888889vw;
 }
 
+.side-scroll__wrapper {
+  overflow: hidden;
+}
+
+.side-scroll__container {
+  display: flex;
+}
+
 .page__works__wrap {
   display: flex;
   justify-content: center;

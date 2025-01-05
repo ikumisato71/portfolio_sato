@@ -124,25 +124,31 @@ const initSwiper = () => {
 window.addEventListener("load", function () {
   initSwiper();
 });
-
+// -------------------
 // PAGE WORKS 横スクロール
+// -------------------
 // コンテナ要素とスライド要素を取得
-const wrapper = document.querySelector(".js-wrapper");
-const slides = gsap.utils.toArray(".js-scroll");
+const container = document.querySelector(".js-container");
+const slides = document.querySelectorAll(".js-scroll");
 
 // コンテナの幅を取得
-const wrapperWidth = wrapper.offsetWidth;
-
+gsap.set(container, {
+  width: items.length * 100 + "%",
+});
+gsap.set(".js-scroll", {
+  width: 100 / items.length + "%",
+});
 // 横スクロールアニメーションの設定
 gsap.to(slides, {
-  xPercent: -100 * (slides.length - 1), // -X軸方向に移動
+  xPercent: -100 * (slides.length - 1), // X軸方向に移動
   ease: "none", // アニメーションのイージング(noneは定速)
   scrollTrigger: {
-    trigger: wrapper, // アニメーション開始のトリガー要素
+    trigger: container, // アニメーション開始のトリガー要素
     pin: true, // 要素を固定
-    scrub: 1, // スクロール量に合わせてアニメーション
+    scrub: true, // スクロール量に合わせてアニメーション
     start: "top top", // アニメーションが始まる位置
-    end: `+=${wrapperWidth}`, // アニメーションが終わる位置
+    // end: `+=${wrapperWidth}`, // アニメーションが終わる位置
+    end: container.clientWidth,
     anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
     invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
   },
