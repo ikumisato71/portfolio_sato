@@ -64,33 +64,32 @@ triggers.forEach((trigger) => {
 // ーーーーーーー
 // マウスストーカー
 // ーーーーーーー
+// .mouse-stalker要素を取得
 const stalker = document.querySelector(".mouse-stalker");
-let hovFlag = false;
 
 // マウスの動きに追従
 document.addEventListener("mousemove", function (e) {
-  stalker.style.transform =
-    "translate(" + e.clientX + "px, " + e.clientY + "px)";
+  stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-// すべてのリンク要素に対してホバー時のイベントを設定
+// すべてのリンクにホバーイベントを設定
 const linkElem = document.querySelectorAll("a:not(.no_stick_)");
 
 linkElem.forEach((link) => {
+  // マウスがリンクに乗ったとき
   link.addEventListener("mouseover", function () {
-    hovFlag = true;
     stalker.classList.add("is_active");
   });
 
+  // マウスがリンクから離れたとき
   link.addEventListener("mouseout", function () {
-    hovFlag = false;
     stalker.classList.remove("is_active");
   });
 });
+
 // ーーーーーーー
 // swiper
 // ーーーーーーー
-
 const slideLength = document.querySelectorAll(".card05 .swiper-slide").length;
 
 const initSwiper = () => {
@@ -127,24 +126,44 @@ window.addEventListener("load", function () {
 });
 
 // PAGE WORKS 横スクロール
-const container = document.querySelectorAll(".container");
-const items = document.querySelectorAll(".js-item");
+// コンテナ要素とスライド要素を取得
+const wrapper = document.querySelector(".js-wrapper");
+const slides = gsap.utils.toArray(".js-scroll");
 
-gsap.set(container, {
-  width: items.length * 100 + "%",
-});
-gsap.set(items, {
-  width: 100 / items.length + "%",
-});
+// コンテナの幅を取得
+const wrapperWidth = wrapper.offsetWidth;
 
-gsap.to(".js-item", {
-  xPercent: -100 * (items.length - 1),
+// 横スクロールアニメーションの設定
+gsap.to(slides, {
+  xPercent: -100 * (slides.length - 1), // -X軸方向に移動
+  ease: "none", // アニメーションのイージング(noneは定速)
   scrollTrigger: {
-    trigger: container,
-    start: "top top",
-    end: container.clientWidth,
-    pin: true,
-    anticipatePin: 1,
-    scrub: true,
+    trigger: wrapper, // アニメーション開始のトリガー要素
+    pin: true, // 要素を固定
+    scrub: 1, // スクロール量に合わせてアニメーション
+    start: "top top", // アニメーションが始まる位置
+    end: `+=${wrapperWidth}`, // アニメーションが終わる位置
+    anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
+    invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
   },
 });
+
+// ーーーーーーー
+// skills
+// ーーーーーーー
+// gsap.set("skill__item", {
+//   y: 30,
+//   opacity: 0,
+// });
+
+// gsap.to(".skill__item", 1.5, {
+//   y: 0,
+//   opacity: 1,
+//   ease: "expo.out",
+//   stagger: {
+//     each: 0.1,
+//     // amount: 1 // 処理する個数 / amountの値
+//     from: "start",
+//     // start, end, center, edges, random
+//   },
+// });

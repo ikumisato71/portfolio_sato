@@ -36,27 +36,8 @@ img {
 //   padding: 0 vw(170) 0 vw(170);
 // }
 .section__padding--pageBL {
-  padding: vh(180) vw(30) 0 vw(30);
+  padding: vh(30) vw(30) 0 vw(30);
 }
-
-// svg {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-//   height: auto;
-// }
-// ①@extendの使い方
-// extendはすでに作られているクラスを使いまわせる
-// .button {
-//   color: #333;
-//   font-size: 16px;
-//   display: inline-block;
-//   margin-top: 20px;
-//   padding: 8px 16px;
-//   border: 1px solid #333;
-//   text-decoration: none;
-// }
 
 h2 {
   font-family: $poiret-one-regular;
@@ -181,16 +162,16 @@ p {
 
 .dli-arrow-down::before {
   content: "";
-  width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
-  height: vw(7); // 同様に換算
-  border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
+  width: vw(7);
+  height: vw(7);
+  border: vw(1.5) solid currentColor;
   border-top: 0;
   border-right: 0;
   transform: rotate(-45deg);
   transform-origin: bottom left;
   position: absolute;
   left: 50%;
-  bottom: vw(0.1); // `-0.05em` を `vw`に換算
+  bottom: vw(0.1);
   box-sizing: border-box;
 }
 .scroll-top__btn {
@@ -220,16 +201,16 @@ p {
 
 .dli-arrow-up::before {
   content: "";
-  width: vw(7); // `0.65em` を `vw`に換算（例: 1em = vw(4) と仮定して計算）
-  height: vw(7); // 同様に換算
-  border: vw(1.5) solid currentColor; // `0.1em` を `vw`に換算
+  width: vw(7);
+  height: vw(7);
+  border: vw(1.5) solid currentColor;
   border-left: 0;
   border-bottom: 0;
   transform: rotate(-45deg);
   transform-origin: top right;
   position: absolute;
   right: 50%;
-  top: vh(0.1); // `-0.05em` を `vw`に換算
+  top: vh(0.1);
   box-sizing: border-box;
 }
 

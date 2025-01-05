@@ -424,7 +424,7 @@ img {
 }
 
 .section__padding--pageBL {
-  padding: 22.2222222222vh 2.0833333333vw 0 2.0833333333vw;
+  padding: 3.7037037037vh 2.0833333333vw 0 2.0833333333vw;
 }
 
 h2 {
@@ -734,6 +734,8 @@ p {
   height: 3.0864197531vh;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
+  filter: url(#water);
+  /* is_active の状態 */
 }
 
 header {
@@ -1143,24 +1145,10 @@ footer .footer__sns .sns__icon {
   padding: 1.3888888889vw;
 }
 
-.wrapper {
-  overflow: hidden;
-}
-
-.container {
-  display: flex;
-}
-
-.page-works1 .page-works2 .page-works3 .page-works4 {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
 .page__works__wrap {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
+  height: auto;
 }
 
 .page__works--h2 {
@@ -1230,7 +1218,18 @@ footer .footer__sns .sns__icon {
   display: flex;
   justify-content: space-around;
   gap: 6.25vw;
-  margin: 2.0833333333vw auto 0 auto;
+  margin: 0 auto;
+}
+
+.page__blog__container {
+  width: 40.9722222222vw;
+  height: 36.1111111111vw;
+}
+
+.blog__number--box {
+  width: 18.0555555556vw;
+  height: 36.1111111111vw;
+  margin-top: 2.0833333333vw;
 }
 
 .blog__number--ul {

@@ -89,6 +89,7 @@
   transform: translate(0, 0);
   transition: transform 0.2s ease-out;
   z-index: 999;
+  // background: rgba(0, 0, 0, 0.5); /* 見やすい背景を追加 */
 
   /* is_active の状態 */
   &.is_active {
@@ -145,7 +146,8 @@
     height: vh(25);
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-color: rgba(255, 255, 255, 0.2); /* 水滴の透明感 */
-    // filter: url(#water);
+    filter: url(#water);
+    /* is_active の状態 */
   }
 }
 
@@ -161,11 +163,7 @@ header {
 .header__wrapper {
   display: flex;
 }
-// .title_logo {
-//   img {
-//     width: 33%;
-//   }
-// }
+
 .nav__container {
   margin-top: vh(35);
   margin-left: vw(755);
@@ -202,14 +200,6 @@ header {
     transform: scale(1, 1); /* 修正: スペースで区切る */
   }
 }
-
-// .list__item-link {
-//   @extend .button;
-// }
-
-// .list__item-link {
-//   @include button(100px);
-// }
 
 // ---------------
 // メインビジュアル

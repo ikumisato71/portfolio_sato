@@ -4,10 +4,6 @@
 @use "../common/mixins" as *;
 @use "../common/global" as *;
 
-// .section__title {
-//   display: flex;
-//   flex-direction: column;
-// }
 #page-blog {
   display: flex;
 }
@@ -15,7 +11,16 @@
   display: flex;
   justify-content: space-around;
   gap: vw(90);
-  margin: vw(30) auto 0 auto;
+  margin: 0 auto;
+}
+.page__blog__container {
+  width: vw(590);
+  height: vw(520);
+}
+.blog__number--box {
+  width: vw(260);
+  height: vw(520);
+  margin-top: vw(30);
 }
 .blog__number--ul {
   width: 80%;

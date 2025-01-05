@@ -4,23 +4,29 @@
 @use "../common/mixins" as *;
 @use "../common/global" as *;
 
-.wrapper {
-  overflow: hidden;
-}
-.container {
-  display: flex;
-}
-.page-works1 .page-works2 .page-works3 .page-works4 {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
+// .page-works__wrapper {
+//   display: flex; /* 要素を横並び */
+//   height: 100vh; /* 要素の高さを画面いっぱい */
+
+//   overflow: hidden;
+// }
 
 .page__works__wrap {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
+  height: auto;
 }
+// .page-works4 {
+//   display: flex;
+//   justify-content: center;
+//   height: 100vh;
+// }
+
+// .page-works2 {
+//   display: flex;
+//   justify-content: center;
+//   height: 100vh;
+// }
 .page__works--h2 {
   margin-top: vh(-150);
   text-align: left;
