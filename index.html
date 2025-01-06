@@ -40,36 +40,78 @@
   </head>
   <body>
     <div class="mouse-stalker"></div>
-    <div class="mask-bg is-animated loader">
-      Ikumi sato
-    </div>
-        <div class="ellipse loading"></div>
-    
+    <div class="mask-bg is-animated loader">Ikumi sato</div>
+    <div class="ellipse loading"></div>
+
     <header>
       <div class="header__wrapper">
-      <div class="title__logo--btn">
-        <a href="index.html">
-          <div class="title__logo--text">Ikumi sato</div>
-        </a>
+        <!--四角のロゴボタン -->
+        <div class="title__logo--btn">
+          <a href="index.html">
+            <div class="title__logo--text">Ikumi sato</div>
+          </a>
         </div>
-      <nav class="nav__container">
-        <ul class="nav__list">
-          <li class="nav__list__item">
-            <a href="index.html#about" class="nav__list__item-link">About</a>
-          </li>
-          <li class="nav__list__item">
-            <a href="index.html#works" class="nav__list__item-link">Works</a>
-          </li>
-          <li class="nav__list__item">
-            <a href="index.html#blog" class="nav__list__item-link">Blog</a>
-          </li>
-          <li class="nav__list__item">
-            <a href="index.html#contact" class="nav__list__item-link">contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    </div>
+        <!-- PC用ナビゲーション -->
+        <nav class="nav__container">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a href="index.html#about" class="nav__list__item-link">About</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="index.html#works" class="nav__list__item-link">Works</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="index.html#blog" class="nav__list__item-link">Blog</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="index.html#contact" class="nav__list__item-link"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- スマホ用メニューボタン -->
+      <div class="header__inner">
+        <button
+          id="js-hamburger"
+          type="button"
+          class="hamburger"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="メニューを開く"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__text"></span>
+        </button>
+        <div class="header__nav-area js-nav-area" id="navigation">
+          <nav id="js-global-navigation" class="global-navigation">
+            <ul class="global-navigation__list">
+              <li>
+                <a href="index.html#about" class="global-navigation__link">
+                  About</a
+                >
+              </li>
+              <li>
+                <a href="index.html#works" class="global-navigation__link">
+                  Works
+                </a>
+              </li>
+              <li>
+                <a href="index.html#blog" class="global-navigation__link">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="global-navigation__link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <div id="js-focus-trap" tabindex="0"></div>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
       <section id="mv">
@@ -437,9 +479,7 @@
 
         <div class="blog__wrapper">
           <div class="blog__item--box">
-            
-            
-
+            <p class="blog__number">01</p>
             <a href="" class="blog__item--link"
               ><img class="blog__img" src="img/blog1.png" alt="大島"
             /></a>
@@ -459,7 +499,7 @@
         </div>
         <button class="blog_arrow__btn">
           <a class="blog__page--link" href="#">
-          <p class="blog_arrow__btn--p">read more</p>
+            <p class="blog_arrow__btn--p">read more</p>
             <span class="dli-arrow-right"></span>
           </a>
         </button>
