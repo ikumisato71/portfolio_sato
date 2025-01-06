@@ -146,7 +146,8 @@ p {
   line-height: 2.2;
   // overflow-wrap: break-word;
   @include sp() {
-    font-size: vw(36);
+    font-size: vw(48);
+    margin-left: vw_sp(18);
     height: auto;
     writing-mode: vertical-rl;
     text-orientation: upright;
