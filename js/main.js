@@ -1,28 +1,47 @@
 // ーーーーーーー
 // ローディングアニメーション
 // ーーーーーーー
-const loader = document.querySelectorAll(".js-loader");
+// ".loader"クラスを持つ要素を取得
+const loader = document.querySelector(".loader");
 
 // ページ読み込み後、2秒後にローダーの非表示処理を開始
-setTimeout(() => {
-  // トランジションを設定し、opacityを1秒かけて0にする
-  loader.style.transition = "opacity 0.8s ease";
-  loader.style.opacity = "0";
-
-  // 1秒後（opacityのトランジションが完了した後）、ローダーを完全に非表示にする
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 800);
-}, 1500);
-
-// // ポートフォリオロゴのクラス名で要素を取得
-// const titleLogoPf = document.querySelector(".mv__title--l"); // クラス名には「.」が必要
-
-// // 1200ミリ秒（1.2秒）後に処理を実行
 // setTimeout(() => {
-//   // 要素に変更を加える例（例えば、クラスを追加してアニメーションをトリガーする）
-//   titleLogoPf.classList.add("active");
-// }, 1200);
+// トランジションを設定し、opacityを1秒かけて0にする
+// loader.style.transition = "opacity 0.8s ease";
+// loader.style.opacity = "0";
+
+// 1秒後（opacityのトランジションが完了した後）、ローダーを完全に非表示にする
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 800);
+// }, 1500);
+
+// GSAP TimelineでローディングアニメーションとMVアニメーションを連動
+const tl = gsap.timeline();
+const loading = document.querySelector(".loading");
+
+// ローディングアニメーション
+tl.to(loader, {
+  opacity: 0,
+  duration: 1,
+  onComplete: () => {
+    loader.style.display = "none"; // ローディング画面を非表示
+  },
+})
+  // MVアニメーション
+  .to(loading, {
+    opacity: 1,
+    translateY: 0,
+    duration: 1,
+    ease: "power2.out",
+  })
+  .to(".js-mv-title", {
+    opacity: 1,
+    scale: 0.8,
+    duration: 1,
+    ease: "back.out(1.7)",
+  });
+
 // ーーーーーーー
 // トップへ戻る
 // ーーーーーーー

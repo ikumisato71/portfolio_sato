@@ -424,7 +424,7 @@ img {
 }
 
 .section__padding--pageBL {
-  padding: 3.7037037037vh 2.0833333333vw 0 2.0833333333vw;
+  padding: 1.2345679012vh 2.0833333333vw 0 2.0833333333vw;
 }
 
 h2 {
@@ -437,17 +437,16 @@ h2 {
 .page__works--h2 {
   font-family: "Poiret One", serif;
   font-size: 8.8888888889vw;
+  letter-spacing: normal; /* または letter-spacing: 0; */
 }
 
 .page__blog--h2 {
   font-family: "Poiret One", serif;
   font-size: 8.3333333333vw;
-  margin-top: 3.7037037037vh;
-}
-.page__blog--h2 span {
-  display: flex;
-  flex-direction: column;
-  line-height: -2;
+  margin-top: 1.2345679012vh;
+  letter-spacing: normal; /* または letter-spacing: 0; */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 h3 {
@@ -523,6 +522,14 @@ p {
   margin-top: 3.0864197531vh;
   margin-left: 1.0416666667vw;
   line-height: 2.2;
+}
+@media screen and (max-width: 768px) {
+  .title__logo--text {
+    font-size: 2.5vw;
+    height: auto;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }
 
 .scrollDown__btn {
@@ -636,26 +643,41 @@ p {
   box-sizing: border-box;
 }
 
-.loader {
-  position: fixed;
-  position: absolute;
-  width: 100%;
-  height: 92.5925925926vh;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  transition: opacity 0.8s ease, visibility 0s 0.8s; /* visibilityの遅延を追加 */
-}
-@media screen and (max-width: 768px) {
-  .loader {
-    height: 62.5vh;
-  }
-}
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden; /* 完全に非表示に */
+.mask-bg {
+  color: black; /* 初期状態で文字を表示 */
+  display: inline-block;
+  font-size: 2.5vw;
+  overflow: hidden;
+  position: relative;
 }
 
+/* 背景の初期状態は文字の外に配置 */
+.mask-bg::after {
+  background: black; /* 背景色を黒に設定 */
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0, -100%); /* 初期状態で文字を覆っていない */
+}
+
+/* is-animated: 背景色が文字を隠すアニメーション */
+.mask-bg.is-animated::after {
+  animation: mask-bg 1.2s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+}
+
+/* アニメーションの動き */
+@keyframes mask-bg {
+  0% {
+    transform: translate(0, -100%); /* 背景が文字の外（上部） */
+  }
+  100% {
+    transform: translate(0, 0%); /* 背景が文字を完全に覆う */
+  }
+}
 .ellipse {
   position: absolute;
   z-index: 999;
