@@ -7,13 +7,17 @@
 // ---------------
 // ローディングアニメーション
 // ---------------
+
 .mask-bg {
-  color: black; /* 初期状態で文字を表示 */
+  color: #fff; /* 初期状態で文字を表示 */
   display: inline-block;
   font-size: vw(36);
   // font-weight: bold;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   position: relative;
+  z-index: 999;
   // transition: color 0ms 450ms; /* 色の変化の遷移（現在は不要だが保持） */
 }
 

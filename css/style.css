@@ -644,11 +644,14 @@ p {
 }
 
 .mask-bg {
-  color: black; /* 初期状態で文字を表示 */
+  color: #fff; /* 初期状態で文字を表示 */
   display: inline-block;
   font-size: 2.5vw;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   position: relative;
+  z-index: 999;
 }
 
 /* 背景の初期状態は文字の外に配置 */
