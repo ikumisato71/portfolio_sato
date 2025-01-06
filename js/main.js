@@ -144,57 +144,29 @@ const initSwiper = () => {
 window.addEventListener("load", function () {
   initSwiper();
 });
-// -------------------
-// PAGE WORKS 横スクロール
-// -------------------
-// コンテナ要素とスライド要素を取得
-const container = document.querySelector(".js-container");
-const slides = document.querySelectorAll(".js-scroll");
-const containerWidth = container.offsetWidth;
-// コンテナの幅を取得
-gsap.set(container, {
-  width: slides.length * 100 + "%",
+
+ーーーーーーー;
+skills;
+ーーーーーーー;
+gsap.set("skill__item", {
+  y: 30,
+  opacity: 0,
 });
-gsap.set(".js-scroll", {
-  width: 100 / slides.length + "%",
-});
-// 横スクロールアニメーションの設定
-gsap.to(slides, {
-  xPercent: -100 * (slides.length - 1), // X軸方向に移動
-  ease: "none", // アニメーションのイージング(noneは定速)
-  scrollTrigger: {
-    trigger: container, // アニメーション開始のトリガー要素
-    markers: true,
-    pin: true, // 要素を固定
-    scrub: true, // スクロール量に合わせてアニメーション
-    start: "top top", // アニメーションが始まる位置
-    end: `+=${containerWidth}`, // アニメーションが終わる位置
-    // end: container.clientWidth,
-    anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
-    invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
+
+gsap.to(".skill__item", 1.5, {
+  y: 0,
+  opacity: 1,
+  ease: "expo.out",
+  stagger: {
+    each: 0.1,
+    // amount: 1 // 処理する個数 / amountの値
+    from: "start",
+    // start, end, center, edges, random
   },
 });
-
-// ーーーーーーー
-// skills
-// ーーーーーーー
-// gsap.set("skill__item", {
-//   y: 30,
-//   opacity: 0,
-// });
-
-// gsap.to(".skill__item", 1.5, {
-//   y: 0,
-//   opacity: 1,
-//   ease: "expo.out",
-//   stagger: {
-//     each: 0.1,
-//     // amount: 1 // 処理する個数 / amountの値
-//     from: "start",
-//     // start, end, center, edges, random
-//   },
-// });
+// ------------------
 // ハンバーガーメニュー
+// ------------------
 // メニュー展開時に背景を固定
 const backgroundFix = (bool) => {
   const scrollingElement = () => {
