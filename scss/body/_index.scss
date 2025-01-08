@@ -25,7 +25,8 @@
 
 /* 背景の初期状態は文字の外に配置 */
 .mask-bg::after {
-  background: $color-base-black; /* 背景色を黒に設定 */
+  background: #fff; /* 背景色を黒に設定 */
+  opacity: 0.3;
   bottom: 0;
   content: "";
   display: block;
@@ -72,16 +73,16 @@
 
 @keyframes graphAnim04 {
   0% {
-    clip-path: ellipse(100% 100% at 100% 100%);
+    clip-path: ellipse(100% 100% at 50% 50%);
   }
-  // 25% {
-  //   clip-path: ellipse(100% 100% at 75% 75%);
-  // }
+  25% {
+    clip-path: ellipse(100% 100% at 0 0);
+  }
   50% {
-    clip-path: ellipse(96% 92% at 9% 11%);
+    clip-path: ellipse(99% 97% at 0 0);
   }
   // 75% {
-  //   clip-path: ellipse(100% 100%at 25% 25%);
+  //   clip-path: ellipse(50% 50%at 0 0);
   // }
   100% {
     clip-path: ellipse(0% 0% at 0% 0%);
@@ -383,21 +384,19 @@ header {
 // ---------------
 // メインビジュアル
 // ---------------
-#mv {
-}
 .mv__container {
+  // display: none;
   position: relative;
   top: 0;
   background-color: $color-base-main;
   width: 100%;
-  height: vh(750);
+  height: 100vh;
   text-align: center;
   @include sp() {
-    height: vh_sp(500);
   }
 }
 // ポートフォリオのロゴ
-.mv__title--l {
+.mv__title--large {
   text-align: center;
   justify-content: center;
   @include sp() {
@@ -420,7 +419,7 @@ header {
   }
 }
 // ウエブデザイナーのロゴ
-.mv__title--s {
+.mv__title--small {
   margin: vw(200) auto vw(0) auto;
   text-align: center;
   @include sp() {
@@ -455,7 +454,7 @@ header {
   }
 }
 // ウエブデザイナーの下線
-.mv__title--s > span {
+.mv__title--small > span {
   border-bottom: 1px solid $color-base-black;
   padding: 5px 30px;
 }

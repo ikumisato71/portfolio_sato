@@ -738,7 +738,8 @@ p {
 
 /* 背景の初期状態は文字の外に配置 */
 .mask-bg::after {
-  background: #0f0f0f; /* 背景色を黒に設定 */
+  background: #fff; /* 背景色を黒に設定 */
+  opacity: 0.3;
   bottom: 0;
   content: "";
   display: block;
@@ -783,12 +784,16 @@ p {
 
 @keyframes graphAnim04 {
   0% {
-    -webkit-clip-path: ellipse(100% 100% at 100% 100%);
-            clip-path: ellipse(100% 100% at 100% 100%);
+    -webkit-clip-path: ellipse(100% 100% at 50% 50%);
+            clip-path: ellipse(100% 100% at 50% 50%);
+  }
+  25% {
+    -webkit-clip-path: ellipse(100% 100% at 0 0);
+            clip-path: ellipse(100% 100% at 0 0);
   }
   50% {
-    -webkit-clip-path: ellipse(96% 92% at 9% 11%);
-            clip-path: ellipse(96% 92% at 9% 11%);
+    -webkit-clip-path: ellipse(99% 97% at 0 0);
+            clip-path: ellipse(99% 97% at 0 0);
   }
   100% {
     -webkit-clip-path: ellipse(0% 0% at 0% 0%);
@@ -1087,21 +1092,15 @@ header {
   top: 0;
   background-color: #e8e2d7;
   width: 100%;
-  height: 92.5925925926vh;
+  height: 100vh;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
-  .mv__container {
-    height: 62.5vh;
-  }
-}
-
-.mv__title--l {
+.mv__title--large {
   text-align: center;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .mv__title--l {
+  .mv__title--large {
     padding-top: 13.8888888889vw;
   }
 }
@@ -1124,12 +1123,12 @@ header {
   }
 }
 
-.mv__title--s {
+.mv__title--small {
   margin: 13.8888888889vw auto 0vw auto;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  .mv__title--s {
+  .mv__title--small {
     width: 200%;
     margin-top: 19.4444444444vw;
     margin-left: -50vw;
@@ -1162,7 +1161,7 @@ header {
     fill: #0f0f0f;
   }
 }
-.mv__title--s > span {
+.mv__title--small > span {
   border-bottom: 1px solid #0f0f0f;
   padding: 5px 30px;
 }

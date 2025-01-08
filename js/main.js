@@ -7,26 +7,33 @@ const loader = document.querySelector(".loader");
 const loading = document.querySelector(".loading");
 
 // ローディングアニメーション
-tl.to(loader, {
-  opacity: 0,
-  duration: 1,
-  onComplete: () => {
-    loader.style.display = "none"; // ローディング画面を非表示
-  },
-})
-  // MVアニメーション
-  .to(loading, {
-    opacity: 1,
-    translateY: 0,
+setTimeout(() => {
+  tl.to(loader, {
+    opacity: 0,
     duration: 1,
-    ease: "power2.out",
+    onComplete: () => {
+      loader.style.display = "none"; // ローディング画面を非表示
+    },
   })
-  .to(".js-mv-title", {
-    opacity: 1,
-    scale: 0.8,
-    duration: 1,
-    ease: "back.out(1.7)",
-  });
+    // titleを表示する
+    .to(".js-mv-title", {
+      onComplete: () => {
+        ".mv__container".style.display = "block"; // ローディング画面を非表示
+      },
+    })
+    .to(loading, {
+      opacity: 1,
+      translateY: 0,
+      duration: 1,
+      ease: "power2.out",
+    })
+    .to(".js-mv-title", {
+      opacity: 1,
+      scale: 0.8,
+      duration: 1,
+      ease: "back.out(1.7)",
+    });
+}, 650);
 
 // ーーーーーーー
 // トップへ戻る
@@ -133,22 +140,22 @@ window.addEventListener("load", function () {
 // ーーーーーーー;
 // skills;
 // ーーーーーーー;
-gsap.set("skill__item", {
-  y: 30,
-  opacity: 0,
-});
+// gsap.set("skill__item", {
+//   y: 30,
+//   opacity: 0,
+// });
 
-gsap.to(".skill__item", 1.5, {
-  y: 0,
-  opacity: 1,
-  ease: "expo.out",
-  stagger: {
-    each: 0.1,
-    // amount: 1 // 処理する個数 / amountの値
-    from: "start",
-    // start, end, center, edges, random
-  },
-});
+// gsap.to(".skill__item", 1.5, {
+//   y: 0,
+//   opacity: 1,
+//   ease: "expo.out",
+//   stagger: {
+//     each: 0.1,
+// amount: 1 // 処理する個数 / amountの値
+// from: "start",
+// start, end, center, edges, random
+//   },
+// });
 // ------------------
 // ハンバーガーメニュー
 // ------------------
@@ -223,19 +230,19 @@ window.addEventListener("keydown", () => {
 });
 
 // // メニュー内アコーディオン制御
-// accordionTrigger.forEach((item) => {
-//   item.addEventListener("click", (e) => {
-//     e.currentTarget.classList.toggle(CLASS);
-//     e.currentTarget.nextElementSibling.classList.toggle(CLASS);
-//     if (accordionFlg) {
-//       e.currentTarget.setAttribute("aria-expanded", "false");
-//       accordionFlg = false;
-//     } else {
-//       e.currentTarget.setAttribute("aria-expanded", "true");
-//       accordionFlg = true;
-//     }
-//   });
-// });
+accordionTrigger.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle(CLASS);
+    e.currentTarget.nextElementSibling.classList.toggle(CLASS);
+    if (accordionFlg) {
+      e.currentTarget.setAttribute("aria-expanded", "false");
+      accordionFlg = false;
+    } else {
+      e.currentTarget.setAttribute("aria-expanded", "true");
+      accordionFlg = true;
+    }
+  });
+});
 
 // フォーカストラップ制御
 focusTrap.addEventListener("focus", (e) => {
