@@ -1088,6 +1088,7 @@ header {
 }
 
 .mv__container {
+  display: none;
   position: relative;
   top: 0;
   background-color: #e8e2d7;

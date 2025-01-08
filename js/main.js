@@ -18,7 +18,8 @@ setTimeout(() => {
     // titleを表示する
     .to(".js-mv-title", {
       onComplete: () => {
-        ".mv__container".style.display = "block"; // ローディング画面を非表示
+        document.querySelector(".mv__container").style.display = "block";
+        // ローディング画面を表示
       },
     })
     .to(loading, {
