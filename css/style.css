@@ -704,6 +704,11 @@ p {
   background: currentColor;
 }
 
+.dli-arrow-right:hover {
+  width: 13.8888888889vw;
+  transition: transform 0.3s ease;
+}
+
 .dli-arrow-right::before {
   content: "";
   width: 1.3888888889vw;

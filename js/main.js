@@ -1,21 +1,6 @@
 // ーーーーーーー
 // ローディングアニメーション
 // ーーーーーーー
-// ".loader"クラスを持つ要素を取得
-// const loader = document.querySelector(".loader");
-
-// ページ読み込み後、2秒後にローダーの非表示処理を開始
-// setTimeout(() => {
-// トランジションを設定し、opacityを1秒かけて0にする
-// loader.style.transition = "opacity 0.8s ease";
-// loader.style.opacity = "0";
-
-// 1秒後（opacityのトランジションが完了した後）、ローダーを完全に非表示にする
-//   setTimeout(() => {
-//     loader.style.display = "none";
-//   }, 800);
-// }, 1500);
-
 // GSAP TimelineでローディングアニメーションとMVアニメーションを連動
 const tl = gsap.timeline();
 const loader = document.querySelector(".loader");

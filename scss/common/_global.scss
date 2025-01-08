@@ -279,11 +279,13 @@ p {
   height: vw(1);
   background: currentColor;
 }
-
+.dli-arrow-right:hover {
+  width: vw(200);
+  transition: transform 0.3s ease;
+}
 .dli-arrow-right::before {
   content: "";
   width: vw(20);
-  // height: 0.65em;
   border: vw(2) solid currentColor;
   border-left: 0;
   border-bottom: 0;
