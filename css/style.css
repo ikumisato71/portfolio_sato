@@ -1297,6 +1297,14 @@ header {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .slide-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   html {
