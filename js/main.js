@@ -3,7 +3,9 @@
 // ーーーーーーー
 // GSAP TimelineでローディングアニメーションとMVアニメーションを連動
 const tl = gsap.timeline();
+// 最初の文字
 const loader = document.querySelector(".loader");
+// 楕円のアニメーション
 const loading = document.querySelector(".loading");
 
 // ローディングアニメーション
@@ -19,7 +21,7 @@ setTimeout(() => {
     .to(".js-mv-title", {
       onComplete: () => {
         document.querySelector(".mv__container").style.display = "block";
-        // ローディング画面を表示
+        // SVGアニメーション画面を表示
       },
     })
     .to(loading, {
