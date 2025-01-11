@@ -281,9 +281,9 @@ header {
 @include sp() {
   .outer-menu {
     display: block;
-    position: fixed;
-    top: 10vh;
-    left: 0;
+    position: absolute;
+    top: 0;
+    left: vw_sp(270);
     z-index: 1;
   }
   .outer-menu .checkbox-toggle {
@@ -330,8 +330,8 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-    width: 60px;
-    height: 60px;
+    width: vw_sp(60);
+    height: vh_sp(60);
     padding: 0.5em 1em;
     // background: rgba(33, 150, 243, 0.75);
     border-radius: 0 0.12em 0.12em 0;
@@ -346,8 +346,8 @@ header {
   .outer-menu .hamburger > div {
     position: relative;
     flex: none;
-    width: 100%;
-    height: 2px;
+    width: 80%;
+    height: vh_sp(1);
     background: #0e0e0e;
     transition: all 0.4s ease;
     display: flex;
@@ -361,8 +361,8 @@ header {
     z-index: 1;
     top: -10px;
     left: 0;
-    width: 100%;
-    height: 2px;
+    width: 80%;
+    height: vh_sp(1);
     background: inherit;
     transition: all 0.4s ease;
   }
