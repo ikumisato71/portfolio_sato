@@ -233,19 +233,19 @@ window.addEventListener("keydown", () => {
 });
 
 // // メニュー内アコーディオン制御
-accordionTrigger.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.currentTarget.classList.toggle(CLASS);
-    e.currentTarget.nextElementSibling.classList.toggle(CLASS);
-    if (accordionFlg) {
-      e.currentTarget.setAttribute("aria-expanded", "false");
-      accordionFlg = false;
-    } else {
-      e.currentTarget.setAttribute("aria-expanded", "true");
-      accordionFlg = true;
-    }
-  });
-});
+// accordionTrigger.forEach((item) => {
+//   item.addEventListener("click", (e) => {
+//     e.currentTarget.classList.toggle(CLASS);
+//     e.currentTarget.nextElementSibling.classList.toggle(CLASS);
+//     if (accordionFlg) {
+//       e.currentTarget.setAttribute("aria-expanded", "false");
+//       accordionFlg = false;
+//     } else {
+//       e.currentTarget.setAttribute("aria-expanded", "true");
+//       accordionFlg = true;
+//     }
+//   });
+// });
 
 // フォーカストラップ制御
 focusTrap.addEventListener("focus", (e) => {

@@ -77,44 +77,22 @@
         </nav>
       </div>
       <!-- スマホ用メニューボタン -->
-      <div class="header__inner">
-        <button
-          id="js-hamburger"
-          type="button"
-          class="hamburger"
-          aria-controls="navigation"
-          aria-expanded="false"
-          aria-label="メニューを開く"
-        >
-          <span class="hamburger__line"></span>
-          <span class="hamburger__text"></span>
-        </button>
-        <div class="header__nav-area js-nav-area" id="navigation">
-          <nav id="js-global-navigation" class="global-navigation">
-            <ul class="global-navigation__list">
-              <li>
-                <a href="index.html#about" class="global-navigation__link">
-                  About</a
-                >
-              </li>
-              <li>
-                <a href="index.html#works" class="global-navigation__link">
-                  Works
-                </a>
-              </li>
-              <li>
-                <a href="index.html#blog" class="global-navigation__link">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="index.html#contact" class="global-navigation__link">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <div id="js-focus-trap" tabindex="0"></div>
-          </nav>
+      <div class="outer-menu">
+        <input class="checkbox-toggle" type="checkbox" />
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
