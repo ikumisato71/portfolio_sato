@@ -9,31 +9,29 @@
 // ---------------
 
 .mask-bg {
-  color: #fff; /* 初期状態で文字を表示 */
-  display: inline-block;
-  font-size: vw(24);
-  // font-weight: bold;
+  position: absolute;
+  z-index: 999;
   width: 100%;
   height: 100vh;
+  display: inline-block;
   display: grid;
   place-items: center;
   overflow: hidden;
-  position: absolute;
-  z-index: 999;
-  // transition: color 0ms 450ms; /* 色の変化の遷移（現在は不要だが保持） */
+  color: #fff;
+  font-size: vw(24);
 }
 
 /* 背景の初期状態は文字の外に配置 */
 .mask-bg::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
   background: #fff;
   opacity: 0.3;
-  bottom: 0;
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: 0;
   transform: translate(0, -100%); /* 初期状態で文字を覆っていない */
 }
 
@@ -50,18 +48,15 @@
   100% {
     transform: translate(0, 0%); /* 背景が文字を完全に覆う */
   }
-  // 100% {
-  //   transform: translate(0, 101%); /* 背景が文字の外（下部） */
-  // }
 }
 
 .ellipse {
   position: absolute;
   z-index: 998;
   width: 100%;
-  overflow: hidden;
   height: 100vh;
   inset: 0;
+  overflow: hidden;
   display: grid;
   place-items: center;
   background-color: #222;
@@ -81,9 +76,9 @@
   50% {
     clip-path: ellipse(99% 97% at 0 0);
   }
-  // 75% {
-  //   clip-path: ellipse(50% 50%at 0 0);
-  // }
+  75% {
+    clip-path: ellipse(50% 50%at 0 0);
+  }
   100% {
     clip-path: ellipse(0% 0% at 0% 0%);
   }
@@ -723,7 +718,7 @@ header {
 // skill
 // ---------------
 
-.skill__wrapper {
+.skill__list {
   margin: vw(70) auto vw(0) auto;
   display: flex;
   flex-wrap: wrap;
@@ -742,7 +737,7 @@ header {
     gap: vw_sp(20);
   }
 }
-.skill__img {
+.skill__item-image {
   width: 30%;
   margin-top: vw(20);
 }
