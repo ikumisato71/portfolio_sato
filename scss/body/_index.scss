@@ -370,7 +370,7 @@ header {
     top: 10px;
   }
   .outer-menu .menu {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -381,7 +381,7 @@ header {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     outline: 1px solid transparent;
-    display: flex;
+    // display: flex;
     align-items: center;
     justify-content: center;
   }
