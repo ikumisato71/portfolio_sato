@@ -277,7 +277,9 @@ header {
 .outer-menu {
   display: none;
 }
+// --------------------------
 /* スマホ　ハンバーガーメニュー */
+// --------------------------
 @include sp() {
   .outer-menu {
     display: block;
