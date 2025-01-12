@@ -1,4 +1,43 @@
 // ーーーーーーー
+// ローディングアニメーション
+// ーーーーーーー
+// GSAP TimelineでローディングアニメーションとMVアニメーションを連動
+const tl = gsap.timeline();
+// 最初の文字
+const loader = document.querySelector(".loader");
+// 楕円のアニメーション
+const loading = document.querySelector(".loading");
+
+// ローディングアニメーション
+setTimeout(() => {
+  tl.to(loader, {
+    opacity: 0,
+    duration: 1,
+    onComplete: () => {
+      loader.style.display = "none"; // ローディング画面を非表示
+    },
+  })
+    // titleを表示する
+    .to(".js-mv-title", {
+      onComplete: () => {
+        document.querySelector(".mv__container").style.display = "block";
+        // SVGアニメーション画面を表示
+      },
+    })
+    .to(loading, {
+      opacity: 1,
+      translateY: 0,
+      duration: 1,
+      ease: "power2.out",
+    })
+    .to(".js-mv-title", {
+      opacity: 1,
+      scale: 0.8,
+      duration: 1,
+      ease: "back.out(1.7)",
+    });
+}, 650);
+// ーーーーーーー
 // マウスストーカー
 // ーーーーーーー
 // .mouse-stalker要素を取得

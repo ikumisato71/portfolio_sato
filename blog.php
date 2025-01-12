@@ -40,7 +40,8 @@ Template Post Type: post
         </div>
       </section>
     </main>
-    <script src="<?php echo get_template_directory_uri(); ?>/./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
     <script src="<?php echo get_template_directory_uri(); ?>/./js/blog.js"></script>
     <!-- jsファイル -->
