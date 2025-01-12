@@ -40,6 +40,8 @@ Template Post Type: post
         </div>
       </section>
     </main>
+    <script src="<?php echo get_template_directory_uri(); ?>/./js/main.js"></script>
+
     <script src="<?php echo get_template_directory_uri(); ?>/./js/blog.js"></script>
     <!-- jsファイル -->
   </body>

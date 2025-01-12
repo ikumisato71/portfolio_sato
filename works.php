@@ -102,6 +102,8 @@ Template Post Type: post
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/./js/works.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/./js/main.js"></script>
+
     <!-- jsファイル -->
   </body>
 </html>

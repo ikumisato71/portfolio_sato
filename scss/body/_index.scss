@@ -257,6 +257,7 @@ header {
 }
 
 .nav__container {
+  position: fixed;
   margin-top: vh(35);
   margin-left: vw(755);
   @include sp() {

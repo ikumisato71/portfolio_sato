@@ -116,7 +116,7 @@
           <div class="l-inner">
             <div class="swiper">
               <div class="swiper-wrapper">
-                <a href="<?php echo home_url(); ?>/#page-works1" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/works/#page-works1" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work1.jpg" alt="" />
@@ -130,7 +130,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="<?php echo home_url(); ?>/#page-works2" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/works/#page-works2" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work2.jpg" alt="" />
@@ -144,7 +144,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="<?php echo home_url(); ?>/#page-works3" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/works/#page-works3" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work3.jpg" alt="" />
@@ -158,7 +158,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="<?php echo home_url(); ?>/#page-works4" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/works/#page-works4" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/works4.jpg" alt="" />

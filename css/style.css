@@ -947,6 +947,7 @@ header {
 }
 
 .nav__container {
+  position: fixed;
   margin-top: 4.3209876543vh;
   margin-left: 52.4305555556vw;
 }
