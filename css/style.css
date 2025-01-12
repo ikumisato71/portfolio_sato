@@ -1165,7 +1165,7 @@ header {
 .l-inner {
   position: relative;
   box-sizing: content-box;
-  max-width: 1200px;
+  max-width: 83.3333333333vw;
   margin: 0 auto;
   padding: 0 11.25rem;
 }
@@ -1224,7 +1224,7 @@ header {
   height: 1.2rem;
   content: "";
   border: solid var(--color-gray);
-  border-width: 3px 3px 0 0;
+  border-width: 0.2083333333vw 0.2083333333vw 0 0;
 }
 
 .swiper-button-prev::after {
@@ -1263,8 +1263,8 @@ header {
   overflow: hidden;
   width: 23.9583333333vw;
   height: 64.1975308642vh;
-  border-radius: 4px;
-  box-shadow: 10px 10px 20px 0px #e8e2d7;
+  border-radius: 0.2777777778vw;
+  box-shadow: 0.6944444444vw 0.6944444444vw 1.3888888889vw 0 #e8e2d7;
   box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
 }
@@ -1273,6 +1273,11 @@ header {
   padding-top: 62.5%;
   width: 23.9583333333vw;
   height: 43.2098765432vh;
+}
+@media screen and (max-width: 768px) {
+  .card05 .slide-media {
+    width: 100%;
+  }
 }
 
 .card05 .slide-media img {

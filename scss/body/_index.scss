@@ -493,7 +493,7 @@ header {
   position: relative;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  max-width: 1200px;
+  max-width: vw(1200);
   margin: 0 auto;
   padding: 0 11.25rem;
 }
@@ -554,7 +554,7 @@ header {
   height: 1.2rem;
   content: "";
   border: solid var(--color-gray);
-  border-width: 3px 3px 0 0;
+  border-width: vw(3) vw(3) 0 0;
 }
 .swiper-button-prev::after {
   margin-left: 0.4rem;
@@ -591,8 +591,8 @@ header {
   // width: 20rem;
   width: vw(345);
   height: vh(520);
-  border-radius: 4px;
-  box-shadow: 10px 10px 20px 0px #e8e2d7;
+  border-radius: vw(4);
+  box-shadow: vw(10) vw(10) vw(20) 0 #e8e2d7;
   -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
@@ -601,6 +601,9 @@ header {
   padding-top: 62.5%;
   width: vw(345);
   height: vh(350);
+  @include sp() {
+    width: 100%;
+  }
 }
 .card05 .slide-media img {
   // height: calc(100% + 16px);
