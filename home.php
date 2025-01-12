@@ -116,7 +116,7 @@
           <div class="l-inner">
             <div class="swiper">
               <div class="swiper-wrapper">
-                <a href="works.html#page-works1" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/#page-works1" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work1.jpg" alt="" />
@@ -130,7 +130,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="works.html#page-works2" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/#page-works2" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work2.jpg" alt="" />
@@ -144,7 +144,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="works.html#page-works3" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/#page-works3" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work3.jpg" alt="" />
@@ -158,7 +158,7 @@
                     </div>
                   </article>
                 </a>
-                <a href="works.html#page-works4" class="swiper-slide">
+                <a href="<?php echo home_url(); ?>/#page-works4" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/works4.jpg" alt="" />
@@ -293,13 +293,13 @@
         <div class="blog__wrapper">
           <div class="blog__item--box">
             <p class="blog__number">01</p>
-            <a href="blog.html" class="blog__item--link"
+            <a href="<?php echo home_url(); ?>/blog" class="blog__item--link"
               ><img class="blog__img" src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" alt="大島"
             /></a>
           </div>
           <div class="blog__item--box">
             <p class="blog__number">02</p>
-            <a href="blog.html" class="blog__item--link"
+            <a href="<?php echo home_url(); ?>/blog" class="blog__item--link"
               ><img class="blog__img" src="<?php echo get_template_directory_uri(); ?>/img/blog2.png" alt="富士山"
             /></a>
           </div>
@@ -311,7 +311,7 @@
           </div>
         </div>
         <button class="blog_arrow__btn">
-          <a class="blog__page--link" href="blog.html">
+          <a class="blog__page--link" href="<?php echo home_url(); ?>/blog">
             <p class="blog_arrow__btn--p">read more</p>
             <span class="dli-arrow-right"></span>
           </a>
