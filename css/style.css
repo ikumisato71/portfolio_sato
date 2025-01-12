@@ -1265,6 +1265,8 @@ header {
   height: 64.1975308642vh;
   border-radius: 4px;
   box-shadow: 10px 10px 20px 0px #e8e2d7;
+  box-shadow: var(--box-shadow);
+  transition: opacity 0.3s, transform 0.3s !important;
 }
 
 .card05 .slide-media {

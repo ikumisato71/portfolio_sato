@@ -593,8 +593,9 @@ header {
   height: vh(520);
   border-radius: 4px;
   box-shadow: 10px 10px 20px 0px #e8e2d7;
-  // -webkit-box-shadow: var(--box-shadow);
-  // box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  transition: opacity 0.3s, transform 0.3s !important;
 }
 .card05 .slide-media {
   padding-top: 62.5%;
