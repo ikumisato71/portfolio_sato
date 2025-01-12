@@ -809,6 +809,7 @@ header {
 }
 .blog__img:hover {
   opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
 }
 .blog_arrow__btn {
   margin-top: vh(40);
