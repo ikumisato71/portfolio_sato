@@ -735,6 +735,11 @@ p {
   color: #fff;
   font-size: 1.6666666667vw;
 }
+@media screen and (max-width: 768px) {
+  .mask-bg {
+    font-size: 5vw;
+  }
+}
 
 /* 背景の初期状態は文字の外に配置 */
 .mask-bg::after {
@@ -968,9 +973,9 @@ header {
 @media screen and (max-width: 768px) {
   .outer-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 75vw;
+    left: 83.3333333333vw;
     z-index: 1;
   }
   .outer-menu .checkbox-toggle {
@@ -979,17 +984,19 @@ header {
     left: 0;
     z-index: 2;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 16.6666666667vw;
+    height: 7.5vh;
     opacity: 0;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div {
     transform: rotate(135deg);
+    background: #e5e5e5;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
   .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
+    background: #e5e5e5;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
     opacity: 0;
@@ -1028,7 +1035,7 @@ header {
   .outer-menu .hamburger > div {
     position: relative;
     flex: none;
-    width: 80%;
+    width: 8.3333333333vw;
     height: 0.125vh;
     background: #0e0e0e;
     transition: all 0.4s ease;
@@ -1041,18 +1048,18 @@ header {
     content: "";
     position: absolute;
     z-index: 1;
-    top: -10px;
+    top: -1.25vh;
     left: 0;
-    width: 80%;
+    width: 8.3333333333vw;
     height: 0.125vh;
     background: inherit;
     transition: all 0.4s ease;
   }
   .outer-menu .hamburger > div:after {
-    top: 10px;
+    top: 1.25vh;
   }
   .outer-menu .menu {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -1062,7 +1069,6 @@ header {
     overflow: hidden;
     backface-visibility: hidden;
     outline: 1px solid transparent;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -1080,6 +1086,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: -12.5vh;
+    bottom: 0; /* 下端に配置 */
+    left: -50vw;
   }
   .outer-menu .menu > div > div {
     text-align: center;

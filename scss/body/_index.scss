@@ -19,8 +19,10 @@
   overflow: hidden;
   color: #fff;
   font-size: vw(24);
+  @include sp() {
+    font-size: vw_sp(18);
+  }
 }
-
 /* 背景の初期状態は文字の外に配置 */
 .mask-bg::after {
   position: absolute;
@@ -283,9 +285,9 @@ header {
 @include sp() {
   .outer-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: vw_sp(270);
+    left: vw_sp(300);
     z-index: 1;
   }
   .outer-menu .checkbox-toggle {
@@ -294,17 +296,19 @@ header {
     left: 0;
     z-index: 2;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: vw_sp(60);
+    height: vh_sp(60);
     opacity: 0;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div {
     transform: rotate(135deg);
+    background: #e5e5e5;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
   .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
+    background: #e5e5e5;
   }
   .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
     opacity: 0;
@@ -348,7 +352,7 @@ header {
   .outer-menu .hamburger > div {
     position: relative;
     flex: none;
-    width: 80%;
+    width: vw_sp(30);
     height: vh_sp(1);
     background: #0e0e0e;
     transition: all 0.4s ease;
@@ -361,15 +365,15 @@ header {
     content: "";
     position: absolute;
     z-index: 1;
-    top: -10px;
+    top: vh_sp(-10);
     left: 0;
-    width: 80%;
+    width: vw_sp(30);
     height: vh_sp(1);
     background: inherit;
     transition: all 0.4s ease;
   }
   .outer-menu .hamburger > div:after {
-    top: 10px;
+    top: vh_sp(10);
   }
   .outer-menu .menu {
     position: relative;
@@ -402,6 +406,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: vh_sp(-100);
+    bottom: 0; /* 下端に配置 */
+    left: vw_sp(-180);
   }
   .outer-menu .menu > div > div {
     text-align: center;
