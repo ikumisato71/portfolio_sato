@@ -5,6 +5,8 @@ Template Post Type: post
 */
 ?>
 <?php get_header();?>
+<?php if(have_posts()) :?>
+  <?php while (have_posts()) : the_post() ; ?>
 <main>
       <section id="page-blog" class="section__padding--pageBL">
         <h2 class="page__blog--h2 js-text">Blog</h2>
@@ -12,15 +14,12 @@ Template Post Type: post
         <div class="page__blog__wrapper">
           <div class="page__blog__container">
           <p class="blog__number">01</p>
-          <div class="blog__item-img"
+          <!-- <div class="blog__item-img"
             ><img src="<?php echo get_template_directory_uri(); ?>/img/blog2.png" alt="富士山"
-          />
-          <h3>富士山</h3>
-          <p>2024/12/8</p>
-          <p>伊豆シャボテン公園からの富士山
-            ここの公園はカピパラと触れ合えます。
-            驚くほど他の動物との距離も近いです。
-            </p>
+          /> -->
+          <!-- <h3> <?php the_title(); ?></h3> -->
+          <p><?php the_content(); ?></p>
+        <p><?php echo post_custom('day'); ?></p>
           </div>
         </div>
           <div class="blog__number--box">
@@ -38,6 +37,8 @@ Template Post Type: post
             </ul>
           </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
