@@ -291,24 +291,38 @@
         </h2>
 
         <div class="blog__wrapper">
-          <div class="blog__item--box">
-            <p class="blog__number">01</p>
-            <a href="<?php echo home_url(); ?>/blog" class="blog__item--link"
-              ><img class="blog__img" src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" alt="大島"
-            /></a>
-          </div>
-          <div class="blog__item--box">
-            <p class="blog__number">02</p>
-            <a href="<?php echo home_url(); ?>/blog" class="blog__item--link"
-              ><img class="blog__img" src="<?php echo get_template_directory_uri(); ?>/img/blog2.png" alt="富士山"
-            /></a>
-          </div>
-          <div class="blog__item--box">
-            <p class="blog__number">03</p>
-            <a href="blog.html" class="blog__item--link"
-              ><img class="blog__img" src="<?php echo get_template_directory_uri(); ?>/img/blog3.png" alt="レース"
-            /></a>
-          </div>
+          <?php
+              //取得したい投稿記事などの条件を引数として渡す
+              $args = array(
+                  // 投稿タイプ
+                  'post_type'      => 'post',
+                  // カテゴリー名
+                  'category_name' => 'blog',
+                  // 1ページに表示する投稿数
+                  'posts_per_page' => 3,
+              );
+              // データの取得
+              $posts = get_posts($args);
+          ?>
+          <?php foreach($posts as $index=>$post): ?>
+          <?php setup_postdata($post); ?>
+            <div class="blog__item--box">
+              <p class="blog__number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></p>
+              <a href="<?php the_permalink(); ?>" class="blog__item--link">
+                <img class="blog__img" 
+                    src="<?php 
+                        if (has_post_thumbnail()) { 
+                            echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+                        } else { 
+                            echo 'default-image.jpg'; // サムネイルがない場合のデフォルト画像
+                        } 
+                    ?>" 
+                    alt="<?php the_title_attribute(); ?>" />
+              </a>
+            </div>
+          <?php endforeach; ?>
+          <!-- 使用した投稿データをリセット -->
+          <?php wp_reset_postdata(); ?>
         </div>
         <button class="blog_arrow__btn">
           <a class="blog__page--link" href="<?php echo home_url(); ?>/blog">
@@ -316,9 +330,9 @@
             <span class="dli-arrow-right"></span>
           </a>
         </button>
-      </section>
-      <section>
-      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+        <section class="instagram">
+        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+        </section>
       </section>
       <section id="contact" class="js-stagger-trigger">
         <button class="scroll-top__btn js-page-top">
@@ -334,6 +348,9 @@
           <span class="js-text">c</span>
           <span class="js-text">t</span>
         </h2>
+        <div>
+
+        </div>
         <a
           class="mailAddress__link"
           href="mailto:kinoko7971&#64;gmail.com"

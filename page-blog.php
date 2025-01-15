@@ -119,7 +119,8 @@ Template Post Type: post
         <p><?php echo post_custom('day'); ?></p>
           </div>
         </div>
-        
+        <?php endwhile; ?>
+        <?php endif; ?>
           <?php
               //取得したい投稿記事などの条件を引数として渡す
               $args = array(
@@ -160,8 +161,7 @@ Template Post Type: post
             <a href=""> <li class="blog__number--li">10</li></a>
             </ul> -->
           
-        <?php endwhile; ?>
-        <?php endif; ?>
+      
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
