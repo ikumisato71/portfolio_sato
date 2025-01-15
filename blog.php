@@ -25,7 +25,7 @@ Template Post Type: post
           <div class="blog__number--box">
             <ul class="blog__number--ul">
             <a href=""><li class="blog__number--li">01</li></a>
-            <a href=""> <li class="blog__number--li">02</li></a>
+            <a href="http://portfolio.local/blog-2/"> <li class="blog__number--li">02</li></a>
             <a href=""><li class="blog__number--li">03</li></a>
             <a href=""><li class="blog__number--li">04</li></a>
             <a href=""> <li class="blog__number--li">05</li></a>

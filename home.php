@@ -317,6 +317,9 @@
           </a>
         </button>
       </section>
+      <section>
+      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      </section>
       <section id="contact" class="js-stagger-trigger">
         <button class="scroll-top__btn js-page-top">
           <span class="dli-arrow-up"></span>
