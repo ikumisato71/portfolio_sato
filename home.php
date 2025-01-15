@@ -357,4 +357,5 @@
           class="mail"
           ><p class="mailAddress">kinoko7971@gmail.com</p></a
         >
+        </main>
         <?php get_footer(); ?>
