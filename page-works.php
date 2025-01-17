@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: works
-Template page Type: post
+Template page Type: page
 */
 ?>
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Custom Event Page
- * Description: イベント専用のカスタムページテンプレート
+ * Template Name: Custom blog Page
+ * Description: blogカスタムページテンプレート
  */
 ?>
 
