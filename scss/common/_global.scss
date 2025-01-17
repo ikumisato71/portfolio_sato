@@ -38,8 +38,8 @@ img {
 // .section__padding--pageWK {
 //   padding: 0 vw(170) 0 vw(170);
 // }
-.section__padding--pageBL {
-  padding: vh(10) vw(30) 0 vw(30);
+.section__padding--pageBlog {
+  padding: vh(100) vw(30) 0 vw(30);
 }
 
 h2 {
@@ -61,6 +61,7 @@ h2 {
   font-family: $poiret-one-regular;
   font-size: vw(120);
   margin-top: vh(10);
+  margin-left: vw(50);
   letter-spacing: normal; /* または letter-spacing: 0; */
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -116,6 +117,9 @@ p {
 .blog__number {
   font-family: $zilla-slab-highlight-regular;
   font-size: vw(64);
+  position: absolute;
+  z-index: 1;
+  margin: 0;
   @include sp() {
     font-size: vw(64);
   }

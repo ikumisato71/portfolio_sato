@@ -103,18 +103,18 @@
     </header>
 
     <main>
-    <section id="page-blog" class="section__padding--pageBL">
+    <section id="page-blog" class="section__padding--pageBlog">
         <h2 class="page__blog--h2 js-text">Blog</h2>
 
         <!-- <section class="single"> -->
             <div class="page__blog__wrapper">
+                <p class="page__blog__number"><?php echo post_custom('number'); ?></p>
                 <div class="page__blog__container">
-                <p class="blog__number"><?php echo post_custom('number'); ?></p>
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <!-- <h1 class="single__title"><?php the_title(); ?></h1> -->
-                    <div class="single__thumbnail">
+                    <!-- <div class="single__thumbnail">
                         <?php the_post_thumbnail(); ?>
-                    </div>
+                    </div> -->
                     <div class="single__text">
                         <?php the_content(); ?>
                     </div>

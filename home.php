@@ -334,28 +334,9 @@
         <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
         </section>
       </section>
-      <section id="contact" class="js-stagger-trigger">
-        <button class="scroll-top__btn js-page-top">
-          <span class="dli-arrow-up"></span>
-          <!-- <img src="img/top_button.svg" alt="トップへ戻るボタン" /> -->
-        </button>
-        <h2 class="section__title">
-          <span class="js-text">C</span>
-          <span class="js-text">o</span>
-          <span class="js-text">n</span>
-          <span class="js-text">t</span>
-          <span class="js-text">a</span>
-          <span class="js-text">c</span>
-          <span class="js-text">t</span>
-        </h2>
-        <div>
 
-        </div>
-        <a
-          class="mailAddress__link"
-          href="mailto:kinoko7971&#64;gmail.com"
-          class="mail"
-          ><p class="mailAddress">kinoko7971@gmail.com</p></a
-        >
+      <a href="#!" class="rotate">
+    <span class="rotate-text">文字がクルッと回転する</span>
+</a>
         </main>
         <?php get_footer(); ?>

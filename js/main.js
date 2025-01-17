@@ -172,3 +172,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 元のテキストを取得
+  const rotateText = document.querySelector(".rotate-text");
+  const text = rotateText.textContent.trim(); // テキストをトリム
+  rotateText.textContent = ""; // 元のテキストをクリア
+
+  // 各文字を <span> で囲む
+  text.split("").forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char === " " ? "\u00A0" : char; // 空白は &nbsp; に変換
+    rotateText.appendChild(span);
+  });
+
+  // GSAPアニメーションの適用
+  gsap.fromTo(
+    ".rotate-text span", // 対象要素
+    { opacity: 0, rotateX: 90 }, // 初期状態
+    {
+      opacity: 1,
+      rotateX: 0, // 最終状態
+      duration: 0.5, // 1文字のアニメーション時間
+      stagger: 0.1, // 順番に適用（0.1秒遅延）
+      ease: "power2.out", // イージング
+    }
+  );
+});

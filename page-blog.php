@@ -105,7 +105,7 @@ Template Post Type: page
 <?php if(have_posts()) :?>
   <?php while (have_posts()) : the_post() ; ?>
 <main>
-      <section id="page-blog" class="section__padding--pageBL">
+      <section id="page-blog" class="section__padding--pageBlog">
         <h2 class="page__blog--h2 js-text">Blog</h2>
 
         <div class="page__blog__wrapper">

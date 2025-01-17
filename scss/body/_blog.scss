@@ -6,6 +6,7 @@
 
 #page-blog {
   display: flex;
+  align-items: center;
 }
 .page__blog__wrapper {
   display: flex;
@@ -32,4 +33,13 @@
   break-inside: avoid;
   margin-bottom: 8px;
   padding: 8px;
+}
+.blog__img {
+  width: vw(338);
+  height: vh(155);
+}
+.page__blog__number {
+  display: block;
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(64);
 }
