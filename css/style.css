@@ -460,6 +460,16 @@ h2 {
   text-orientation: upright;
 }
 
+.single__blog--h2 {
+  font-family: "Poiret One", serif;
+  font-size: 8.3333333333vw;
+  margin-top: 1.2345679012vh;
+  margin-left: 3.4722222222vw;
+  letter-spacing: normal; /* または letter-spacing: 0; */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 h3 {
   font-size: 1.3888888889vw;
   font-weight: 700;
@@ -531,6 +541,17 @@ p {
 }
 @media screen and (max-width: 768px) {
   .blog__number {
+    font-size: 4.4444444444vw;
+  }
+}
+
+.single__blog__number {
+  font-family: "Zilla Slab Highlight", serif;
+  font-size: 4.4444444444vw;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .single__blog__number {
     font-size: 4.4444444444vw;
   }
 }
@@ -1472,7 +1493,8 @@ header {
 }
 
 .blog__img {
-  width: 100%;
+  width: 23.4722222222vw;
+  height: 19.1358024691vh;
   margin-top: 4.8611111111vw;
 }
 
@@ -1631,14 +1653,25 @@ footer {
 
 .page__blog__wrapper {
   display: flex;
-  justify-content: space-around;
-  gap: 6.25vw;
-  margin: 0 auto;
 }
 
 .page__blog__container {
-  width: 40.9722222222vw;
-  height: 36.1111111111vw;
+  width: 25vw;
+  height: 40.625vw;
+}
+
+.page__blog--img {
+  width: 10.7638888889vw;
+  height: 19.1358024691vh;
+}
+
+#single-blog {
+  display: flex;
+  align-items: center;
+}
+
+.single__blog__container {
+  width: 100%;
 }
 
 .blog__number--box {
@@ -1660,11 +1693,6 @@ footer {
        break-inside: avoid;
   margin-bottom: 8px;
   padding: 8px;
-}
-
-.blog__img {
-  width: 23.4722222222vw;
-  height: 19.1358024691vh;
 }
 
 .page__blog__number {

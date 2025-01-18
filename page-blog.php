@@ -101,27 +101,11 @@ Template Post Type: page
         </div>
       </div>
     </header>
-
-<?php if(have_posts()) :?>
-  <?php while (have_posts()) : the_post() ; ?>
-<main>
+    
+    <main>
       <section id="page-blog" class="section__padding--pageBlog">
         <h2 class="page__blog--h2 js-text">Blog</h2>
-
-        <div class="page__blog__wrapper">
-          <div class="page__blog__container">
-          <p class="blog__number"><?php echo post_custom('number'); ?></p>
-          <!-- <div class="blog__item-img"
-            ><img src="<?php echo get_template_directory_uri(); ?>/img/blog2.png" alt="富士山"
-          /> -->
-          <!-- <h3> <?php the_title(); ?></h3> -->
-          <p><?php the_content(); ?></p>
-        <p><?php echo post_custom('day'); ?></p>
-          </div>
-        </div>
-        <?php endwhile; ?>
-        <?php endif; ?>
-          <?php
+        <?php
               //取得したい投稿記事などの条件を引数として渡す
               $args = array(
                   // 投稿タイプ
@@ -129,27 +113,44 @@ Template Post Type: page
                   // カテゴリー名
                   'category_name' => 'blog',
                   // 1ページに表示する投稿数
-                  'posts_per_page' => 2,
+                  'posts_per_page' => 6,
               );
               // データの取得
               $posts = get_posts($args);
-            ?>
-
+          ?>
             <!-- ループ処理 -->
-            <?php foreach($posts as $post): ?>
-            <?php setup_postdata($post); ?>
-            <div class="blog__number--box">
-            <ul class="blog__number--ul">
-                    <!-- aタグで投稿記事へのリンクを作成 -->
-                    <li class="blog__number--li"><a href="<?php echo get_permalink(); ?>"> </a></li>
-                    </ul>
+            <?php foreach($posts as $index=>$post): ?>
+          <?php setup_postdata($post); ?>
+          <div class="page__blog__wrapper">
+          <div class="page__blog__container">
+              <p class="blog__number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></p>
+              <a href="<?php the_permalink(); ?>" class="blog__item--link">
+                <img class="page__blog--img" 
+                    src="<?php 
+                        if (has_post_thumbnail()) { 
+                            echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+                        } else { 
+                            echo 'default-image.jpg'; // サムネイルがない場合のデフォルト画像
+                        } 
+                    ?>" 
+                    alt="<?php the_title_attribute(); ?>" />
+              </a>
+              <?php endforeach; ?>
+              <!-- 使用した投稿データをリセット -->
+              <?php wp_reset_postdata(); ?>           
               </div>
-
-            <?php endforeach; ?>
-            <!-- 使用した投稿データをリセット -->
-            <?php wp_reset_postdata(); ?>
-            <!-- <ul class="blog__number--ul">
-            <a href=""><li class="blog__number--li">01</li></a>
+            </div>
+        
+            <ul class="blog__number--ul">
+            <?php
+                        // 記事一覧ページ用のページネーション
+                        echo paginate_links(array(
+                          'total' => $wp_query->max_num_pages,
+                          'prev_text' => '&lt;&lt;前へ',
+                          'next_text' => '次へ&gt;&gt;',
+                        ));
+                      ?>
+            <!-- <a href=""><li class="blog__number--li">01</li></a>
             <a href="http://portfolio.local/blog-2/"> <li class="blog__number--li">02</li></a>
             <a href=""><li class="blog__number--li">03</li></a>
             <a href=""><li class="blog__number--li">04</li></a>
@@ -158,8 +159,8 @@ Template Post Type: page
             <a href=""> <li class="blog__number--li">07</li></a>
             <a href=""> <li class="blog__number--li">08</li></a>
             <a href=""> <li class="blog__number--li">09</li></a>
-            <a href=""> <li class="blog__number--li">10</li></a>
-            </ul> -->
+            <a href=""> <li class="blog__number--li">10</li></a> -->
+            </ul>
           
       
       </section>

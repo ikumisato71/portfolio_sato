@@ -66,6 +66,15 @@ h2 {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+.single__blog--h2 {
+  font-family: $poiret-one-regular;
+  font-size: vw(120);
+  margin-top: vh(10);
+  margin-left: vw(50);
+  letter-spacing: normal; /* または letter-spacing: 0; */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
 h3 {
   font-size: vw(20);
   font-weight: 700;
@@ -119,6 +128,14 @@ p {
   font-size: vw(64);
   position: absolute;
   z-index: 1;
+  margin: 0;
+  @include sp() {
+    font-size: vw(64);
+  }
+}
+.single__blog__number {
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(64);
   margin: 0;
   @include sp() {
     font-size: vw(64);

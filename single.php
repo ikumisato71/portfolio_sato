@@ -103,13 +103,13 @@
     </header>
 
     <main>
-    <section id="page-blog" class="section__padding--pageBlog">
-        <h2 class="page__blog--h2 js-text">Blog</h2>
+    <section id="single-blog" class="section__padding--pageBlog">
+        <h2 class="single__blog--h2 js-text">Blog</h2>
 
         <!-- <section class="single"> -->
-            <div class="page__blog__wrapper">
-                <p class="page__blog__number"><?php echo post_custom('number'); ?></p>
-                <div class="page__blog__container">
+            <div class="single__blog__wrapper">
+                <p class="single__blog__number"><?php echo post_custom('number'); ?></p>
+                <div class="single__blog__container">
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <!-- <h1 class="single__title"><?php the_title(); ?></h1> -->
                     <!-- <div class="single__thumbnail">

@@ -67,7 +67,7 @@
               <a href="<?php echo home_url(); ?>/#works" class="nav__list__item-link">Works</a>
             </li>
             <li class="nav__list__item">
-              <a href="<?php echo home_url(); ?>/#blog" class="nav__list__item-link">Blog</a>
+              <a href="<?php echo home_url(); ?>/blog" class="nav__list__item-link">Blog</a>
             </li>
             <li class="nav__list__item">
               <a href="<?php echo home_url(); ?>/#contact" class="nav__list__item-link"
@@ -89,7 +89,7 @@
               <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
                 <li><a href="<?php echo home_url(); ?>/#works">Works</a></li>
-                <li><a href="<?php echo home_url(); ?>/#blog">Blog</a></li>
+                <li><a href="<?php echo home_url(); ?>/blog">Blog</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
               </ul>
             </div>
