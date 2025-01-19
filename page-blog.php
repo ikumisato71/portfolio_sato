@@ -123,7 +123,7 @@ Template Post Type: page
           <?php setup_postdata($post); ?>
           <div class="page__blog__wrapper">
           <div class="page__blog__container">
-              <p class="blog__number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></p>
+              <p class="page__blog__number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></p>
               <a href="<?php the_permalink(); ?>" class="blog__item--link">
                 <img class="page__blog--img" 
                     src="<?php 

@@ -141,6 +141,14 @@ p {
     font-size: vw(64);
   }
 }
+.page__blog__number {
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(48);
+  margin: 0;
+  @include sp() {
+    font-size: vw(64);
+  }
+}
 .blog__number--li {
   font-family: $zilla-slab-highlight-regular;
   font-size: vw(36);
