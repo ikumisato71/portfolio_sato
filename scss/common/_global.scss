@@ -59,12 +59,10 @@ h2 {
 }
 .page__blog--h2 {
   font-family: $poiret-one-regular;
-  font-size: vw(120);
+  font-size: vw(96);
   margin-top: vh(10);
   margin-left: vw(50);
   letter-spacing: normal; /* または letter-spacing: 0; */
-  writing-mode: vertical-rl;
-  text-orientation: upright;
 }
 .single__blog--h2 {
   font-family: $poiret-one-regular;
@@ -143,10 +141,10 @@ p {
 }
 .page__blog__number {
   font-family: $zilla-slab-highlight-regular;
-  font-size: vw(48);
+  font-size: vw(24);
   margin: 0;
   @include sp() {
-    font-size: vw(64);
+    font-size: vw(24);
   }
 }
 .blog__number--li {
@@ -324,4 +322,50 @@ p {
   top: 50%;
   right: vw(-0.8);
   box-sizing: border-box;
+}
+
+/* pagination */
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: vw(30);
+  gap: vw(15);
+}
+
+.page-numbers li a {
+  text-decoration: none;
+  color: $color-base-black;
+  font-size: vw(14);
+  padding: vh(8) vw(18);
+  border: vw(1) solid $color-base-black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-numbers li a:hover {
+  background-color: $color-base-black;
+  color: $color-base-wh;
+}
+
+.page-numbers .current {
+  background-color: $color-base-black;
+  color: $color-base-wh;
+  padding: vh(8) vw(18);
+  border: none;
+}
+/* 一覧へ戻るボタン */
+.back__list {
+  display: block;
+  margin-left: vw(1100);
+}
+.back__list--btn {
+  color: $color-base-black;
+  font-size: vw(20);
+  padding: vh(8) vw(18);
+  border: vw(1) solid $color-base-black;
+  transition: background-color 0.3s, color 0.3s;
+}
+.back__list--btn:hover {
+  background-color: $color-base-black;
+  color: $color-base-wh;
 }

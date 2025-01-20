@@ -5,18 +5,25 @@
 @use "../common/global" as *;
 // 固定ページBlog
 #page-blog {
-  display: flex;
   align-items: center;
 }
-.page__blog__wrapper {
+.page__blog--title {
   display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: vw(40);
+}
+.page__blog__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: vw(40);
 }
 .page__blog__container {
-  width: vw(360);
-  height: vw(585);
 }
 .page__blog--img {
-  width: vw(155);
+  width: vw(338);
   height: vh(155);
 }
 // 投稿ページBlog
@@ -45,9 +52,4 @@
   break-inside: avoid;
   margin-bottom: 8px;
   padding: 8px;
-}
-.page__blog__number {
-  display: block;
-  font-family: $zilla-slab-highlight-regular;
-  font-size: vw(64);
 }

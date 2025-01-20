@@ -330,13 +330,7 @@
             <span class="dli-arrow-right"></span>
           </a>
         </button>
-        <section class="instagram">
-        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
-        </section>
       </section>
 
-      <a href="#!" class="rotate">
-    <span class="rotate-text">文字がクルッと回転する</span>
-</a>
         </main>
         <?php get_footer(); ?>

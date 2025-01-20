@@ -856,24 +856,3 @@ footer {
   width: 8%;
   padding: vw(20);
 }
-.rotate {
-  perspective: 1000px; /* 3D感を保つための奥行き設定 */
-  text-decoration: none;
-  display: inline-block;
-}
-
-.rotate-text {
-  display: inline-block;
-  position: relative;
-  white-space: nowrap; /* 文字の折り返しを防ぐ */
-}
-
-.rotate-text span {
-  display: inline-block;
-  backface-visibility: hidden; /* 背面を非表示 */
-  transform-origin: center; /* 回転の基点を設定 */
-  transform: rotateX(90deg); /* 初期状態で非表示（90度回転） */
-  opacity: 0; /* 初期状態では透明 */
-  font-size: 20px; /* 文字サイズ（調整可能） */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* 念のため */
-}

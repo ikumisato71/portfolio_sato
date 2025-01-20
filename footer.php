@@ -3,7 +3,6 @@
           <section id="contact" class="js-stagger-trigger">
         <button class="scroll-top__btn js-page-top">
           <span class="dli-arrow-up"></span>
-          <!-- <img src="img/top_button.svg" alt="トップへ戻るボタン" /> -->
         </button>
         <h2 class="section__title">
           <span class="js-text">C</span>
