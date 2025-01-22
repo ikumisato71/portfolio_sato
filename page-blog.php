@@ -39,7 +39,7 @@ Template Post Type: page
     <!-- ページのサイト名 -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" />
 
     <!-- css -->
     <link
@@ -138,7 +138,7 @@ Template Post Type: page
                     if (has_post_thumbnail()) { 
                         echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
                     } else { 
-                        echo get_template_directory_uri() . '/img/No image.jpg';  // サムネイルがない場合のデフォルト画像
+                        echo get_template_directory_uri() . '/img/No image.svg';  // サムネイルがない場合のデフォルト画像
                     } 
                 ?>" 
                 alt="<?php the_title_attribute(); ?>" />

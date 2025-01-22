@@ -116,7 +116,41 @@
           <div class="l-inner">
             <div class="swiper">
               <div class="swiper-wrapper">
-                <a href="<?php echo home_url(); ?>/works/#page-works1" class="swiper-slide">
+              <?php
+          // 投稿データの取得設定
+          $args = array(
+            'post_type' => 'post',           // 投稿タイプ
+            'category_name' => 'work',       // カテゴリー名
+            'posts_per_page' => 4,           // 取得する投稿数
+          );
+          $posts = get_posts($args);
+          ?>
+
+          <?php foreach ($posts as $post): setup_postdata($post); ?>
+          <div class="swiper-slide">
+            <a href="<?php the_permalink(); ?>">
+              <article class="slide">
+                <div class="slide-media img-cover">
+                  <img src="<?php 
+                    if (has_post_thumbnail()) { 
+                      echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+                    } else { 
+                      echo get_template_directory_uri() . '/img/No image.svg'; // デフォルト画像
+                    } 
+                  ?>" alt="<?php the_title_attribute(); ?>" />
+                </div>
+                <div class="slide-content">
+                  <h3 class="slide-title"><?php the_title(); ?></h3>
+                  <p class="slide-text">
+                    <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?> <!-- 抜粋を表示 -->
+                  </p>
+                </div>
+              </article>
+            </a>
+          </div>
+          <?php endforeach; wp_reset_postdata(); ?>
+        
+                <!-- <a href="<?php echo home_url(); ?>/works/#page-works1" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work1.jpg" alt="" />
@@ -129,8 +163,8 @@
                       </p>
                     </div>
                   </article>
-                </a>
-                <a href="<?php echo home_url(); ?>/works/#page-works2" class="swiper-slide">
+                </a> -->
+                <!-- <a href="<?php echo home_url(); ?>/works/#page-works2" class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media img-cover">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/work2.jpg" alt="" />
@@ -170,8 +204,8 @@
                       </p>
                     </div>
                   </article>
-                </a>
-              </div>
+                </a> -->
+              <!-- </div> -->
               <!-- /swiper-wrapper -->
             </div>
             <!-- /swiper -->
@@ -314,7 +348,7 @@
                         if (has_post_thumbnail()) { 
                             echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
                         } else { 
-                            echo 'default-image.jpg'; // サムネイルがない場合のデフォルト画像
+                          echo get_template_directory_uri() . '/img/No image.svg'; // サムネイルがない場合のデフォルト画像
                         } 
                     ?>" 
                     alt="<?php the_title_attribute(); ?>" />

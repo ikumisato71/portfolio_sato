@@ -33,7 +33,7 @@
     <!-- ページのサイト名 -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" />
 
     <!-- css -->
     <link
@@ -64,7 +64,7 @@
               <a href="<?php echo home_url(); ?>/#about" class="nav__list__item-link">About</a>
             </li>
             <li class="nav__list__item">
-              <a href="<?php echo home_url(); ?>/#works" class="nav__list__item-link">Works</a>
+              <a href="<?php echo home_url(); ?>/works" class="nav__list__item-link">Works</a>
             </li>
             <li class="nav__list__item">
               <a href="<?php echo home_url(); ?>/blog" class="nav__list__item-link">Blog</a>
@@ -88,7 +88,7 @@
             <div>
               <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
-                <li><a href="<?php echo home_url(); ?>/#works">Works</a></li>
+                <li><a href="<?php echo home_url(); ?>/works">Works</a></li>
                 <li><a href="<?php echo home_url(); ?>/blog">Blog</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
               </ul>

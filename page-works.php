@@ -39,7 +39,7 @@ Template page Type: page
     <!-- ページのサイト名 -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" />
 
     <!-- css -->
     <link
@@ -71,7 +71,7 @@ Template page Type: page
               <a href="<?php echo home_url(); ?>/#works" class="nav__list__item-link">Works</a>
             </li>
             <li class="nav__list__item">
-              <a href="<?php echo home_url(); ?>/blog" class="nav__list__item-link">Blog</a>
+              <a href="<?php echo home_url(); ?>/#blog" class="nav__list__item-link">Blog</a>
             </li>
             <li class="nav__list__item">
               <a href="<?php echo home_url(); ?>/#contact" class="nav__list__item-link"
@@ -93,7 +93,7 @@ Template page Type: page
               <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
                 <li><a href="<?php echo home_url(); ?>/#works">Works</a></li>
-                <li><a href="<?php echo home_url(); ?>/blog">Blog</a></li>
+                <li><a href="<?php echo home_url(); ?>/#blog">Blog</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
               </ul>
             </div>
@@ -102,99 +102,71 @@ Template page Type: page
       </div>
     </header>
     <main>
-      <article class="page-works__wrapper ">
-      <section id="page-works1" class="section__padding">
-        <h2 class="page__works--h2">Works</h2>
-        <div class="page__works__wrap">
-          <div class="page__works__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page_work1.jpg" alt="ANGE webサイト" />
-            <h3 class="page__works--h3">コーポレートサイト</h3>
-            <p class="page__works--p">
-              アパレルOEM企業様のコーポレートサイトになります。デザインからコーディングまで携わりました、
-              主にニット製品を扱っているので、やわらかい優しい雰囲気にしました。
-            </p>
-            <p>ー使用技術：HTML/CSS/JavaScript/jQueryー</p>
-          </div>
-          <div class="page__works__item-pc">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/ange_pc.jpg" alt="ANGE webサイトPC" />
-          </div>
-        </div>
-      </section>
-      <div class="side-scroll__wrapper">
-      <div class="side-scroll__container js-container">
-      <section  id="page-works2" class=" section__padding js-scroll">
-        <h2 class="page__works--h2">Works</h2>
-        <div class="page__works__wrap">
-          <div class="page__works__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page_work2.jpg" alt="Eco Shopサイト" />
-            <h3 class="page__works--h3">コーポレートサイト</h3>
-            <p class="page__works--p">
-              サスティナブルな商品を扱っているエコショップ様のホームページになります。
-              フェアトレードの商品を扱ってらっしゃたので、ホームページからShoppingページへの遷移もできます。
-            </p>
-            <p>ー使用技術：WordPress  テーマ：Lightning</p>
-          </div>
-          <div class="page__works__item-pc">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/eco_shop_pc.jpg" alt="Eco ShopサイトPC" />
-          </div>
-        </div>
-      </section>
-      <section id="page-works3" class="section__padding js-scroll">
-        <h2 class="page__works--h2">Works</h2>
-        <div class="page__works__wrap">
-          <div class="page__works__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/por.gif" alt="portfolio" />
-            <h3 class="page__works--h3">Portfolio</h3>
-            <p class="page__works--p">
-              最初に作ったportfolioです。
-              メインビジュアルにwebGLのjQueryを使用して波紋の効果をいれてます。
-            </p>
-            <p>ー使用技術：HTML/CSS/JavaScript/jQueryー</p>
-          </div>
-          <div class="page__works__item-pc">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-pc.jpg" alt="portfolioサイトPC" />
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-      <section id="page-works4" class="section__padding">
-        <h2 class="page__works--h2">Works</h2>
-        <div class="page__works__wrapper">
-          <div class="page-works__top">
-            <div class="page__works__item1">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/sea.jpg" alt="海の画像" />
-            </div>
-            <div class="page__works__text">
-              <h3 class="page__works--h3">デザイン</h3>
-              <p class="page__works--p">
-                イラストやロゴの作成、名刺デザインまで幅広く対応いたします。
-                アパレル分野では、カジュアルなデザインから女性らしい華やかなデザインまで、
-                多様なテイストでお客様のご要望にお応えしてまいりました。
-                今の私に、できることを全力で対応いたします。
-              </p>
-            </div>
-            <div class="page__works__item2">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/wordpressHp.jpg" alt="Wp美容室サイト" />
-            </div>
-          </div>
-          <div class="page-works__bottom">
-            <div class="page__works__item3">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/sato_Banner.jpg" alt="バナー" />
-            </div>
-            <div class="page__works__item4">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/hp.jpg" alt="ハーブHP" />
-            </div>
-            <div class="page__works__item5">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/flyer.jpg" alt="ちらし" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </article>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <section id="page-blog" class="section__padding--pageBlog">
 
+    <div class="page__blog--title">
+    <h2 class="page__blog--h2 js-text">Works</h2>
+    <p class="page__blog--p">一覧</p>
+    </div>
+
+    <div class="page__blog__wrapper">
+    <?php
+        // 現在のページ番号を取得
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+        // クエリの設定
+        $args = array(
+            'post_type'      => 'post',
+            'category_name'  => 'work',
+            'posts_per_page' => 2, // 1ページあたりの記事数
+            'paged'          => $paged, // 現在のページ番号
+        );
+
+        // クエリの作成
+        $query = new WP_Query($args);
+
+        // ループ開始
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post(); 
+    ?>
+        <div class="page__blog__container">
+          <p class="page__blog__number"><?php echo str_pad(($query->current_post + 1) + (($paged - 1) * 6), 2, '0', STR_PAD_LEFT); ?></p>
+          <a href="<?php the_permalink(); ?>" class="blog__item--link">
+            <img class="page__blog--img" 
+                src="<?php 
+                    if (has_post_thumbnail()) { 
+                        echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+                    } else { 
+                        echo get_template_directory_uri() . '/img/No image.svg';  // サムネイルがない場合のデフォルト画像
+                    } 
+                ?>" 
+                alt="<?php the_title_attribute(); ?>" />
+          </a>
+        </div>
+    <?php
+            endwhile;
+        else :
+            echo '<p>投稿が見つかりませんでした。</p>';
+        endif;
+        // クエリをリセット
+        wp_reset_postdata();
+    ?>        
+    </div>
+
+<div class="pagination">
+  <?php
+      echo paginate_links(array(
+          'total' => $query->max_num_pages,
+          'current' => $paged,
+          'prev_text' => '&lt;&lt; 前へ',
+          'next_text' => '次へ &gt;&gt;',
+          'type' => 'list', // リスト形式に変換
+      ));
+  ?>
+</div>
+  </section>
+</main>    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/./js/works.js"></script>

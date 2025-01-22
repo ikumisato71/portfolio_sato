@@ -39,7 +39,7 @@
     <!-- ページのサイト名 -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" />
 
     <!-- css -->
     <link
@@ -68,7 +68,7 @@
                 <a href="<?php echo home_url(); ?>/#about" class="nav__list__item-link">About</a>
             </li>
             <li class="nav__list__item">
-                <a href="<?php echo home_url(); ?>/#works" class="nav__list__item-link">Works</a>
+                <a href="<?php echo home_url(); ?>/works" class="nav__list__item-link">Works</a>
             </li>
             <li class="nav__list__item">
                 <a href="<?php echo home_url(); ?>/blog" class="nav__list__item-link">Blog</a>
@@ -92,7 +92,7 @@
             <div>
                 <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
-                <li><a href="<?php echo home_url(); ?>/#works">Works</a></li>
+                <li><a href="<?php echo home_url(); ?>/works">Works</a></li>
                 <li><a href="<?php echo home_url(); ?>/blog">Blog</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
                 </ul>
@@ -104,7 +104,25 @@
 
     <main>
     <section id="single-blog" class="section__padding--pageBlog">
-        <h2 class="single__blog--h2 js-text">Blog</h2>
+    <h2 class="single__blog--h2 js-text">
+    <?php
+    // 投稿が属するカテゴリーを取得
+    $categories = get_the_category();
+    if (!empty($categories)) {
+        // カテゴリーのスラッグで条件分岐
+        $category_slug = $categories[0]->slug;
+        if ($category_slug === 'blog') {
+            echo 'Blog';
+        } elseif ($category_slug === 'work') {
+            echo 'Works';
+        } else {
+            echo 'Other'; // その他の場合
+        }
+    } else {
+        echo 'No Category'; // カテゴリーがない場合
+    }
+    ?>
+</h2>
 
         <!-- <section class="single"> -->
             <div class="single__blog__wrapper">
@@ -124,8 +142,29 @@
             
         </section>
         <button class="back__list">
-            <a href="<?php echo home_url(); ?>/blog" class="back__list--btn">一覧へ</a>
-        </button>
+    <a 
+        href="<?php
+        // 投稿が属するカテゴリーを取得
+        $categories = get_the_category();
+        if (!empty($categories)) {
+            $category_slug = $categories[0]->slug;
+
+            // カテゴリーのスラッグでリンク先を切り替え
+            if ($category_slug === 'blog') {
+                echo home_url() . '/blog';
+            } elseif ($category_slug === 'work') {
+                echo home_url() . '/work';
+            } else {
+                echo home_url(); // その他の場合はホームへ
+            }
+        } else {
+            echo home_url(); // カテゴリーがない場合はホームへ
+        }
+        ?>" 
+        class="back__list--btn">
+        一覧へ
+    </a>
+</button>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
