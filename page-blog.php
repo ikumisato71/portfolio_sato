@@ -107,7 +107,7 @@ Template Post Type: page
 
     <div class="page__blog--title">
     <h2 class="page__blog--h2 js-text">Blog</h2>
-    <p>一覧</p>
+    <p class="page__blog--p">一覧</p>
     </div>
 
     <div class="page__blog__wrapper">
@@ -138,7 +138,7 @@ Template Post Type: page
                     if (has_post_thumbnail()) { 
                         echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
                     } else { 
-                        echo 'default-image.jpg'; // サムネイルがない場合のデフォルト画像
+                        echo get_template_directory_uri() . '/img/No image.jpg';  // サムネイルがない場合のデフォルト画像
                     } 
                 ?>" 
                 alt="<?php the_title_attribute(); ?>" />

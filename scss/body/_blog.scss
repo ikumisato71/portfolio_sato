@@ -9,22 +9,25 @@
 }
 .page__blog--title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
-  gap: vw(40);
 }
 .page__blog__wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: vh(40);
   gap: vw(40);
 }
-.page__blog__container {
-}
+
 .page__blog--img {
   width: vw(338);
   height: vh(155);
+}
+.page__blog--img:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
 }
 // 投稿ページBlog
 #single-blog {

@@ -39,7 +39,7 @@ img {
 //   padding: 0 vw(170) 0 vw(170);
 // }
 .section__padding--pageBlog {
-  padding: vh(100) vw(30) 0 vw(30);
+  padding: vh(80) vw(30) 0 vw(30);
 }
 
 h2 {
@@ -59,11 +59,42 @@ h2 {
 }
 .page__blog--h2 {
   font-family: $poiret-one-regular;
-  font-size: vw(96);
-  margin-top: vh(10);
-  margin-left: vw(50);
+  font-size: vw(64);
   letter-spacing: normal; /* または letter-spacing: 0; */
 }
+.page__blog--p {
+  font-size: vw(20);
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  padding: 0 vw(55);
+}
+.page__blog--p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: vw(170);
+  height: vh(1);
+  background-color: $color-base-black;
+  right: vw(-170);
+}
+.page__blog--p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: vw(170);
+  height: vh(1);
+  background-color: $color-base-black;
+
+  left: vw(-170);
+}
+.page__blog--p {
+  font-size: vw(20);
+  margin: 0 auto;
+}
+
 .single__blog--h2 {
   font-family: $poiret-one-regular;
   font-size: vw(120);
