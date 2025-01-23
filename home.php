@@ -360,7 +360,7 @@
           <?php wp_reset_postdata(); ?>
         </div>
         <button class="blog_arrow__btn">
-          <a class="blog__page--link" href="<?php echo home_url(); ?>/blog">
+          <a class="blog__page--link" href="<?php echo home_url(); ?>/blogs">
             <p class="blog_arrow__btn--p">read more</p>
             <span class="dli-arrow-right"></span>
           </a>

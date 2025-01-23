@@ -106,7 +106,7 @@ Template Post Type: page
   <section id="page-blog" class="section__padding--pageBlog">
 
     <div class="page__blog--title">
-    <h2 class="page__blog--h2 js-text">Blog</h2>
+    <h2 class="page__blog--h2 js-text">Blogs</h2>
     <p class="page__blog--p">一覧</p>
     </div>
 

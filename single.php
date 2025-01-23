@@ -71,7 +71,7 @@
                 <a href="<?php echo home_url(); ?>/works" class="nav__list__item-link">Works</a>
             </li>
             <li class="nav__list__item">
-                <a href="<?php echo home_url(); ?>/blog" class="nav__list__item-link">Blog</a>
+                <a href="<?php echo home_url(); ?>/blogs" class="nav__list__item-link">Blogs</a>
             </li>
             <li class="nav__list__item">
                 <a href="<?php echo home_url(); ?>/#contact" class="nav__list__item-link"
@@ -93,7 +93,7 @@
                 <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
                 <li><a href="<?php echo home_url(); ?>/works">Works</a></li>
-                <li><a href="<?php echo home_url(); ?>/blog">Blog</a></li>
+                <li><a href="<?php echo home_url(); ?>/blogs">Blogs</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
                 </ul>
             </div>
@@ -144,22 +144,24 @@
         <button class="back__list">
     <a 
         href="<?php
-        // 投稿が属するカテゴリーを取得
-        $categories = get_the_category();
-        if (!empty($categories)) {
-            $category_slug = $categories[0]->slug;
+        if (is_singular('post')) { 
+            // 投稿が属するカテゴリーを取得
+            $categories = get_the_category();
 
-            // カテゴリーのスラッグでリンク先を切り替え
-            if ($category_slug === 'blog') {
-                echo home_url() . '/blog';
-            } elseif ($category_slug === 'work') {
-                echo home_url() . '/work';
-            } else {
-                echo home_url(); // その他の場合はホームへ
-            }
-        } else {
-            echo home_url(); // カテゴリーがない場合はホームへ
-        }
+            if (!empty($categories)) {
+                // 最初のカテゴリーを取得
+                $category_slug = $categories[0]->slug;
+
+                // カテゴリーのスラッグでリンク先を切り替え
+                if ($category_slug === 'blogs') {
+                    echo home_url('/blogs'); // blogs 固定ページへのリンク
+                } elseif ($category_slug === 'works') {
+                    echo home_url('/works'); // works 固定ページへのリンク
+                } else {
+                    echo home_url(); // その他の場合はホームへ
+                }
+            } 
+        } 
         ?>" 
         class="back__list--btn">
         一覧へ
