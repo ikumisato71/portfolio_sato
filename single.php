@@ -141,31 +141,31 @@
             </div>
             
         </section>
-        <button class="back__list">
-    <a 
-        href="<?php
-        if (is_singular('post')) { 
-            // 投稿が属するカテゴリーを取得
-            $categories = get_the_category();
-
-            if (!empty($categories)) {
-                // 最初のカテゴリーを取得
-                $category_slug = $categories[0]->slug;
-
-                // カテゴリーのスラッグでリンク先を切り替え
-                if ($category_slug === 'blogs') {
-                    echo home_url('/blogs'); // blogs 固定ページへのリンク
-                } elseif ($category_slug === 'works') {
-                    echo home_url('/works'); // works 固定ページへのリンク
-                } else {
-                    echo home_url(); // その他の場合はホームへ
+        <button class="back__list--btn">
+        <a 
+    href="<?php
+    if (is_singular('post')) {
+        $categories = get_the_category();
+        if (!empty($categories)) {
+            foreach ($categories as $category) {
+                if ($category->slug === 'blogs') {
+                    echo home_url('/blogs');
+                    break;
+                } elseif ($category->slug === 'works') {
+                    echo home_url('/works');
+                    break;
                 }
-            } 
-        } 
-        ?>" 
-        class="back__list--btn">
-        一覧へ
-    </a>
+            }
+        } else {
+            echo home_url(); // カテゴリーがない場合はホームへ
+        }
+    } else {
+        echo home_url(); // シングル投稿以外の場合はホームへ
+    }
+    ?>" 
+    class="back__list--link">
+    一覧へ
+</a>
 </button>
 </main>
 

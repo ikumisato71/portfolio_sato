@@ -821,12 +821,12 @@ p {
 }
 
 /* 一覧へ戻るボタン */
-.back__list {
-  display: block;
+.back__list--btn {
   margin-left: 76.3888888889vw;
+  margin-bottom: 9.8765432099vh;
 }
 
-.back__list--btn {
+.back__list--link {
   color: #0f0f0f;
   font-size: 1.3888888889vw;
   padding: 0.987654321vh 1.25vw;
@@ -834,7 +834,7 @@ p {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.back__list--btn:hover {
+.back__list--link:hover {
   background-color: #0f0f0f;
   color: #f5f5f5;
 }

@@ -385,18 +385,18 @@ p {
   border: none;
 }
 /* 一覧へ戻るボタン */
-.back__list {
-  display: block;
-  margin-left: vw(1100);
-}
 .back__list--btn {
+  margin-left: vw(1100);
+  margin-bottom: vh(80);
+}
+.back__list--link {
   color: $color-base-black;
   font-size: vw(20);
   padding: vh(8) vw(18);
   border: vw(1) solid $color-base-black;
   transition: background-color 0.3s, color 0.3s;
 }
-.back__list--btn:hover {
+.back__list--link:hover {
   background-color: $color-base-black;
   color: $color-base-wh;
 }
