@@ -132,7 +132,7 @@ Template Post Type: page
     ?>
         <div class="page__blog__container">
           <p class="page__blog__number"><?php echo str_pad(($query->current_post + 1) + (($paged - 1) * 6), 2, '0', STR_PAD_LEFT); ?></p>
-          <a href="<?php the_permalink(); ?>" class="blog__item--link">
+          <a href="<?php the_permalink(); ?>" class="page__blog--link">
             <img class="page__blog--img" 
                 src="<?php 
                     if (has_post_thumbnail()) { 
