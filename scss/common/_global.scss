@@ -57,19 +57,19 @@ h2 {
   font-size: vw(96);
   letter-spacing: normal; /* または letter-spacing: 0; */
 }
-.page__blog--h2 {
+.page__blogs--h2 {
   font-family: $poiret-one-regular;
   font-size: vw(64);
   letter-spacing: normal; /* または letter-spacing: 0; */
 }
-.page__blog--p {
+.page__blogs--p {
   font-size: vw(20);
   margin: 0 auto;
   position: relative;
   display: inline-block;
   padding: 0 vw(55);
 }
-.page__blog--p::before {
+.page__blogs--p::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -79,7 +79,7 @@ h2 {
   background-color: $color-base-black;
   right: vw(-170);
 }
-.page__blog--p::after {
+.page__blogs--p::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -87,12 +87,34 @@ h2 {
   width: vw(170);
   height: vh(1);
   background-color: $color-base-black;
-
   left: vw(-170);
 }
-.page__blog--p {
+.page__works--p {
   font-size: vw(20);
   margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  padding: 0 vw(55);
+}
+.page__works--p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: vw(170);
+  height: vh(1);
+  background-color: $color-base-black;
+  right: vw(-170);
+}
+.page__works--p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: vw(170);
+  height: vh(1);
+  background-color: $color-base-black;
+  left: vw(-170);
 }
 
 .single__blog--h2 {
@@ -104,6 +126,16 @@ h2 {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+.single__work--h2 {
+  font-family: $poiret-one-regular;
+  font-size: vw(120);
+  margin-top: vh(10);
+  margin-left: vw(50);
+  letter-spacing: normal; /* または letter-spacing: 0; */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 h3 {
   font-size: vw(20);
   font-weight: 700;

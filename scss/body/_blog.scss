@@ -4,15 +4,15 @@
 @use "../common/mixins" as *;
 @use "../common/global" as *;
 // 固定ページBlog
-#page-blog {
+#page-blogs {
   align-items: center;
 }
-.page__blog--title {
+.page__blogs--title {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.page__blog__wrapper {
+.page__blogs__wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,19 +20,19 @@
   margin-top: vh(40);
   gap: vw(40);
 }
-.page__blog--link {
+.page__blogs--link {
   width: vw(338);
   height: vh(155);
   overflow: hidden;
 }
-.page__blog--img {
+.page__blogs--img {
   width: vw(338);
   height: vh(155);
   object-fit: cover;
   transition: transform 0.4s;
   // transition: opacity 0.3s, transform 0.3s;
 }
-.page__blog--img:hover {
+.page__blogs--img:hover {
   // opacity: 0.5;
   transform: scale(0.8);
 }
@@ -47,22 +47,22 @@
   width: 100%;
 }
 
-.blog__number--box {
-  width: vw(260);
-  height: vw(520);
-  margin-top: vw(30);
-}
-.blog__number--ul {
-  width: 80%;
-  column-count: 3;
-  column-gap: vw(50);
-}
+// .blog__number--box {
+//   width: vw(260);
+//   height: vw(520);
+//   margin-top: vw(30);
+// }
+// .blog__number--ul {
+//   width: 80%;
+//   column-count: 3;
+//   column-gap: vw(50);
+// }
 
-.blog__number--li {
-  break-inside: avoid;
-  margin-bottom: 8px;
-  padding: 8px;
-}
-.blog__img {
-  object-fit: contain;
-}
+// .blog__number--li {
+//   break-inside: avoid;
+//   margin-bottom: 8px;
+//   padding: 8px;
+// }
+// .blog__img {
+//   object-fit: contain;
+// }

@@ -103,14 +103,14 @@ Template Post Type: page
     </header>
     
     <main>
-  <section id="page-blog" class="section__padding--pageBlog">
+  <section id="page-blogs" class="section__padding--pageBlog">
 
-    <div class="page__blog--title">
-    <h2 class="page__blog--h2 js-text">Blogs</h2>
-    <p class="page__blog--p">一覧</p>
+    <div class="page__blogs--title">
+    <h2 class="page__blogs--h2 js-text">Blogs</h2>
+    <p class="page__blogs--p">一覧</p>
     </div>
 
-    <div class="page__blog__wrapper">
+    <div class="page__blogs__wrapper">
     <?php
         // 現在のページ番号を取得
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -132,8 +132,8 @@ Template Post Type: page
     ?>
         <div class="page__blog__container">
           <p class="page__blog__number"><?php echo str_pad(($query->current_post + 1) + (($paged - 1) * 6), 2, '0', STR_PAD_LEFT); ?></p>
-          <a href="<?php the_permalink(); ?>" class="page__blog--link">
-            <img class="page__blog--img" 
+          <a href="<?php the_permalink(); ?>" class="pages__blogs--link">
+            <img class="page__blogs--img" 
                 src="<?php 
                     if (has_post_thumbnail()) { 
                         echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 

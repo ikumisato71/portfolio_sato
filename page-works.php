@@ -102,14 +102,14 @@ Template page Type: page
       </div>
     </header>
     <main>
-  <section id="page-blog" class="section__padding--pageBlog">
+  <section id="page-works" class="section__padding--pageBlog">
 
-    <div class="page__blog--title">
-    <h2 class="page__blog--h2 js-text">Works</h2>
-    <p class="page__blog--p">一覧</p>
+    <div class="page__works--title">
+    <h2 class="page__works--h2 js-text">Works</h2>
+    <p class="page__works--p">一覧</p>
     </div>
 
-    <div class="page__blog__wrapper">
+    <div class="page__works__wrapper">
     <?php
         // 現在のページ番号を取得
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -118,7 +118,7 @@ Template page Type: page
         $args = array(
             'post_type'      => 'post',
             'category_name'  => 'work',
-            'posts_per_page' => 2, // 1ページあたりの記事数
+            'posts_per_page' => 3, // 1ページあたりの記事数
             'paged'          => $paged, // 現在のページ番号
         );
 
@@ -129,10 +129,10 @@ Template page Type: page
         if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post(); 
     ?>
-        <div class="page__blog__container">
-          <p class="page__blog__number"><?php echo str_pad(($query->current_post + 1) + (($paged - 1) * 6), 2, '0', STR_PAD_LEFT); ?></p>
-          <a href="<?php the_permalink(); ?>" class="blog__item--link">
-            <img class="page__blog--img" 
+        <div class="page__works__container">
+          <p class="page__works__number"><?php echo str_pad(($query->current_post + 1) + (($paged - 1) * 6), 2, '0', STR_PAD_LEFT); ?></p>
+          <a href="<?php the_permalink(); ?>" class="page__works--link">
+            <img class="page__works--img" 
                 src="<?php 
                     if (has_post_thumbnail()) { 
                         echo get_the_post_thumbnail_url(get_the_ID(), 'full'); 
