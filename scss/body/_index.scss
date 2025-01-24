@@ -804,10 +804,12 @@ header {
   width: vw(338);
   height: vh(155);
   margin-top: vw(70);
+  object-fit: cover;
+  transition: opacity 0.3s, transform 0.4s;
 }
 .blog__img:hover {
   opacity: 0.5;
-  transition: opacity 0.3s, transform 0.3s;
+  transform: scale(0.8);
 }
 .blog_arrow__btn {
   margin-top: vh(40);
