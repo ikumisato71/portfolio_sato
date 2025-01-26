@@ -1710,10 +1710,11 @@ footer {
   height: 19.1358024691vh;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.4s;
+  transition: opacity 0.3s, transform 0.4s;
 }
 
 .page__works--img:hover {
+  opacity: 0.5;
   transform: scale(0.8);
 }
 

@@ -91,10 +91,10 @@
   width: vw(338);
   height: vh(155);
   object-fit: cover;
-  transition: transform 0.4s;
+  transition: opacity 0.3s, transform 0.4s;
   // transition: opacity 0.3s, transform 0.3s;
 }
 .page__works--img:hover {
-  // opacity: 0.5;
+  opacity: 0.5;
   transform: scale(0.8);
 }
