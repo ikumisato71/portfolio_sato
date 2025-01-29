@@ -1774,6 +1774,10 @@ footer {
   align-items: center;
 }
 
+.single__blog__wrapper {
+  width: 70%;
+}
+
 .single__blog__container {
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
