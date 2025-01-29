@@ -24,36 +24,36 @@ linkElem.forEach((link) => {
   });
 });
 
-// -------------------
-// PAGE WORKS 横スクロール
-// -------------------
-// コンテナ要素とスライド要素を取得
-const container = document.querySelector(".js-container");
-const slides = document.querySelectorAll(".js-scroll");
-const containerWidth = container.offsetWidth;
-// コンテナの幅を取得
-gsap.set(container, {
-  width: slides.length * 100 + "%",
-});
-gsap.set(".js-scroll", {
-  width: 100 / slides.length + "%",
-});
-// 横スクロールアニメーションの設定
-gsap.to(slides, {
-  xPercent: -100 * (slides.length - 1), // X軸方向に移動
-  ease: "none", // アニメーションのイージング(noneは定速)
-  scrollTrigger: {
-    trigger: container, // アニメーション開始のトリガー要素
-    markers: true,
-    pin: true, // 要素を固定
-    scrub: true, // スクロール量に合わせてアニメーション
-    start: "top top", // アニメーションが始まる位置
-    end: `+=${containerWidth}`, // アニメーションが終わる位置
-    // end: container.clientWidth,
-    anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
-    invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
-  },
-});
+// // -------------------
+// // PAGE WORKS 横スクロール
+// // -------------------
+// // コンテナ要素とスライド要素を取得
+// const container = document.querySelector(".js-container");
+// const slides = document.querySelectorAll(".js-scroll");
+// const containerWidth = container.offsetWidth;
+// // コンテナの幅を取得
+// gsap.set(container, {
+//   width: slides.length * 100 + "%",
+// });
+// gsap.set(".js-scroll", {
+//   width: 100 / slides.length + "%",
+// });
+// // 横スクロールアニメーションの設定
+// gsap.to(slides, {
+//   xPercent: -100 * (slides.length - 1), // X軸方向に移動
+//   ease: "none", // アニメーションのイージング(noneは定速)
+//   scrollTrigger: {
+//     trigger: container, // アニメーション開始のトリガー要素
+//     markers: true,
+//     pin: true, // 要素を固定
+//     scrub: true, // スクロール量に合わせてアニメーション
+//     start: "top top", // アニメーションが始まる位置
+//     end: `+=${containerWidth}`, // アニメーションが終わる位置
+//     // end: container.clientWidth,
+//     anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
+//     invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
+//   },
+// });
 // ------------------
 // ハンバーガーメニュー
 // ------------------
