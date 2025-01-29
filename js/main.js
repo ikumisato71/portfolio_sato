@@ -69,7 +69,7 @@ triggers.forEach((trigger) => {
     scrollTrigger: {
       trigger: trigger,
       scrub: true, // スクロールに合わせてアニメーションの進行を変化させる
-      markers: true,
+      // markers: true,
       start: "top 60%",
       end: "top 30%",
     },
