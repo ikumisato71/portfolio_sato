@@ -148,9 +148,16 @@ p {
   font-size: vw(18);
   margin-top: vh(20);
   @include sp() {
-    font-size: vw_sp(16);
+    font-size: vw_sp(18);
   }
 }
+.about__text--p {
+  @include sp() {
+    font-size: vw_sp(17);
+    text-align: left;
+  }
+}
+
 .nav__list__item-link {
   font-size: vw(20);
 }

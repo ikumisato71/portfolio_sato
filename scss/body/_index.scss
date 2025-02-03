@@ -272,7 +272,7 @@ header {
   display: flex;
   justify-content: flex-end;
   gap: 40px;
-
+  backdrop-filter: blur(8px);
   @include sp() {
     // display: none;
   }
@@ -497,6 +497,7 @@ header {
   max-width: vw(1200);
   margin: 0 auto;
   padding: 0 11.25rem;
+  z-index: 0;
 }
 
 .l-section {
@@ -806,6 +807,10 @@ header {
   margin-top: vw(70);
   object-fit: cover;
   transition: opacity 0.3s, transform 0.4s;
+  @include sp() {
+    width: vw_sp(338);
+    height: vh_sp(155);
+  }
 }
 .blog__img:hover {
   opacity: 0.5;
