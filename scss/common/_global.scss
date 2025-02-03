@@ -179,12 +179,6 @@ p {
   }
 }
 
-.blog_arrow__btn--p {
-  font-family: $rajdhani-regular;
-  font-size: vw(24);
-  font-weight: 700;
-  margin: 0;
-}
 .mailAddress {
   font-family: $raleway-dots-regular;
   font-size: vw(128);
@@ -373,20 +367,30 @@ p {
   }
 }
 
+// ブログのread moreの文字
+.blog_arrow__btn--p {
+  font-family: $rajdhani-regular;
+  font-size: vw(24);
+  font-weight: 700;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+.blog_arrow__btn--p:hover {
+  transform: scale(1.2);
+}
 // ブログのread moreの矢印
 .dli-arrow-right {
   display: inline-block;
   vertical-align: middle;
   color: $color-base-black;
-  // line-height: 1;
   position: relative;
   width: vw(150);
   height: vw(1);
   background: currentColor;
+  transition: transform 0.3s ease;
 }
 .dli-arrow-right:hover {
   width: vw(200);
-  transition: transform 0.3s ease;
 }
 .dli-arrow-right::before {
   content: "";

@@ -591,13 +591,6 @@ p {
   }
 }
 
-.blog_arrow__btn--p {
-  font-family: "Rajdhani", sans-serif;
-  font-size: 1.6666666667vw;
-  font-weight: 700;
-  margin: 0;
-}
-
 .mailAddress {
   font-family: "Raleway Dots", sans-serif;
   font-size: 8.8888888889vw;
@@ -814,6 +807,18 @@ p {
   }
 }
 
+.blog_arrow__btn--p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.6666666667vw;
+  font-weight: 700;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.blog_arrow__btn--p:hover {
+  transform: scale(1.2);
+}
+
 .dli-arrow-right {
   display: inline-block;
   vertical-align: middle;
@@ -822,11 +827,11 @@ p {
   width: 10.4166666667vw;
   height: 0.0694444444vw;
   background: currentColor;
+  transition: transform 0.3s ease;
 }
 
 .dli-arrow-right:hover {
   width: 13.8888888889vw;
-  transition: transform 0.3s ease;
 }
 
 .dli-arrow-right::before {
