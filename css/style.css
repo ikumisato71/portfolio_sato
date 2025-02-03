@@ -892,6 +892,29 @@ p {
   color: #f5f5f5;
 }
 
+.breadcrumbs_container {
+  display: block;
+  width: 100%;
+}
+
+.notfound__container {
+  text-align: center;
+}
+
+.notfound__img {
+  width: 100%;
+}
+
+.notfound__text--h2 {
+  font-family: "Poiret One", serif;
+  font-size: 4.4444444444vw;
+  letter-spacing: normal; /* または letter-spacing: 0; */
+}
+
+.notfound__text--p {
+  margin-bottom: 3.7037037037vh;
+}
+
 .mask-bg {
   position: absolute;
   z-index: 999;

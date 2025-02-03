@@ -447,3 +447,21 @@ p {
   background-color: $color-base-black;
   color: $color-base-wh;
 }
+.breadcrumbs_container {
+  display: block;
+  width: 100%;
+}
+.notfound__container {
+  text-align: center;
+}
+.notfound__img {
+  width: 100%;
+}
+.notfound__text--h2 {
+  font-family: $poiret-one-regular;
+  font-size: vw(64);
+  letter-spacing: normal; /* または letter-spacing: 0; */
+}
+.notfound__text--p {
+  margin-bottom: vh(30);
+}
