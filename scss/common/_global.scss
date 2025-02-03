@@ -217,6 +217,14 @@ p {
     font-size: vw(24);
   }
 }
+.page__works__number {
+  font-family: $zilla-slab-highlight-regular;
+  font-size: vw(24);
+  margin: 0;
+  @include sp() {
+    font-size: vw(24);
+  }
+}
 .blog__number--li {
   font-family: $zilla-slab-highlight-regular;
   font-size: vw(36);

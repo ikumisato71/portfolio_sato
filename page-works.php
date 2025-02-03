@@ -90,10 +90,10 @@ Template page Type: page
         <div class="menu">
           <div>
             <div>
-              <ul>
+            <ul>
                 <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
-                <li><a href="<?php echo home_url(); ?>/#works">Works</a></li>
-                <li><a href="<?php echo home_url(); ?>/#blog">Blog</a></li>
+                <li><a href="<?php echo home_url(); ?>/works">Works</a></li>
+                <li><a href="<?php echo home_url(); ?>/blogs">Blogs</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
               </ul>
             </div>
