@@ -622,23 +622,14 @@ p {
   }
 }
 
-.page__blog__number {
-  font-family: "Zilla Slab Highlight", serif;
-  font-size: 1.6666666667vw;
-  margin: 0;
-}
-@media screen and (max-width: 768px) {
-  .page__blog__number {
-    font-size: 1.6666666667vw;
-  }
-}
-
+.page__blog__number,
 .page__works__number {
   font-family: "Zilla Slab Highlight", serif;
   font-size: 1.6666666667vw;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
+  .page__blog__number,
   .page__works__number {
     font-size: 1.6666666667vw;
   }
@@ -1612,7 +1603,8 @@ header {
   }
 }
 
-.skill__list {
+.skill__inner {
+  width: 100%;
   margin: 4.8611111111vw auto 0vw auto;
   display: flex;
   flex-wrap: wrap;
@@ -1620,7 +1612,7 @@ header {
   justify-content: space-around;
 }
 @media screen and (max-width: 768px) {
-  .skill__list {
+  .skill__inner {
     flex-direction: column;
     align-items: center;
   }

@@ -239,7 +239,7 @@
         </div>
       </section>
       <section id="skill" class="section__padding js-stagger-trigger">
-        <div class="skill__inner">
+        <div class="skill__container">
           <h2 class="section__title">
             <span class="js-text">S</span>
             <span class="js-text">k</span>
@@ -247,20 +247,38 @@
             <span class="js-text">l</span>
             <span class="js-text">l</span>
           </h2>
+
+          <?php
+        //取得したい投稿記事などの条件を引数として渡す
+        $args = array(
+          // 投稿タイプ
+          'post_type'      => 'skills',
+          // 1ページに表示する投稿数
+          'posts_per_page' => 6,
+        );
+        // データの取得
+        $posts = get_posts($args);
+        ?>
+            <?php foreach ($posts as $post) : ?>
+              <?php setup_postdata($post); ?>
+              <div class="skill__inner">
           <ul class="skill__list">
             <li class="skill__item">
               <div class="skill__item-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_htmlcss.svg" alt="HTML/CSSのアイコン" />
+              <?php the_post_thumbnail();?>
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/icon_htmlcss.svg" alt="HTML/CSSのアイコン" /> -->
               </div>
               <div class="skill__text">
-                <h3 class="skill__text--h3">HTML/CSS</h3>
+                <h3 class="skill__text--h3"><?php the_title(); ?></h3>
                 <p class="skill__text--p">
-                  スマホで見ても表示崩れのないレスポンシブ対応も可能です。
+                <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
+                  <!-- スマホで見ても表示崩れのないレスポンシブ対応も可能です。 -->
                 </p>
               </div>
             </li>
-            <li class="skill__item">
+            <!-- <li class="skill__item">
               <div class="skill__item-image">
+              
                 <img src="<?php echo get_template_directory_uri(); ?>/img/icon_js.svg" alt="Jsのアイコン" />
               </div>
               <div class="skill__text">
@@ -313,9 +331,12 @@
                   Webサイトのデザインやワイヤーフレームを作ることが可能です
                 </p>
               </div>
-            </li>
+            </li> -->
           </ul>
-        </div>
+            <?php endforeach; ?>
+          <!-- 使用した投稿データをリセット -->
+          <?php wp_reset_postdata(); ?>
+          </div>
       </section>
       <section id="blog" class="section__padding js-stagger-trigger">
         <h2 class="section__title">

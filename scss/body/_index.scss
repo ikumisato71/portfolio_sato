@@ -755,7 +755,8 @@ header {
 // skill
 // ---------------
 
-.skill__list {
+.skill__inner {
+  width: 100%;
   margin: vw(70) auto vw(0) auto;
   display: flex;
   flex-wrap: wrap;
@@ -765,6 +766,8 @@ header {
     flex-direction: column;
     align-items: center;
   }
+}
+.skill__list {
 }
 .skill__item {
   width: 30%;
