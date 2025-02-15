@@ -768,9 +768,9 @@ header {
   }
 }
 .skill__list {
+  width: 30%;
 }
 .skill__item {
-  width: 30%;
   display: flex;
   @include sp() {
     width: 100%;

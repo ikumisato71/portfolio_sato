@@ -248,20 +248,20 @@
             <span class="js-text">l</span>
           </h2>
 
+          <div class="skill__inner">
           <?php
         //取得したい投稿記事などの条件を引数として渡す
         $args = array(
           // 投稿タイプ
           'post_type'      => 'skills',
           // 1ページに表示する投稿数
-          'posts_per_page' => 6,
+          'posts_per_page' => 9,
         );
         // データの取得
         $posts = get_posts($args);
         ?>
             <?php foreach ($posts as $post) : ?>
               <?php setup_postdata($post); ?>
-              <div class="skill__inner">
           <ul class="skill__list">
             <li class="skill__item">
               <div class="skill__item-image">
@@ -271,7 +271,7 @@
               <div class="skill__text">
                 <h3 class="skill__text--h3"><?php the_title(); ?></h3>
                 <p class="skill__text--p">
-                <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
+                <?php echo wp_trim_words(get_the_content(), 60, '...'); ?>
                   <!-- スマホで見ても表示崩れのないレスポンシブ対応も可能です。 -->
                 </p>
               </div>

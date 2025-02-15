@@ -1618,8 +1618,11 @@ header {
   }
 }
 
-.skill__item {
+.skill__list {
   width: 30%;
+}
+
+.skill__item {
   display: flex;
 }
 @media screen and (max-width: 768px) {
