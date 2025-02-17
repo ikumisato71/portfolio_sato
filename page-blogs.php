@@ -18,25 +18,22 @@ Template Post Type: page
     <meta name="keywords" content="ポートフォリオ、Webデザイン" />
     <!-- ページのキーワード -->
 
-    <!--og-->
+    <!-- OGP設定 -->
     <meta property="og:type" content="website" />
-    <!-- ページの種類 -->
-    <meta property="og:url" content="" />
-    <!-- ページのURL -->
-    <meta property="og:image" content="ポートフォリオのサムネイル画像" />
-    <!-- サムネイル画像URL -->
-    <meta property="og:Ikumi sato portfolio" content="ページのタイトル" />
-    <!-- ページのタイトル -->
-    <meta
-      property="og:佐藤郁美のポートフォリオサイトです。"
-      content="サイトの説明文"
-    />
-    <!-- ページの説明文 -->
-    <meta
-      property="og:Ikumi sato portfolio"
-      content="佐藤郁美のポートフォリオサイト"
-    />
-    <!-- ページのサイト名 -->
+<!-- ページの種類 -->
+<meta property="og:url" content="http://ikumisato.com/" />
+<!-- ポートフォリオサイトのURL -->
+<meta property="og:title" content="Ikumi Sato Portfolio" />
+<!-- ページのタイトル -->
+<meta property="og:description" content="佐藤郁美のポートフォリオサイトです。" />
+<!-- サイトの説明文 -->
+<meta property="og:image" content="http://ikumisato.com/wp-content/uploads/2025/02/home.png" />
+<!-- OGP用サムネイル画像のURL -->
+<meta property="og:site_name" content="Ikumi Sato Portfolio" />
+<!-- サイトの名前 -->
+<meta property="og:locale" content="ja_JP" />
+<!-- 言語設定（日本語の場合） -->
+
 
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" />
