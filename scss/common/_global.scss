@@ -384,6 +384,9 @@ p {
   font-weight: 700;
   margin: 0;
   transition: transform 0.3s ease;
+  @include sp() {
+    font-size: vw_sp(24);
+  }
 }
 // ブログのread moreの矢印
 .dli-arrow-right {
@@ -395,6 +398,9 @@ p {
   height: vw(1);
   background: currentColor;
   transition: width 0.3s ease;
+  @include sp() {
+    font-size: vw_sp(150);
+  }
 }
 .dli-arrow-right::before {
   content: "";

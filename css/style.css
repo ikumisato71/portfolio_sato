@@ -814,6 +814,11 @@ p {
   margin: 0;
   transition: transform 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+  .blog_arrow__btn--p {
+    font-size: 6.6666666667vw;
+  }
+}
 
 .dli-arrow-right {
   display: inline-block;
@@ -824,6 +829,11 @@ p {
   height: 0.0694444444vw;
   background: currentColor;
   transition: width 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .dli-arrow-right {
+    font-size: 41.6666666667vw;
+  }
 }
 
 .dli-arrow-right::before {
