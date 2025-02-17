@@ -367,7 +367,16 @@ p {
     height: vw_sp(13);
   }
 }
-
+// ---------------
+// blogのread moreのボタン
+// ---------------
+.blog_arrow__btn {
+  margin-top: vh(50);
+  margin-left: vw(950);
+}
+.blog__page--link {
+  padding: vw(5);
+}
 // ブログのread moreの文字
 .blog_arrow__btn--p {
   font-family: $rajdhani-regular;
@@ -375,9 +384,6 @@ p {
   font-weight: 700;
   margin: 0;
   transition: transform 0.3s ease;
-}
-.blog_arrow__btn--p:hover {
-  transform: scale(1.2);
 }
 // ブログのread moreの矢印
 .dli-arrow-right {
@@ -388,10 +394,7 @@ p {
   width: vw(150);
   height: vw(1);
   background: currentColor;
-  transition: transform 0.3s ease;
-}
-.dli-arrow-right:hover {
-  width: vw(200);
+  transition: width 0.3s ease;
 }
 .dli-arrow-right::before {
   content: "";
@@ -406,8 +409,17 @@ p {
   right: vw(-0.8);
   box-sizing: border-box;
 }
-
+.blog__page--link:hover {
+  .blog_arrow__btn--p {
+    transform: scale(1.2);
+  }
+  .dli-arrow-right {
+    width: 200%;
+  }
+}
+// ------------
 /* pagination */
+// ------------
 .page-numbers {
   display: flex;
   justify-content: center;

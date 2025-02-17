@@ -769,6 +769,9 @@ header {
 }
 .skill__list {
   width: 30%;
+  @include sp() {
+    width: 90%;
+  }
 }
 .skill__item {
   display: flex;
@@ -814,14 +817,6 @@ header {
     width: vw_sp(338);
     height: vh_sp(155);
   }
-}
-.blog__img:hover {
-  opacity: 0.5;
-  transform: scale(0.8);
-}
-.blog_arrow__btn {
-  margin-top: vh(40);
-  margin-left: vw(1000);
 }
 
 // ---------------

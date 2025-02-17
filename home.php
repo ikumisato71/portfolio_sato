@@ -150,62 +150,6 @@
           </div>
           <?php endforeach; wp_reset_postdata(); ?>
         
-                <!-- <a href="<?php echo home_url(); ?>/works/#page-works1" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media img-cover">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/work1.jpg" alt="" />
-                    </div>
-                    <div class="slide-content">
-                      <h3 class="slide-title">コーポレートサイト</h3>
-                      <p class="slide-text">
-                        アパレルOEM企業様のコーポレートサイトになります。デザインからコーディングまで携わりました、
-                        主にニット製品を扱っているので、やわらかい優しい雰囲気にしました。
-                      </p>
-                    </div>
-                  </article>
-                </a> -->
-                <!-- <a href="<?php echo home_url(); ?>/works/#page-works2" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media img-cover">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/work2.jpg" alt="" />
-                    </div>
-                    <div class="slide-content">
-                      <h3 class="slide-title">エコショップのHP （ダミー）</h3>
-                      <p class="slide-text">
-                        サスティナブルな商品を扱っているエコショップ様のホームページになります。
-                        フェアトレードの商品を扱ってらっしゃたので、ホームページからShoppingページへの遷移もできます
-                      </p>
-                    </div>
-                  </article>
-                </a>
-                <a href="<?php echo home_url(); ?>/works/#page-works3" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media img-cover">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/work3.jpg" alt="" />
-                    </div>
-                    <div class="slide-content">
-                      <h3 class="slide-title">ポートフォリオ</h3>
-                      <p class="slide-text">
-                        最初に作ったportfolioです。
-                        メインビジュアルにwebGLのjQueryを使用して波紋の効果をいれてます。
-                      </p>
-                    </div>
-                  </article>
-                </a>
-                <a href="<?php echo home_url(); ?>/works/#page-works4" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media img-cover">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/works4.jpg" alt="" />
-                    </div>
-                    <div class="slide-content">
-                      <h3 class="slide-title">etc...</h3>
-                      <p class="slide-text">
-                        バナーやチラシ、ニット指示書なども作成できます。
-                      </p>
-                    </div>
-                  </article>
-                </a> -->
-              <!-- </div> -->
               <!-- /swiper-wrapper -->
             </div>
             <!-- /swiper -->
@@ -266,72 +210,14 @@
             <li class="skill__item">
               <div class="skill__item-image">
               <?php the_post_thumbnail();?>
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/icon_htmlcss.svg" alt="HTML/CSSのアイコン" /> -->
               </div>
               <div class="skill__text">
                 <h3 class="skill__text--h3"><?php the_title(); ?></h3>
                 <p class="skill__text--p">
                 <?php echo wp_trim_words(get_the_content(), 60, '...'); ?>
-                  <!-- スマホで見ても表示崩れのないレスポンシブ対応も可能です。 -->
                 </p>
               </div>
             </li>
-            <!-- <li class="skill__item">
-              <div class="skill__item-image">
-              
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_js.svg" alt="Jsのアイコン" />
-              </div>
-              <div class="skill__text">
-                <h3 class="skill__text--h3">JavaScript</h3>
-                <p class="skill__text--p">
-                  お問い合わせフォームや自動スクロールなど動きのあるWebサイトを作る事が可能です。
-                </p>
-              </div>
-            </li>
-            <li class="skill__item">
-              <div class="skill__item-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_wp.svg" alt="WordPressのアイコン" />
-              </div>
-              <div class="skill__text">
-                <h3 class="skill__text--h3">WordPress</h3>
-                <p class="skill__text--p">
-                  WordPress製の店舗HP・企業HP・メディアサイトなど、Webサイトを0から構築することが可能です。
-                </p>
-              </div>
-            </li>
-            <li class="skill__item">
-              <div class="skill__item-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_ai.svg" alt="Aiのアイコン" />
-              </div>
-              <div class="skill__text">
-                <h3 class="skill__text--h3">Illustrator</h3>
-                <p class="skill__text--p">
-                  オリジナルのロゴやイラストを作成できます。
-                </p>
-              </div>
-            </li>
-            <li class="skill__item">
-              <div class="skill__item-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_ps.svg" alt="Psのアイコン" />
-              </div>
-              <div class="skill__text">
-                <h3 class="skill__text--h3">Photoshop</h3>
-                <p class="skill__text--p">
-                  Webサイトに必要不可欠なクリエイティブバナーを作ることが可能です。
-                </p>
-              </div>
-            </li>
-            <li class="skill__item">
-              <div class="skill__item-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon_figma.svg" alt="Figmaのアイコン" />
-              </div>
-              <div class="skill__text">
-                <h3 class="skill__text--h3">Figma</h3>
-                <p class="skill__text--p">
-                  Webサイトのデザインやワイヤーフレームを作ることが可能です
-                </p>
-              </div>
-            </li> -->
           </ul>
             <?php endforeach; ?>
           <!-- 使用した投稿データをリセット -->
