@@ -1115,6 +1115,7 @@ p {
   left: -3.8194444444vw;
   width: 2.0833333333vw;
   height: 1.7361111111vw;
+  transition: width 0.3s ease, transform 0.3s ease;
   border-radius: 50% 50% 50% 50%/50% 50% 45% 45%;
   background-image: radial-gradient(ellipse at center, white 40%, transparent 60%);
   background-size: 0.6944444444vw 0.4166666667vw;
@@ -1138,7 +1139,6 @@ p {
   left: -2.7777777778vw;
   width: 5.5555555556vw;
   height: 5.5555555556vw;
-  transition: transform 0.2s ease-out;
 }
 
 header {
@@ -1474,7 +1474,7 @@ header {
   width: 23.9583333333vw;
   height: 64.1975308642vh;
   border-radius: 0.2777777778vw;
-  box-shadow: 0.6944444444vw 0.6944444444vw 1.3888888889vw 0 #e8e2d7;
+  box-shadow: 0.6944444444vw 0.6944444444vw 1.3888888889vw 0 #e8e2d7 !important;
   box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
 }

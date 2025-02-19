@@ -193,6 +193,7 @@
     left: vw(-55);
     width: vw(30);
     height: vw(25);
+    transition: width 0.3s ease, transform 0.3s ease;
     border-radius: 50% 50% 50% 50% / 50% 50% 45% 45%;
     background-image: radial-gradient(
       ellipse at center,
@@ -240,7 +241,6 @@
     left: vw(-40);
     width: vw(80);
     height: vw(80);
-    transition: transform 0.2s ease-out;
   }
 }
 // ---------------
@@ -594,8 +594,8 @@ header {
   width: vw(345);
   height: vh(520);
   border-radius: vw(4);
-  box-shadow: vw(10) vw(10) vw(20) 0 #e8e2d7;
-  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: vw(10) vw(10) vw(20) 0 #e8e2d7 !important;
+  // -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
 }
