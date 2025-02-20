@@ -273,9 +273,6 @@ header {
   justify-content: flex-end;
   gap: 40px;
   backdrop-filter: blur(8px);
-  @include sp() {
-    // display: none;
-  }
 }
 .outer-menu {
   display: none;
@@ -340,7 +337,6 @@ header {
     width: vw_sp(60);
     height: vh_sp(60);
     padding: 0.5em 1em;
-    // background: rgba(33, 150, 243, 0.75);
     border-radius: 0 0.12em 0.12em 0;
     cursor: pointer;
     transition: box-shadow 0.4s ease;
@@ -388,7 +384,6 @@ header {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     outline: 1px solid transparent;
-    // display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -476,7 +471,7 @@ header {
     left: 0;
     bottom: 0;
     transform-origin: right top;
-    transform: scale(0, 1); /* 修正: スペースで区切る */
+    transform: scale(0, 1);
     transition: transform 0.3s ease;
   }
 
@@ -490,6 +485,10 @@ header {
 // works
 // ---------------
 // swiperここから
+:root {
+  --easing: cubic-bezier(0.2, 1, 0.2, 1);
+  --transition: 0.8s var(--easing);
+}
 .l-inner {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -547,15 +546,12 @@ header {
   left: 0;
   content: "";
   border-radius: 50%;
-  -webkit-box-shadow: var(--box-shadow);
-  box-shadow: var(--box-shadow);
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
   width: 1.2rem;
   height: 1.2rem;
   content: "";
-  border: solid var(--color-gray);
   border-width: vw(3) vw(3) 0 0;
 }
 .swiper-button-prev::after {
@@ -591,12 +587,9 @@ header {
 }
 .card05 .slide {
   overflow: hidden;
-  // width: 20rem;
   width: vw(345);
   height: vh(520);
   border-radius: vw(4);
-  // -webkit-box-shadow: var(--box-shadow);
-  box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
 }
 .card05 .slide-media {
@@ -608,10 +601,7 @@ header {
   }
 }
 .card05 .slide-media img {
-  // height: calc(100% + 16px);
   width: 100%;
-  // -webkit-transform: translateY(-16px);
-  // transform: translateY(-16px);
   @include sp() {
     width: 100%;
   }
@@ -622,20 +612,9 @@ header {
 .card05 .slide-title {
   margin-top: vh(20);
   margin-left: vw(15);
-  // font-size: vw(20);
-  // line-height: 1;
-  // display: block;
-  // color: var(--color-theme);
 }
 .card05 .slide-text {
   margin: vh(10) vw(10) 0 vw(10);
-  // line-height: 1.6;
-  // display: -webkit-box;
-  // overflow: hidden;
-  // -webkit-line-clamp: 2;
-  // -webkit-box-orient: vertical;
-  // height: 3.2em;
-  // margin-top: 1.6rem;
 }
 .slide-text {
   // pcの時
@@ -697,8 +676,6 @@ header {
   .card05 .slide:hover {
     -webkit-transform: translateY(-16px);
     transform: translateY(-16px);
-    -webkit-box-shadow: var(--box-shadow-hover);
-    box-shadow: var(--box-shadow-hover);
   }
   .card05 .slide:hover img {
     -webkit-transform: translateY(0);
