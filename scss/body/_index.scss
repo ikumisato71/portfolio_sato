@@ -587,6 +587,7 @@ header {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  box-shadow: vw(10) vw(10) vw(20) 0 #e8e2d7;
 }
 .card05 .slide {
   overflow: hidden;
@@ -594,7 +595,6 @@ header {
   width: vw(345);
   height: vh(520);
   border-radius: vw(4);
-  box-shadow: vw(10) vw(10) vw(20) 0 #e8e2d7 !important;
   // -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
   transition: opacity 0.3s, transform 0.3s !important;
