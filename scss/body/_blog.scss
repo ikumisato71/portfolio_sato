@@ -40,6 +40,12 @@
 .page__blogs--img:hover {
   opacity: 0.5;
   transform: scale(0.8);
+  @include not_sp() {
+    .page__blogs--img:hover {
+      opacity: 0.5;
+      transform: scale(0.8);
+    }
+  }
 }
 
 // 投稿ページBlog

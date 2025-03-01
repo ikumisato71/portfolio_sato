@@ -328,6 +328,11 @@ header {
   }
   .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
     transform: rotate(225deg);
+    @include not_sp() {
+      .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+      }
+    }
   }
   .outer-menu .hamburger {
     position: absolute;
@@ -440,9 +445,19 @@ header {
   }
   .outer-menu .menu > div > div > ul > li > a:hover {
     color: #e5e5e5;
+    @include not_sp() {
+      .outer-menu .menu > div > div > ul > li > a:hover {
+        color: #e5e5e5;
+      }
+    }
   }
   .outer-menu .menu > div > div > ul > li > a:hover:after {
     width: 100%;
+    @include not_sp() {
+      .outer-menu .menu > div > div > ul > li > a:hover:after {
+        width: 100%;
+      }
+    }
   }
   .outer-menu .menu > div > div > ul > li > a:after {
     content: "";
@@ -478,6 +493,12 @@ header {
   &:hover::before {
     transform-origin: left top;
     transform: scale(1, 1); /* 修正: スペースで区切る */
+    @include not_sp() {
+      &:hover::before {
+        transform-origin: left top;
+        transform: scale(1, 1); /* 修正: スペースで区切る */
+      }
+    }
   }
 }
 
@@ -664,6 +685,13 @@ header {
   .swiper-button-next:hover::before {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+    @include not_sp() {
+      .swiper-button-prev:hover::before,
+      .swiper-button-next:hover::before {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
   }
   .card05 .slide {
     -webkit-transition: var(--transition);
@@ -676,13 +704,30 @@ header {
   .card05 .slide:hover {
     -webkit-transform: translateY(-16px);
     transform: translateY(-16px);
+    @include not_sp() {
+      .card05 .slide:hover {
+        -webkit-transform: translateY(-16px);
+        transform: translateY(-16px);
+      }
+    }
   }
   .card05 .slide:hover img {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    @include not_sp() {
+      .card05 .slide:hover img {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
   }
   .card05 .swiper:hover .slide:not(:hover) {
     opacity: 0.3;
+    @include not_sp() {
+      .card05 .swiper:hover .slide:not(:hover) {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
