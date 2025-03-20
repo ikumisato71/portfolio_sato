@@ -79,28 +79,56 @@ triggers.forEach((trigger) => {
 // ーーーーーーー
 // マウスストーカー
 // ーーーーーーー
-// .mouse-stalker要素を取得
 const stalker = document.querySelector(".mouse-stalker");
 
-// マウスの動きに追従
-document.addEventListener("mousemove", function (e) {
+// これ以上はPCですよというブレイクポイントを指定
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+const handle = (pcWindow) => {
+  if (pcWindow.matches) {
+    // マウスの動きに追従
+    document.addEventListener("mousemove", mouseMoveHandler);
+
+    // すべてのリンクにホバーイベントを設定
+    const linkElem = document.querySelectorAll("a:not(.no_stick_)");
+
+    linkElem.forEach((link) => {
+      link.addEventListener("mouseover", mouseOverHandler);
+      link.addEventListener("mouseout", mouseOutHandler);
+    });
+  } else {
+    // スマートフォンではイベントを削除
+    document.removeEventListener("mousemove", mouseMoveHandler);
+
+    const linkElem = document.querySelectorAll("a:not(.no_stick_)");
+    linkElem.forEach((link) => {
+      link.removeEventListener("mouseover", mouseOverHandler);
+      link.removeEventListener("mouseout", mouseOutHandler);
+    });
+
+    // スマホ時はマウスストーカーを非表示にする（任意）
+    stalker.style.display = "none";
+  }
+};
+
+// イベントハンドラーの定義
+const mouseMoveHandler = (e) => {
   stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
+};
 
-// すべてのリンクにホバーイベントを設定
-const linkElem = document.querySelectorAll("a:not(.no_stick_)");
+const mouseOverHandler = () => {
+  stalker.classList.add("is_active");
+};
 
-linkElem.forEach((link) => {
-  // マウスがリンクに乗ったとき
-  link.addEventListener("mouseover", function () {
-    stalker.classList.add("is_active");
-  });
+const mouseOutHandler = () => {
+  stalker.classList.remove("is_active");
+};
 
-  // マウスがリンクから離れたとき
-  link.addEventListener("mouseout", function () {
-    stalker.classList.remove("is_active");
-  });
-});
+// ページが読み込まれた時に実行
+handle(mediaQuery);
+
+// ウィンドウサイズを変更しても実行（ブレイクポイントの監視）
+mediaQuery.addEventListener("change", handle); // 修正済み！
 
 // ーーーーーーー
 // swiper
